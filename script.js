@@ -6,35 +6,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 // Navbar
-console.clear();
+
 
 const app = (() => {
-	let body;
-	let menu;
-	let menuItems;
-	
-	const init = () => {
-		body = document.querySelector('body');
-		menu = document.querySelector('.menu-icon');
-		menuItems = document.querySelectorAll('.nav__list-item');
+  let navContainer;
+  let menu;
+  let menuItems;
 
-		applyListeners();
-	}
-	
-	const applyListeners = () => {
-		menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
-	}
-	
-	const toggleClass = (element, stringClass) => {
-		if(element.classList.contains(stringClass))
-			element.classList.remove(stringClass);
-		else
-			element.classList.add(stringClass);
-	}
-	
-	init();
+  const init = () => {
+      navContainer = document.querySelector('.nav-container');
+      menu = document.querySelector('.menu-icon');
+      menuItems = document.querySelectorAll('.nav__list-item');
+
+      applyListeners();
+  }
+
+  const applyListeners = () => {
+      menu.addEventListener('click', () => toggleClass(navContainer, 'nav-active'));
+  }
+
+  const toggleClass = (element, stringClass) => {
+      if(element.classList.contains(stringClass))
+          element.classList.remove(stringClass);
+      else
+          element.classList.add(stringClass);
+  }
+
+  init();
 })();
-
 
 //Hero
 const hero = document.querySelector('.hero');
@@ -184,12 +183,12 @@ gsap.to(".video-scroll", {
   let marquee = document.querySelector(".marquee");
 
   gsap.to(".marquee", {
-    translateY: 10,
+    translateY: 0,
     scrollTrigger:{
       trigger: ".marquee",
-      start: "top 60%",
-      end: "top 30%",
-      scrub: 1,
+      start: "top 50%",
+      end: "top 10%",
+      scrub: 4,
     }
   })
 

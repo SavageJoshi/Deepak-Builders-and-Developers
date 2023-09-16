@@ -3,12 +3,36 @@
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100% !important;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Fira Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+}
+
+.nav-container {
+  display: flex;
+  max-width: 100%;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1001;
+  align-items: center;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
@@ -21,9 +45,9 @@ body {
 .menu-icon {
   height: 30px;
   width: 30px;
-  position: fixed;
+  position: absolute;
   z-index: 1001;
-  right: 50px;
+  right: 30px;
   top: 30px;
   cursor: pointer;
 }
@@ -44,6 +68,7 @@ body {
 }
 
 .nav {
+  display: flex;
   opacity: 0;
   pointer-events: none;
   transition: opacity 1.5s, pointer-events 0.5s 0.5s;
@@ -85,15 +110,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5vw;
+  padding: 0;
 }
 .nav__list-item {
+  text-decoration: none;
   position: relative;
   display: inline-block;
   transition-delay: 0.8s;
   opacity: 0;
   transform: translate(0%, 100%);
   transition: opacity 0.2s ease, transform 0.3s ease;
-  margin-right: 25px;
   color: #ffffff;
 }
 .nav__list-item:before {
@@ -111,66 +137,58 @@ body {
   width: 100%;
 }
 
-body.nav-active .menu-icon__line {
+.nav__list-item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container.nav-active .menu-icon__line {
   background-color: #ffffff;
   transform: translateX(0px) rotate(-45deg);
 }
-body.nav-active .menu-icon__line-left {
+.nav-container.nav-active .menu-icon__line-left {
   transform: translateX(1px) rotate(45deg);
 }
-body.nav-active .menu-icon__line-right {
+.nav-container.nav-active .menu-icon__line-right {
   transform: translateX(-2px) rotate(45deg);
 }
-body.nav-active .nav {
+.nav-container.nav-active .nav {
   opacity: 1;
   pointer-events: all;
   transition: opacity 1s, pointer-events 0s;
   visibility: visible;
 }
-body.nav-active .nav:before, body.nav-active .nav:after {
+.nav-container.nav-active .nav:before, .nav-container.nav-active .nav:after {
   transform: translateX(0%) translateY(0%);
 }
-body.nav-active .nav:after {
+.nav-container.nav-active .nav:after {
   transition-delay: 0.1s;
 }
-body.nav-active .nav:before {
+.nav-container.nav-active .nav:before {
   transition-delay: 0s;
 }
-body.nav-active .nav__list-item {
+.nav-container.nav-active .nav__list-item {
   opacity: 1;
   transform: translateX(0%);
   transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
-body.nav-active .nav__list-item:nth-child(0) {
+.nav-container.nav-active .nav__list-item:nth-child(0) {
   transition-delay: 0.5s;
 }
-body.nav-active .nav__list-item:nth-child(1) {
+.nav-container.nav-active .nav__list-item:nth-child(1) {
   transition-delay: 0.6s;
 }
-body.nav-active .nav__list-item:nth-child(2) {
+.nav-container.nav-active .nav__list-item:nth-child(2) {
   transition-delay: 0.7s;
 }
-body.nav-active .nav__list-item:nth-child(3) {
+.nav-container.nav-active .nav__list-item:nth-child(3) {
   transition-delay: 0.8s;
 }
-body.nav-active .nav__list-item:nth-child(4) {
+.nav-container.nav-active .nav__list-item:nth-child(4) {
   transition-delay: 0.9s;
 }
 
-.nav-container {
-  height: 9vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100% vw;
-  z-index: 3000;
-}
-
 @media (max-width: 768px) {
-  .menu-icon {
-    right: 20px;
-    top: 20px;
-  }
   .nav__content {
     font-size: calc(4vw + 8px);
   }
@@ -837,14 +855,15 @@ p {
 }
 
 .ourprojects-title {
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-family: "Phudu", cursive;
   color: red;
-  font-size: clamp(2rem, 4vw, 4rem);
-  letter-spacing: 3rem;
+  font-size: clamp(1rem, 4vw, 3rem);
+  letter-spacing: 2rem;
   user-select: none;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -1020,7 +1039,6 @@ body:active .projects {
 }
 
 .footer {
-  height: 100vh;
   width: 100%;
   background-color: #ED1D24;
   display: flex;
