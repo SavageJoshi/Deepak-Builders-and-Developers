@@ -133,7 +133,23 @@ gsap.to(".para-wrapper .mask span", {
 //Filler Start
 
 //video
+let videobox = document.querySelector(".video-conatainer");
 let videoElement = document.querySelector(".video-scroll");
+
+gsap.to(".video-container", {
+  // width: "100vh" ,
+  translateY: 0,
+  scale: 1,
+  scrollTrigger: {
+    trigger: ".video-container",
+    start: "top 110%",
+    end: "top 75%",
+    scrub: 1,
+    // markers: true,
+  }
+})
+
+
 
 gsap.to(".video-scroll", {
     scrollTrigger: {
@@ -158,10 +174,24 @@ gsap.to(".video-scroll", {
   });
 
 
+
+
+
   //marquee1
 
   let currentScroll = 0;
   let isScrollingDown = true;
+  let marquee = document.querySelector(".marquee");
+
+  gsap.to(".marquee", {
+    translateY: 10,
+    scrollTrigger:{
+      trigger: ".marquee",
+      start: "top 60%",
+      end: "top 30%",
+      scrub: 1,
+    }
+  })
 
   let tween = gsap.to(".marquee__part", {
     xPercent: -100,
@@ -248,7 +278,7 @@ gsap.to(".long-title", {
     start: "top 40%",
     end: "top -20%",
     scrub: 3,
-    markers: true,
+    // markers: true,
   }
 });
 
@@ -333,12 +363,22 @@ gsap.to(".title-2", {
       });
     }
     loadedBoth() {
-      const mainImageSrc =
-        this.element.children[0].src ||
-        this.element.children[0].getAttribute(`data-beer-src`);
-      const revealImageSrc =
-        this.revealElement.src ||
-        this.revealElement.getAttribute(`data-beer-src`);
+      // const mainImageSrc =
+      //   this.element.children[0].src ||
+      //   this.element.children[0].getAttribute(`data-beer-src`);
+      // const revealImageSrc =
+      //   this.revealElement.src ||
+      //   this.revealElement.getAttribute(`data-beer-src`);
+
+      const mainImageSrc = 
+    this.element.children[0].querySelector('image').getAttribute('xlink:href') ||
+    this.element.children[0].getAttribute(`data-beer-src`);
+
+const revealImageSrc = 
+    this.revealElement.querySelector('image').getAttribute('xlink:href') ||
+    this.revealElement.getAttribute(`data-beer-src`);
+
+
       return Promise.all([
         this.loadingImg(mainImageSrc),
         this.loadingImg(revealImageSrc)
@@ -397,27 +437,7 @@ gsap.to(".title-2", {
 
   //projects
 
-  let hasSimulatedMouseMovement = false;
-
-  document.addEventListener('scroll', function() {
-      const rect = projectslider.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0 && !hasSimulatedMouseMovement) {
-          // Section is in view
-          simulateMouseMovement();
-          hasSimulatedMouseMovement = true;
-      }
-  });
-  
-  function simulateMouseMovement() {
-      const mouseEvent = new MouseEvent('mousemove', {
-          bubbles: true,
-          cancelable: true,
-          screenX: 1,
-          screenY: 1
-      });
-      projectslider.dispatchEvent(mouseEvent);
-  }
-
+//   
 
 let isDown = false;
 let startX;
@@ -425,11 +445,17 @@ let scrollLeft;
 
 const projectslider = document.querySelector('.projects');
 
+projectslider.addEventListener('mouseenter', () => {
+  document.body.style.overflow = 'hidden';
+});
 
+projectslider.addEventListener('mouseleave', () => {
+  document.body.style.overflow = 'auto';
+});
 
 projectslider.addEventListener('wheel', function(e) {
   const maxScrollLeft = projectslider.scrollWidth - projectslider.clientWidth;
-  
+
   // If scrolling down and we're at the end of the horizontal scroll
   if (e.deltaY > 0 && projectslider.scrollLeft >= maxScrollLeft - 2) {
       return; // allow default behavior
@@ -443,18 +469,14 @@ projectslider.addEventListener('wheel', function(e) {
   e.preventDefault();
   gsap.to(projectslider, {
       duration: 1,
-      scrollTo: { x: projectslider.scrollLeft + e.deltaY * 2 }
+      scrollTo: { x: projectslider.scrollLeft + e.deltaY * 3.7 }
   });
 
 }, { passive: false });
 
-
-
-
-
 projectslider.addEventListener('mousedown', (e) => {
   isDown = true;
-  startX = e.pageX - projectslider.offsetLeft;
+  startX = e.pageX;
   scrollLeft = projectslider.scrollLeft;
 });
 
@@ -469,10 +491,13 @@ projectslider.addEventListener('mouseup', () => {
 projectslider.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
-  const x = e.pageX - projectslider.offsetLeft;
+  const x = e.pageX;
   const walk = x - startX;
   projectslider.scrollLeft = scrollLeft - walk;
 });
+
+
+
 
 
 // projects end

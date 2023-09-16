@@ -211,6 +211,7 @@ body.nav-active .nav__list-item:nth-child(4) {
 }
 
 .headline {
+  font-family: "Phudu", cursive;
   position: absolute;
   top: 60%;
   left: 8%;
@@ -350,6 +351,8 @@ body.nav-active .nav__list-item:nth-child(4) {
 }
 
 .video-scroll {
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 100%;
   width: 70%;
   height: auto;
@@ -360,7 +363,10 @@ body.nav-active .nav__list-item:nth-child(4) {
 }
 
 .video-container {
-  width: 100%; /* Adjust this to your desired starting width */
+  width: 100%;
+  transform-origin: center;
+  transform: translateY(70%);
+  scale: 0;
   overflow: hidden;
   margin-left: 10%;
 }
@@ -382,6 +388,7 @@ body.nav-active .nav__list-item:nth-child(4) {
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
+  mix-blend-mode: multiply;
 }
 
 .marquee1 {
@@ -463,7 +470,7 @@ body.nav-active .nav__list-item:nth-child(4) {
 .color-block {
   height: 100%;
   width: 10%;
-  background-color: yellow;
+  background-color: lightgrey;
 }
 
 .long-img {
@@ -498,6 +505,7 @@ body.nav-active .nav__list-item:nth-child(4) {
   z-index: 10;
   width: 100%;
   margin-top: 2rem;
+  mix-blend-mode: multiply;
 }
 
 .long-title h1 {
@@ -507,6 +515,7 @@ body.nav-active .nav__list-item:nth-child(4) {
   font-size: 11rem;
   letter-spacing: 3rem;
   position: relative;
+  mix-blend-mode: difference;
 }
 
 .goals-2 {
@@ -571,6 +580,43 @@ body.nav-active .nav__list-item:nth-child(4) {
   display: block;
   transform: translateX(200%);
   font-size: 1rem;
+}
+
+.mini-marquee {
+  letter-spacing: 2vw;
+  width: 100vw;
+  overflow-x: hidden;
+  line-height: 1.5;
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  margin: 6vh 0;
+  mix-blend-mode: multiply;
+}
+
+.mini-marquee1 {
+  position: relative;
+  font-weight: 600;
+  font-size: 64px;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: rgb(237, 29, 36);
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.mini-marquee2 {
+  position: relative;
+  font-weight: 600;
+  font-size: 64px;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: rgb(237, 29, 36);
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+  margin: 0;
 }
 
 .picfx {
@@ -790,49 +836,14 @@ p {
   letter-spacing: 3px;
 }
 
-.mini-marquee {
-  letter-spacing: 2vw;
-  width: 100vw;
-  overflow-x: hidden;
-  line-height: 1.5;
-  user-select: none;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  margin: 6vh 0;
-}
-
-.mini-marquee1 {
-  position: relative;
-  font-weight: 600;
-  font-size: 64px;
-  text-transform: uppercase;
-  overflow: hidden;
-  color: rgb(237, 29, 36);
-  mix-blend-mode: overlay;
-  opacity: 0.9;
-  margin: 0;
-}
-
-.mini-marquee2 {
-  position: relative;
-  font-weight: 600;
-  font-size: 64px;
-  text-transform: uppercase;
-  overflow: hidden;
-  color: rgb(237, 29, 36);
-  mix-blend-mode: overlay;
-  opacity: 0.9;
-  margin: 0;
-}
-
 .ourprojects-title {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Phudu", cursive;
   color: red;
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw, 4rem);
   letter-spacing: 3rem;
   user-select: none;
   -webkit-user-select: none; /* Safari */
@@ -841,6 +852,18 @@ p {
 }
 
 .projects {
+  cursor: url("/assets/img/sliders_FILL0_wght400_GRAD0_opsz24.svg"), grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body:active .projects {
+  cursor: url("/assets/img/sliders_FILL0_wght400_GRAD0_opsz24.svg"), grabbing;
+}
+
+.projects {
+  width: 100vw;
   height: 70vh;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -864,7 +887,7 @@ p {
 }
 
 .project-card {
-  flex: 0 0 20%; /* ensures 5 projects show at a time */
+  flex: 0 0 25%; /* ensures 5 projects show at a time */
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -914,11 +937,11 @@ p {
 }
 
 .content {
-  margin: 5vh;
+  margin: 5em 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
   position: relative;
   text-align: center;
 }
@@ -1000,10 +1023,8 @@ p {
   height: 100vh;
   width: 100%;
   background-color: #ED1D24;
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   flex-direction: column;
   text-align: center;
 }
