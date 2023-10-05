@@ -23,7 +23,7 @@ body{
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
-	// overflow-x: hidden;
+	overflow-x: hidden;
 	// height: 100vh;
 	// width: 100%;
 }
@@ -441,12 +441,12 @@ body{
 	scale: 0;
 	// width: 100%; /* Adjust this to your desired starting width */
 	overflow: hidden;
-	margin-left: 10%;
+	// margin-left: 10%;
  }
  
 .video-container video {
-	width: 70vw;
-	height: auto;
+	width: 100vw;
+	height: 100vh;
  }
 
 

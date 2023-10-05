@@ -17,6 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .nav-container {
@@ -386,12 +387,11 @@ body {
   transform: translateY(70%);
   scale: 0;
   overflow: hidden;
-  margin-left: 10%;
 }
 
 .video-container video {
-  width: 70vw;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
 }
 
 .marquee {

@@ -144,6 +144,7 @@ gsap.to(".video-container", {
     start: "top 110%",
     end: "top 75%",
     scrub: 1,
+    // pin: true,
     // markers: true,
   }
 })
