@@ -1,4 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
+
 
 
 
@@ -65,69 +67,6 @@ tl.fromTo(hero , 1 , {height: "80%"}, {height: "100%", ease: Power2.easeInOut },
 
 //Goal
 
-const goalImg = document.querySelector(".goal-img1");
-const title = document.querySelector(".title");
-
-gsap.to(".goal-img1 img", {
-    y: "-37%",
-    scrollTrigger: {
-        trigger: ".goal-img1",
-        start: "top 80%",
-        end: "top 10%",
-        scrub: 1,
-		// markers: true
-    }
-});
-gsap.to(".goal-img2 img", {
-    y: "-37%",
-    scrollTrigger: {
-        trigger: ".goal-img2",
-        start: "top 80%",
-        end: "top 10%",
-        scrub: 1,
-		// markers: true
-    }
-});
-gsap.to(".title", {
-	y: 0, // Bring it to its natural position
-	scrollTrigger: {
-	  trigger: ".goal-text",
-	  start: "top 85%", // adjust as needed
-	  end: "top 60%", // adjust as needed
-	  scrub: 1,
-	}
-  });
-
-// tl.from(".line span", {
-//     y: 200,
-//     ease: "Power4.out",
-//     skewY: 10,
-//     stagger: {
-//         amount: 0.4
-//     },
-//     scrollTrigger: {
-//         trigger: ".goal-text",
-//         start: "top 80%",
-//         end: "top 60%",
-//         scrub: 1.5,
-//         // markers: true
-//     }
-// });
-
-gsap.to(".para-wrapper .mask span", {
-  translateX: 0, // slide up into natural position
-  stagger: 0.15, // delay between each line
-  scrollTrigger: {
-      trigger: ".para-wrapper",
-      start: "top 80%",
-      end: "top 55%",
-      scrub: 1.5,
-  },
-});
-
-
-// Goal End
-
 
 //Filler Start
 
@@ -141,9 +80,9 @@ gsap.to(".video-container", {
   scale: 1,
   scrollTrigger: {
     trigger: ".video-container",
-    start: "top 110%",
-    end: "top 75%",
-    scrub: 1,
+    start: "top 130%",
+    end: "top 65%",
+    scrub: true,
     // pin: true,
     // markers: true,
   }
@@ -156,7 +95,7 @@ gsap.to(".video-scroll", {
       trigger: ".video-scroll",
       start: "top 50%", 
       end: "top -10%", 
-      scrub: 1,
+      scrub: true,
     //   markers: true,
       onEnter: function() {
         videoElement.play();
@@ -244,6 +183,41 @@ window.addEventListener("scroll", function() {
 
     currentScroll2 = window.pageYOffset;
 });
+
+
+
+
+
+//Achiements
+
+const rollingNumbers = (target, value) => {
+  gsap.to(target, {
+    duration: 1,
+    scrollTrigger: {
+      // trigger: "target",
+      trigger: ".count1",
+      start: "top 70%",
+      end: "bottom 40%",
+      scrub: true,
+      markers: true, // for debugging, remove this in production
+    },
+    innerHTML: value.toString(),
+    roundProps: "innerHTML",
+  });
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  rollingNumbers(".count1 span", 100); 
+  rollingNumbers(".count2 span", 1200000); 
+  rollingNumbers(".count3 span", 1000); 
+  rollingNumbers(".count4 span", 1200000); 
+  rollingNumbers(".count5 span", 1000); 
+  
+});
+
+
+
+
 
 //block
 
