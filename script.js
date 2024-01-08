@@ -126,8 +126,8 @@ gsap.to(".video-scroll", {
     translateY: 0,
     scrollTrigger:{
       trigger: ".marquee",
-      start: "top 50%",
-      end: "top 10%",
+      start: "top 80%",
+      end: "top 20%",
       scrub: 4,
     }
   })
@@ -159,7 +159,7 @@ gsap.to(".video-scroll", {
 //marquee2
 
 let currentScroll2 = 0;
-let isScrollingDown2 = false;  // Since you want the default direction to be opposite
+let isScrollingDown2 = false;  //direction to be opposite
 
 let tween2 = gsap.to(".marquee__part2", {
     xPercent: 100,  // This will make it scroll in the opposite direction
@@ -196,10 +196,10 @@ const rollingNumbers = (target, value) => {
     scrollTrigger: {
       // trigger: "target",
       trigger: ".count1",
-      start: "top 70%",
-      end: "bottom 40%",
+      start: "top 80%",
+      end: "top 50%",
       scrub: true,
-      markers: true, // for debugging, remove this in production
+      // markers: true, 
     },
     innerHTML: value.toString(),
     roundProps: "innerHTML",
@@ -207,11 +207,12 @@ const rollingNumbers = (target, value) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  rollingNumbers(".count1 span", 100); 
-  rollingNumbers(".count2 span", 1200000); 
-  rollingNumbers(".count3 span", 1000); 
-  rollingNumbers(".count4 span", 1200000); 
-  rollingNumbers(".count5 span", 1000); 
+  rollingNumbers(".count1 span", 98); 
+  rollingNumbers(".count2 span", 15); 
+  rollingNumbers(".count3 span", 5); 
+  rollingNumbers(".count4 span", 98); 
+  rollingNumbers(".count5 span", 98); 
+  rollingNumbers(".count6 span", 98); 
   
 });
 
