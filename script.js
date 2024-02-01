@@ -222,18 +222,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //block
 
-gsap.to(".block-img img", {
-  y: "-37%",
-  scrollTrigger: {
-      trigger: ".block-img",
-      start: "top 80%",
-      end: "top 10%",
-      scrub: 1,
-  // markers: true
-  }
+$(document).ready(function(){
+  $('.slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    infinite: true,
+  });
 });
 
+
+
+
+
+
+
+
+
+
+
 //long image
+
+gsap.to(".goals-text", {
+  scrollTrigger: {
+    trigger: ".goals-text",
+    start: "top 10%", // Adjust the start position
+    end: "bottom", // Adjust the end position
+    pin: true,
+    pinSpacing: false, // Set to true if you want to maintain the spacing
+    // markers: true, 
+  },
+});
+
 //image
 gsap.to(".ver-img img", {
   y: "-40%",
@@ -247,7 +269,7 @@ gsap.to(".ver-img img", {
 });
 //text
 gsap.to(".long-title", {
-  y: "90%",
+  y: "150%",
   scrollTrigger: {
     trigger: ".long-title",
     start: "top 40%",
@@ -258,16 +280,17 @@ gsap.to(".long-title", {
 });
 
 //goals-2
-gsap.to(".goals-2-img img", {
-  y: "-37%",
-  scrollTrigger: {
-      trigger: ".goals-2-img",
-      start: "top 80%",
-      end: "top -20%",
-      scrub: 1,
-  // markers: true
-  }
+$(document).ready(function(){
+  $('.goals-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    infinite: true,
+  });
 });
+
 gsap.to(".title-2", {
 	y: 0, // Bring it to its natural position
 	scrollTrigger: {
@@ -469,6 +492,17 @@ projectslider.addEventListener('mousemove', (e) => {
   const x = e.pageX;
   const walk = x - startX;
   projectslider.scrollLeft = scrollLeft - walk;
+});
+
+gsap.to(".projects", {
+  scrollTrigger: {
+    trigger: ".projects",
+    start: "top 10%", // Adjust the start position
+    end: "bottom", // Adjust the end position
+    pin: true,
+    pinSpacing: true, // Set to true if you want to maintain the spacing
+    // markers: true, 
+  },
 });
 
 

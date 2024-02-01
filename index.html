@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deepak Builders & Developers</title>
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
   </head>
   <body>
     <div class="website-container">
@@ -182,23 +187,45 @@
     
 
   <!--  Blocks -->
+
   <div class="block-div">
     <div class="block-img">
-      <img src="./assets/img/Sunflower_City_Night_D1 (2).jpg" alt="">
+      <div class="slider">
+        <div class="slide"><img src="./assets/img/Sunflower_City_Night_D1 (2).jpg" alt=""></div>
+        <div class="slide"><img src="./assets/img/Sunflower_City_Night_D1 (2).jpg" alt=""></div>
+        <div class="slide"><img src="./assets/img/Sunflower_City_Night_D1 (2).jpg" alt=""></div>
+        
+        <!-- Add more divs for additional images -->
+      </div>
     </div>
     <div class="color-block"></div>
   </div>
+  
+  
+  
+
 
   <!-- long-img -->
-  <section class="long-img">
-    <div class="ver-img">
-      <img src="./assets/img/Kid_Sunflower_D1 (1).jpg" alt="">
+  <section class="long-img-parent">
+    <!-- Left Div for Goals Text Section -->
+    <div class="goals-text">
+        <h2>Goals</h2>
+        <p class="goals-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod suscipit ligula eu ultricies.</p>
+        <!-- Add more descriptive lines as needed -->
     </div>
-    <div class="long-title">
-      <h1>Luxury</h1>
-      <h1>Premium</h1>
+
+    <!-- Right Div for Image with Text -->
+    <div class="long-img">
+        <div class="ver-img">
+            <img src="./assets/img/Kid_Sunflower_D1 (1).jpg" alt="">
+        </div>
+        <div class="long-title">
+            <h1>Luxury</h1>
+            <h1>Premium</h1>
+        </div>
     </div>
-  </section>
+</section>
+
 
   <!-- filler end -->
 
@@ -206,7 +233,14 @@
 
   <section class="goals-2">
     <div class="goals-2-img">
-      <img src="./assets/img/Sunflowers_&_Bees_D1 (3).jpg" alt="">
+      <div class="slider goals-slider">
+        <div class="slide"><img src="./assets/img/Sunflowers_&_Bees_D1 (3).jpg" alt=""></div>
+        
+        <div class="slide"><img src="./assets/img/Sunflowers_&_Bees_D1 (3).jpg" alt=""></div>
+        
+        <div class="slide"><img src="./assets/img/Sunflowers_&_Bees_D1 (3).jpg" alt=""></div>
+        
+      </div>
     </div>
     <div class="goals-2-content">
       <div class="goals-2-text">
@@ -215,14 +249,15 @@
         </div>
         <div class="para-wrapper-2">
           <div class="mask-2">
-              <span>"Building Dreams, Shaping Realities: Crafting a Better Tomorrow Together."</span>
-              <span>"Elevating Skylines, Enriching Lives: Pioneering Construction Excellence."</span>
-              <span>"Foundation to Aspiration: Constructing a Future of Infinite Possibilities."</span>
+            <span>"Building Dreams, Shaping Realities: Crafting a Better Tomorrow Together."</span>
+            <span>"Elevating Skylines, Enriching Lives: Pioneering Construction Excellence."</span>
+            <span>"Foundation to Aspiration: Constructing a Future of Infinite Possibilities."</span>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
   </section>
+  
   
   <!-- Goal-2 End -->
 
@@ -398,6 +433,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script> 
 <script src="https://unpkg.com/gsap@3.9.1/dist/TextPlugin.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
 <script>
