@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //block
 
 $(document).ready(function(){
-  $('.slider').slick({
+  $('.image-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
