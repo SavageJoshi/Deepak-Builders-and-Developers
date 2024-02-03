@@ -281,7 +281,7 @@ gsap.to(".long-title", {
 
 //goals-2
 $(document).ready(function(){
-  $('.goals-slider').slick({
+  $('.goals-image-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
