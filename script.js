@@ -199,6 +199,7 @@ const rollingNumbers = (target, value) => {
       start: "top 80%",
       end: "top 50%",
       scrub: true,
+      once: true,
       // markers: true, 
     },
     innerHTML: value.toString(),
@@ -245,39 +246,37 @@ $(document).ready(function(){
 
 //long image
 
+$(document).ready(function(){
+  $('.image-carousel').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+    infinite: true,
+  });
+});
+
 gsap.to(".goals-text", {
   scrollTrigger: {
     trigger: ".goals-text",
-    start: "top 10%", // Adjust the start position
-    end: "bottom", // Adjust the end position
+    start: "top 10%",
+    end: "+=100%",
     pin: true,
-    pinSpacing: false, // Set to true if you want to maintain the spacing
-    // markers: true, 
+    pinSpacing: true,
   },
 });
 
-//image
-gsap.to(".ver-img img", {
-  y: "-40%",
-  scrollTrigger: {
-    trigger: ".ver-img",
-    start: "top 50%",
-    end: "top -80%",
-    scrub: 1.5,
-    // markers: true,
-  }
-});
-//text
 gsap.to(".long-title", {
-  y: "150%",
+  y: "250%",
   scrollTrigger: {
     trigger: ".long-title",
     start: "top 40%",
     end: "top -20%",
     scrub: 3,
-    // markers: true,
   }
 });
+
 
 //goals-2
 $(document).ready(function(){
@@ -494,10 +493,10 @@ projectslider.addEventListener('mousemove', (e) => {
   projectslider.scrollLeft = scrollLeft - walk;
 });
 
-gsap.to(".projects", {
+gsap.to(".projects-section-wrapper", {
   scrollTrigger: {
-    trigger: ".projects",
-    start: "top 10%", // Adjust the start position
+    trigger: ".projects-section-wrapper",
+    start: "top top", // Adjust the start position
     end: "bottom", // Adjust the end position
     pin: true,
     pinSpacing: true, // Set to true if you want to maintain the spacing
