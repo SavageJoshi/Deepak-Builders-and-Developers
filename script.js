@@ -290,18 +290,19 @@ $(document).ready(function(){
   });
 });
 
-gsap.to(".title-2", {
-	y: 0, // Bring it to its natural position
-	scrollTrigger: {
-	  trigger: ".goals-2-text",
-	  start: "top 80%", // adjust as needed
-	  end: "top 50%", // adjust as needed
-	  scrub: 1,
-	}
-  });
+// gsap.to(".title-2", {
+// 	y: 0, // Bring it to its natural position
+// 	scrollTrigger: {
+// 	  trigger: ".goals-2-text",
+// 	  start: "top 80%", // adjust as needed
+// 	  end: "top 50%", // adjust as needed
+// 	  scrub: 1,
+// 	}
+//   });
 
   gsap.to(".para-wrapper-2 .mask-2 span", {
     translateX: 0, // slide up into natural position
+    opacity: 1,
     stagger: 0.15, // delay between each line
     scrollTrigger: {
         trigger: ".para-wrapper-2",
@@ -311,8 +312,16 @@ gsap.to(".title-2", {
     },
   });
 
-
-
+  gsap.to(".title-2",{
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".goals-2-text",
+      start: "top 80%", // adjust as needed
+      end: "top 50%", // adjust as needed
+      scrub: 1,
+    }
+  })
 
 
 
