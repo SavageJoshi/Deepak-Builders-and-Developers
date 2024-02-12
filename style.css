@@ -1277,7 +1277,64 @@ body:active .projects {
   height: 5vh;
 }
 
-.spacer {
+.specificProject-hero {
+  position: relative;
+  width: 100vw;
+}
+
+.specificProject-heroImage {
+  padding-top: 20vh;
+  width: 100%;
   height: 100vh;
-  background-color: #eae8e8;
+}
+.specificProject-heroImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Use 'cover' to ensure the entire image is visible */
+  z-index: -1;
+}
+
+.project-textCard {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 15%;
+  color: #e4e4e4;
+  background-color: #EC1C24;
+  height: 50%;
+  z-index: 2;
+  padding: 1rem; /* Add padding for content inside the card */
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1rem;
+}
+.project-textCard h3 {
+  margin: 0;
+  font-size: 1.5rem; /* Adjust font size as needed */
+  font-family: vorkurs;
+  text-transform: uppercase;
+}
+.project-textCard p {
+  margin: 0;
+  font-size: 1rem; /* Adjust font size as needed */
+  font-family: MullerNarrow;
+}
+
+@media only screen and (max-width: 768px) {
+  .specificProject-heroImage {
+    padding-top: 10vh;
+    height: 50vh;
+  }
+  .project-textCard {
+    padding: 0.5rem;
+  }
+  .project-textCard h3 {
+    font-size: 16px;
+  }
+  .project-textCard p {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

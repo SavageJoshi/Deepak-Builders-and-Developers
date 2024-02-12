@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBD - ProjectName</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+<body>
+    
+<div class="projectPage-container">
+
+
+    <!-- Navbar -->
+    <div class="nav-container">
+        <div class="navbar">
+  
+          <div class="logo">
+            <a href="/">
+              <img src="/" alt="logo" />
+            </a>
+          </div>
+        
+        </div>
+        <div class="nav-icon">
+  
+          <div class="menu-icon">
+            <span class="menu-icon__line menu-icon__line-left"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line menu-icon__line-right"></span>
+          </div>
+                
+          <div class="nav">
+              <div class="nav__content">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="/">Home</a></li>
+                    <li class="nav__list-item"><a href="#">About</a></li>
+                    <li class="nav__list-item"><a href="/pages/specificProject.html">Projects</a></li>
+                    <li class="nav__list-item">Contact</li>
+                </ul>
+              </div>
+          </div> 
+        </div>
+      </div>
+    <!-- Navbar ends -->
+
+    <!-- Project-hero -->
+
+    <div class="specificProject-hero">
+        <div class="specificProject-heroImage">
+            <img src="../assets/img/Sunflower_City_Night_D1 (2).jpg" alt="">
+        </div>
+        <div class="project-textCard">
+            <h3>Project Name</h3>
+            <p>BASIC BRIEF ABOUT
+                PROJECT LIKE ADRESS AND OFFERINGS  </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script> 
+<script src="https://unpkg.com/gsap@3.9.1/dist/TextPlugin.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://kit.fontawesome.com/f174b8f6e7.js" crossorigin="anonymous"></script>
+
+
+<script>
+  let lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  // console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+</script>
+
+
+<script src="../script.js"></script>
+
+</body>
+</html>

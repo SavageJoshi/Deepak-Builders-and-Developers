@@ -525,3 +525,33 @@ gsap.to(".projects-section-wrapper", {
 
 
 
+
+
+// footer end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Specific Project Start
+
+// Hero image section
+
+const projectImage = document.querySelector('.specificProject-heroImage');
+
+gsap.fromTo(projectImage, 1, 
+  {x: "-100%"}, 
+  {x: "0%", ease: Power2.easeInOut}
+)
+
+
+
