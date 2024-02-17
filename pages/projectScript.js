@@ -33,12 +33,6 @@ const app = (() => {
 
 
 
-
-
-
-
-
-
 //Image Gallery
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -77,5 +71,80 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// project Section 
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+const projectslider = document.querySelector('.projects');
+
+projectslider.addEventListener('mouseenter', () => {
+  document.body.style.overflow = 'hidden';
+});
+
+projectslider.addEventListener('mouseleave', () => {
+  document.body.style.overflow = 'auto';
+});
+
+projectslider.addEventListener('wheel', function(e) {
+  const maxScrollLeft = projectslider.scrollWidth - projectslider.clientWidth;
+
+  // If scrolling down and we're at the end of the horizontal scroll
+  if (e.deltaY > 0 && projectslider.scrollLeft >= maxScrollLeft - 2) {
+      return; // allow default behavior
+  }
+
+  // If scrolling up and we're at the start of the horizontal scroll
+  if (e.deltaY < 0 && projectslider.scrollLeft <= 0) {
+      return; // allow default behavior
+  }
+
+  e.preventDefault();
+  gsap.to(projectslider, {
+      duration: 1,
+      scrollTo: { x: projectslider.scrollLeft + e.deltaY * 3.7 }
+  });
+
+}, { passive: false });
+
+projectslider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX;
+  scrollLeft = projectslider.scrollLeft;
+});
+
+projectslider.addEventListener('mouseleave', () => {
+  isDown = false;
+});
+
+projectslider.addEventListener('mouseup', () => {
+  isDown = false;
+});
+
+projectslider.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX;
+  const walk = x - startX;
+  projectslider.scrollLeft = scrollLeft - walk;
+});
+
+// gsap.to(".projects-section-wrapper", {
+//   scrollTrigger: {
+//     trigger: ".projects-section-wrapper",
+//     start: "top top", // Adjust the start position
+//     end: "bottom", // Adjust the end position
+//     pin: true,
+//     pinSpacing: true, // Set to true if you want to maintain the spacing
+//     // markers: true, 
+//   },
+// });
+
+
+
+
+
+// projects end
 
   

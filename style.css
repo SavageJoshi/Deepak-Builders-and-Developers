@@ -988,10 +988,10 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: "Phudu", cursive;
+  font-family: vorkurs;
   color: red;
   font-size: clamp(1rem, 4vw, 3rem);
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
   user-select: none;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -1466,7 +1466,7 @@ body:active .projects {
   }
 }
 .imageGallery {
-  margin: 3rem 0;
+  margin-top: 3rem;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
@@ -1513,6 +1513,9 @@ body:active .projects {
   flex-shrink: 0;
   gap: 1rem;
   transition: transform 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .imageGallery .imageGallery-images .imageGallery-row1 img,
 .imageGallery .imageGallery-images .imageGallery-row2 img {
@@ -1579,5 +1582,62 @@ body:active .projects {
   .imageGallery .imageGallery-images .imageGallery-row2 img {
     height: 20vh;
     width: 45%;
+  }
+}
+.amenities-section {
+  margin: 3rem 0;
+  margin-bottom: 4rem;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.amenities-section .amenities-header h1 {
+  font-size: 4rem;
+  color: #EC1C24;
+  font-family: vorkurs;
+}
+.amenities-section .amenities-list {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 2rem;
+}
+.amenities-section .amenities-list .amenity {
+  background-color: #fff;
+  color: #EC1C24;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-family: vorkurs;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.amenities-section .amenities-list .amenity:hover {
+  background-color: #EC1C24;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .amenities-section {
+    margin: 2rem 0;
+  }
+  .amenities-section .amenities-header h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  .amenities-section .amenities-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  .amenities-section .amenities-list .amenity {
+    font-size: 0.7rem;
+    padding: 0.7rem;
   }
 }/*# sourceMappingURL=style.css.map */

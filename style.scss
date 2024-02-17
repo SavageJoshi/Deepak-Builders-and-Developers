@@ -1109,10 +1109,10 @@ body{
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	font-family: 'Phudu', cursive;
+	font-family: vorkurs;
 	color: red;
 	font-size: clamp(1rem, 4vw, 3rem);
-	letter-spacing: 2rem;
+	letter-spacing: 1rem;
 	user-select: none;
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
@@ -1622,7 +1622,7 @@ body{
 // Image Description ends
 
 .imageGallery {
-	margin: 3rem 0;
+	margin-top: 3rem;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -1676,7 +1676,7 @@ body{
 			flex-shrink: 0;
 			gap: 1rem;
 			transition: transform 0.3s ease;
-			
+			user-select: none;
 			img {
 				cursor: pointer;
 				height: 35vh;
@@ -1750,3 +1750,74 @@ body{
 		}
 	}
 }
+
+
+
+// Amenities 
+
+.amenities-section {
+    margin: 3rem 0;
+	margin-bottom: 4rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .amenities-header {
+        h1 {
+            font-size: 4rem;
+            color: #EC1C24;
+            font-family: vorkurs;
+        }
+    }
+
+    .amenities-list {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        // padding: 0 20px;
+        margin-top: 2rem;
+
+        .amenity {
+            background-color: #fff;
+            color: #EC1C24;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.3rem;
+			font-family: vorkurs;
+			align-items: center;
+			justify-content: center;
+            // font-weight: bold;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                
+				background-color: #EC1C24;
+            	color: #fff;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	.amenities-section{
+		margin: 2rem 0;
+		.amenities-header h1{
+			font-size: 2rem;
+			margin: 0.5rem 0;
+		}
+		.amenities-list{
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0;
+			.amenity{
+				font-size: 0.7rem;
+				padding: 0.7rem;
+			}
+		}
+	}
+}
+
