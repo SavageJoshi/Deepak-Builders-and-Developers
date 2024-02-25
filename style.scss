@@ -1149,7 +1149,7 @@ body{
   
   .project-wrapper {
 	display: flex;
-	align-items: stretch;
+	// align-items: stretch;
 	height: 100%;
   }
   
@@ -1186,7 +1186,7 @@ body{
   
   .project-title {
 	font-family: $font--primary;
-	font-size: 3em;
+	font-size: clamp(1rem, 4vw, 3rem);
 	font-weight: 600;
 	text-transform: uppercase;
 	position: absolute;
@@ -1204,8 +1204,24 @@ body{
 	opacity: 1;
   }
 
+@media only screen and (max-width: 768px) {
+	.projects{
+		height: 40vh;
+	}
+	.project-card{
+		flex: 0 0 calc(100% / 2);
+	}
+  }
 
-  	//project-button
+
+
+
+
+
+
+
+
+//project-button
 	  .content {
 		margin: 5em 0;
 		display: flex;
@@ -1317,7 +1333,7 @@ body{
 	text-transform: uppercase;
 	width: 80%;
 	z-index: 1;
-	font-size: 28px;
+	font-size: clamp(1rem, 4vw, 3rem);
 	color: #e4e4e4;
 	// margin-top: 2em;
 	display: flex;
@@ -1383,7 +1399,7 @@ body{
 }
 
 .contact-details{
-	width: 30%;
+	width: 40%;
 	font-family: vorkurs;
 	align-items: start;
 	text-align: left;
@@ -1393,7 +1409,7 @@ body{
 	color: #e4e4e4;
 }
 .contact-row{
-	font-size: larger;
+	font-size: 22px;
 	width: 100%;
 	height: 30%;
 	display: flex;
@@ -1406,6 +1422,39 @@ body{
 	height: 5vh;
 }
 
+@media only screen and (max-width: 768px) {
+	.headltitle{
+		width: 90%;
+	}
+	.footer-separator{
+		width: 90%;
+		flex-direction: column	;
+	}
+	.email-footer{
+		flex-direction: column;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+	.mail-details{
+		width: 100%;
+	}
+
+	.contact-details{
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		// text-align: center;
+		gap: 2rem;
+	}
+	.contact-row{
+		align-items: center;
+		justify-content: center;
+	}
+	.address-line-footer{
+		flex-direction: column;
+		text-align: center;
+	}
+}
 
 
 
@@ -1818,6 +1867,107 @@ body{
 				padding: 0.7rem;
 			}
 		}
+	}
+}
+
+
+
+
+// Specific Project Ends
+
+
+
+
+
+
+
+//About Us Page Starts
+
+
+
+// About us hero
+.aboutHero{
+	overflow: hidden;
+}
+.aboutHero-image{
+	display: flex;
+	// align-items: center;
+	justify-content: center;
+	height: 100vh;
+	// width: 100%;
+}
+
+
+// Our History
+
+.ourHistory{
+	background-color: #EC1C24;
+	color: #e4e4e4;
+	width: 100%;
+	// height: fit-content;
+	overflow: hidden;
+	display: flex;
+}
+.history-container{
+	display: flex;
+}
+
+.history-left{
+	width: 30%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	align-items: center;
+	overflow: hidden;
+
+	h1{
+		font-size: 48px;
+		font-family: MullerNarrow;
+		text-transform: uppercase;
+	}
+	.history-left-line {
+		// flex: 1;
+		width: 0.4rem;
+		border-radius: 10px;
+		background-color: #e4e4e4;
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		transform-origin: top;
+		transition: height 0.5s ease;
+    }
+}
+
+
+
+.history-right{
+	// height: min-content;
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin-top: 2rem;
+}
+.history-text{
+	margin-bottom: 3rem;
+	h1{
+		font-size: 128px;
+		font-family: vorkurs;
+		margin: 0;
+
+		transform: translateX(4rem);
+		opacity: 0;
+	}
+	p{
+		font-family: MullerNarrow;
+		font-size: 36px;
+		text-transform: uppercase;
+
+		transform: translateY(2rem);
+		opacity: 0 ;
+		line-height: 1;
 	}
 }
 
