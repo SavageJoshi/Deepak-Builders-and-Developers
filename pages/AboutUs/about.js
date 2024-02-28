@@ -82,3 +82,84 @@ gsap.to(".history-left-line", {
         scrub: true,
     },
 });
+
+
+
+
+// Logo Ticker Starts
+
+jQuery(document).ready(function($){
+    $('.ticker-row').slick({
+        slidesToShow: 6,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed:3000,
+        cssEase: 'linear',
+        pauseOnHover: true,
+        // rtl: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4,
+            }
+        }]
+    })
+})
+jQuery(document).ready(function($){
+    $('.ticker-row-2').slick({
+        slidesToShow: 6,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed:3000,
+        cssEase: 'linear',
+        pauseOnHover: true,
+        rtl: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4,
+            }
+        }]
+    })
+})
+
+
+
+
+
+//accordion Box
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const accordionBoxes = document.querySelectorAll(".accordion-box");
+  
+//     accordionBoxes.forEach((box) => {
+//       const text = box.querySelector(".accordion-text");
+//       const toggleBtn = box.querySelector(".toggle-btn");
+  
+//       toggleBtn.addEventListener("click", function () {
+//         text.classList.toggle("open");
+//         toggleBtn.style.transform = text.classList.contains("open") ? "rotate(45deg)" : "rotate(0deg)";
+//       });
+//     });
+//   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const accordionBoxes = document.querySelectorAll(".accordion-box");
+  
+    accordionBoxes.forEach((box) => {
+        const text = box.querySelector(".accordion-text");
+        const toggleBtn = box.querySelector(".toggle-btn");
+  
+        toggleBtn.addEventListener("click", function () {
+            text.classList.toggle("open");
+            toggleBtn.style.transform = text.classList.contains("open") ? "rotate(45deg)" : "rotate(0deg)";
+            
+            // Toggle the -webkit-line-clamp property
+            text.style.webkitLineClamp = text.classList.contains("open") ? "unset" : "5"; // Set to 'unset' to show all lines
+            box.style.minHeight = text.classList.contains("open") ? "auto" : "20rem";
+        });
+    });
+});
+  

@@ -1888,6 +1888,7 @@ body{
 // About us hero
 .aboutHero{
 	overflow: hidden;
+	position: relative;
 }
 .aboutHero-image{
 	display: flex;
@@ -1970,4 +1971,128 @@ body{
 		line-height: 1;
 	}
 }
+
+
+// Logo Ticker
+.section-brandTicker {
+	background-color: #EC1C24;
+	// position: relative;
+	padding: 3rem 0;
+  }
+
+  .ticker-title{
+	display: flex;
+	justify-content: center;
+	color: #e4e4e4;
+	h1{
+		font-size: 4rem;
+		font-family: vorkurs;
+		text-transform: uppercase;
+	}
+  }
+  
+  .ticker-container {
+	// background-color: #EC1C24;
+	// overflow: hidden;
+	display: flex;
+	flex-direction: column;
+  }
+  
+
+  
+  .ticker-logo {
+	// display: block;
+	// margin: 0 20px;
+	width: 200px;
+	// height: 200px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	img {
+	  max-width: 100%;
+	  height: 100%;
+	  object-fit: contain;
+	}
+  }
+  
+
+
+//   Accordion goals 
+
+.accordion-goals{
+	background-color: #EC1C24;
+	display: flex;
+	justify-content: center;
+	height: fit-content;
+}
+
+.accordions{
+	width: 80%;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	// gap: 4rem;
+}
+
+.accordion-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: #e4e4e4;
+	margin: 2rem;
+	min-height: 20rem;
+	transition: all 1s ease;
+
+	h1{
+		margin: 0;
+		font-family: vorkurs;
+		color: #EC1C24;
+		font-size: clamp(4rem, 4vw, 5rem);
+	}
+	.accordion-text {
+		font-size: clamp(0.5rem, 4vw, 1rem);
+		font-family: MullerNarrow;
+		text-transform: uppercase;
+		overflow: hidden;
+		position: relative;
+		display: -webkit-box;
+		-webkit-line-clamp: 5; // Number of lines to show
+		-webkit-box-orient: vertical;
+		transition: all 1s ease;
+		// max-height: 500px;
+	  }
+
+	  .toggle-btn-container{
+		height: auto;
+		display: flex;
+		justify-content: end;
+		align-items: end;
+	  }
+	
+	  .toggle-btn {
+		
+		margin: 10px; 
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		background-color: #EC1C24;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		font-size: 1.5rem;
+		transform-origin: center;
+		transition: all 0.5s ease;
+		
+		&:hover {
+		  background-color: #ff474e;	
+		  color: #e4e4e4;
+		}
+	  }
+}
+
 
