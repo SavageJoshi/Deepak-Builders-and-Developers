@@ -1889,13 +1889,26 @@ body{
 .aboutHero{
 	overflow: hidden;
 	position: relative;
+	display: flex;
+	justify-content: center;
 }
 .aboutHero-image{
 	display: flex;
 	// align-items: center;
 	justify-content: center;
 	height: 100vh;
-	// width: 100%;
+	width: 80%;
+	padding: 1rem;
+	img{
+		object-fit: cover;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.aboutHero-image{
+		width: 100%;
+		height: 40vh;
+	}
 }
 
 
@@ -1915,7 +1928,7 @@ body{
 
 .history-left{
 	width: 30%;
-	height: 100%;
+	// height: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 1rem;
@@ -1928,7 +1941,6 @@ body{
 		text-transform: uppercase;
 	}
 	.history-left-line {
-		// flex: 1;
 		width: 0.4rem;
 		border-radius: 10px;
 		background-color: #e4e4e4;
@@ -1963,7 +1975,7 @@ body{
 	}
 	p{
 		font-family: MullerNarrow;
-		font-size: 36px;
+		font-size: 32px;
 		text-transform: uppercase;
 
 		transform: translateY(2rem);
@@ -1971,6 +1983,50 @@ body{
 		line-height: 1;
 	}
 }
+
+
+@media only screen and (max-width: 768px){
+	.history-container{
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.history-left{
+		width: 100%;
+		height: fit-content;
+		h1{
+			margin: 0 1rem;
+		}
+	}
+	.history-left-line{
+		visibility: hidden;
+	}
+	.history-right{
+		margin-top: 0;
+		width: 90%;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+	}
+	.history-text{
+		margin-bottom: 1rem;
+		h1{
+			font-size: 64px;
+		}
+		p{
+			font-size: 16px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
 
 
 // Logo Ticker
@@ -1985,7 +2041,7 @@ body{
 	justify-content: center;
 	color: #e4e4e4;
 	h1{
-		font-size: 4rem;
+		font-size: clamp(1.5rem, 4vw, 4rem);
 		font-family: vorkurs;
 		text-transform: uppercase;
 	}
@@ -1997,8 +2053,6 @@ body{
 	display: flex;
 	flex-direction: column;
   }
-  
-
   
   .ticker-logo {
 	// display: block;
@@ -2016,6 +2070,23 @@ body{
 	  object-fit: contain;
 	}
   }
+
+
+@media only screen and (max-width: 768px) {
+	.section-brandTicker{
+		padding-top: 1rem;
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
   
 
 
@@ -2026,10 +2097,11 @@ body{
 	display: flex;
 	justify-content: center;
 	height: fit-content;
+	width: 100%;
 }
 
 .accordions{
-	width: 80%;
+	width: 90%;
 	display: flex;
 	align-items: start;
 	justify-content: center;
@@ -2041,19 +2113,20 @@ body{
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 1rem;
+	padding-left: 1.7rem;
 	background-color: #e4e4e4;
 	margin: 2rem;
 	min-height: 20rem;
-	transition: all 1s ease;
+	transition: height 1s ease;
 
 	h1{
 		margin: 0;
 		font-family: vorkurs;
 		color: #EC1C24;
-		font-size: clamp(4rem, 4vw, 5rem);
+		font-size: clamp(2rem, 4vw, 5rem);
 	}
 	.accordion-text {
-		font-size: clamp(0.5rem, 4vw, 1rem);
+		font-size: clamp(0.2rem, 4vw, 1rem);
 		font-family: MullerNarrow;
 		text-transform: uppercase;
 		overflow: hidden;
@@ -2095,4 +2168,80 @@ body{
 	  }
 }
 
+@media only screen and (max-width: 768px) {
+	.accordions{
+		flex-direction: column;
+		width: 100%;
+	}
+	.accordion-box{
+		border-radius: 5px;
+		min-height: 0px;
+		height: fit-content;
+		margin: 0.5rem;
+		justify-content: flex-start;
+	}
+}
 
+
+
+
+// Proud Moments Starts
+
+.proudMoments{
+	background-color: #EC1C24;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.proudMoments-title{
+	h1{
+		font-size: 82px;
+		color: #e4e4e4;
+		text-transform: uppercase;
+		font-family: vorkurs;
+	}
+}
+
+.proudMoments-images{
+	// display: flex;
+	// flex-direction: row;
+	// flex-wrap: wrap;
+	width: 85%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 25px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	img{
+		border-radius: 10px;
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		// margin: 1.5rem;
+	}
+}
+
+.proudMoments-button{
+	width: fit-content;
+	font-family: vorkurs;
+	font-size: medium;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	border-radius: 30px;
+	border: 0;
+	color: #EC1C24;
+	background-color: #e4e4e4;
+	font-size: 16px;
+	margin: 2rem;
+	padding: 1rem 2rem;
+	transition: all 0.5s ease;
+
+	&:hover{
+		cursor: pointer;
+		background-color: #ff7c7c;
+		color: #e4e4e4;
+	}
+}

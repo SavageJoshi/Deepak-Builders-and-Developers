@@ -74,7 +74,7 @@ gsap.to(".history-left", {
 
 // Animation for the vertical line
 gsap.to(".history-left-line", {
-    height: "600px", // Set height to the container's height
+    height: "550px", // Set height to the container's height
     scrollTrigger: {
         trigger: ".history-container",
         start: "top top",
@@ -94,9 +94,9 @@ jQuery(document).ready(function($){
         arrows: false,
         autoplay: true,
         autoplaySpeed: 0,
-        speed:3000,
+        speed:1200,
         cssEase: 'linear',
-        pauseOnHover: true,
+        pauseOnHover: false,
         // rtl: false,
         responsive: [{
             breakpoint: 768,
@@ -112,7 +112,7 @@ jQuery(document).ready(function($){
         arrows: false,
         autoplay: true,
         autoplaySpeed: 0,
-        speed:3000,
+        speed:1200,
         cssEase: 'linear',
         pauseOnHover: true,
         rtl: true,
@@ -158,8 +158,55 @@ jQuery(document).ready(function($){
             
             // Toggle the -webkit-line-clamp property
             text.style.webkitLineClamp = text.classList.contains("open") ? "unset" : "5"; // Set to 'unset' to show all lines
-            box.style.minHeight = text.classList.contains("open") ? "auto" : "20rem";
+
+            if (window.innerWidth > 768){
+                box.style.minHeight = text.classList.contains("open") ? "auto" : "20rem";
+            }else{
+                box.style.minHeight = "auto";
+            }
         });
     });
 });
   
+
+
+
+// Proud Moment Start
+
+document.addEventListener("DOMContentLoaded", function () {
+    const proudMomentsImages = document.querySelector(".proudMoments-images");
+    const showMoreButton = document.querySelector(".proudMoments-button");
+
+    // Set the number of initially visible rows
+    const initialRows = 2;
+    let totalRows = Math.ceil(proudMomentsImages.children.length / 3); // Assuming each row has 3 columns
+
+    // Hide additional rows initially
+    for (let i = initialRows; i < totalRows; i++) {
+        for (let j = 0; j < 3; j++) {
+            const index = i * 3 + j;
+            if (proudMomentsImages.children[index]) {
+                proudMomentsImages.children[index].style.display = "none";
+            }
+        }
+    }
+
+    showMoreButton.addEventListener("click", function () {
+        const additionalRows = totalRows - initialRows;
+
+        // Toggle visibility of additional rows
+        for (let i = initialRows; i < totalRows; i++) {
+            for (let j = 0; j < 3; j++) {
+                const index = i * 3 + j;
+                if (proudMomentsImages.children[index]) {
+                    proudMomentsImages.children[index].style.display =
+                        proudMomentsImages.children[index].style.display === "none" ? "grid" : "none";
+                }
+            }
+        }
+
+        // Toggle button text
+        showMoreButton.textContent =
+            showMoreButton.textContent === "Show More" ? "Show Less" : "Show More";
+    });
+});

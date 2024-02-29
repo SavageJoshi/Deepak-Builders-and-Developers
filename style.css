@@ -1682,14 +1682,28 @@ body:active .projects {
 .aboutHero {
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .aboutHero-image {
   display: flex;
   justify-content: center;
   height: 100vh;
+  width: 80%;
+  padding: 1rem;
+}
+.aboutHero-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
+@media only screen and (max-width: 768px) {
+  .aboutHero-image {
+    width: 100%;
+    height: 40vh;
+  }
+}
 .ourHistory {
   background-color: #EC1C24;
   color: #e4e4e4;
@@ -1704,7 +1718,6 @@ body:active .projects {
 
 .history-left {
   width: 30%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -1748,13 +1761,47 @@ body:active .projects {
 }
 .history-text p {
   font-family: MullerNarrow;
-  font-size: 36px;
+  font-size: 32px;
   text-transform: uppercase;
   transform: translateY(2rem);
   opacity: 0;
   line-height: 1;
 }
 
+@media only screen and (max-width: 768px) {
+  .history-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .history-left {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .history-left h1 {
+    margin: 0 1rem;
+  }
+  .history-left-line {
+    visibility: hidden;
+  }
+  .history-right {
+    margin-top: 0;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .history-text {
+    margin-bottom: 1rem;
+  }
+  .history-text h1 {
+    font-size: 64px;
+  }
+  .history-text p {
+    font-size: 16px;
+  }
+}
 .section-brandTicker {
   background-color: #EC1C24;
   padding: 3rem 0;
@@ -1766,7 +1813,7 @@ body:active .projects {
   color: #e4e4e4;
 }
 .ticker-title h1 {
-  font-size: 4rem;
+  font-size: clamp(1.5rem, 4vw, 4rem);
   font-family: vorkurs;
   text-transform: uppercase;
 }
@@ -1790,16 +1837,23 @@ body:active .projects {
      object-fit: contain;
 }
 
+@media only screen and (max-width: 768px) {
+  .section-brandTicker {
+    padding-top: 1rem;
+    margin: 0;
+  }
+}
 .accordion-goals {
   background-color: #EC1C24;
   display: flex;
   justify-content: center;
   height: -moz-fit-content;
   height: fit-content;
+  width: 100%;
 }
 
 .accordions {
-  width: 80%;
+  width: 90%;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -1810,19 +1864,20 @@ body:active .projects {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  padding-left: 1.7rem;
   background-color: #e4e4e4;
   margin: 2rem;
   min-height: 20rem;
-  transition: all 1s ease;
+  transition: height 1s ease;
 }
 .accordion-box h1 {
   margin: 0;
   font-family: vorkurs;
   color: #EC1C24;
-  font-size: clamp(4rem, 4vw, 5rem);
+  font-size: clamp(2rem, 4vw, 5rem);
 }
 .accordion-box .accordion-text {
-  font-size: clamp(0.5rem, 4vw, 1rem);
+  font-size: clamp(0.2rem, 4vw, 1rem);
   font-family: MullerNarrow;
   text-transform: uppercase;
   overflow: hidden;
@@ -1855,5 +1910,72 @@ body:active .projects {
 }
 .accordion-box .toggle-btn:hover {
   background-color: #ff474e;
+  color: #e4e4e4;
+}
+
+@media only screen and (max-width: 768px) {
+  .accordions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .accordion-box {
+    border-radius: 5px;
+    min-height: 0px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0.5rem;
+    justify-content: flex-start;
+  }
+}
+.proudMoments {
+  background-color: #EC1C24;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proudMoments-title h1 {
+  font-size: 82px;
+  color: #e4e4e4;
+  text-transform: uppercase;
+  font-family: vorkurs;
+}
+
+.proudMoments-images {
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.proudMoments-images img {
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.proudMoments-button {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: vorkurs;
+  font-size: medium;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 30px;
+  border: 0;
+  color: #EC1C24;
+  background-color: #e4e4e4;
+  font-size: 16px;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  transition: all 0.5s ease;
+}
+.proudMoments-button:hover {
+  cursor: pointer;
+  background-color: #ff7c7c;
   color: #e4e4e4;
 }/*# sourceMappingURL=style.css.map */
