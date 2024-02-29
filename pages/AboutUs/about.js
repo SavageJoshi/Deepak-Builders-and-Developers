@@ -114,7 +114,7 @@ jQuery(document).ready(function($){
         autoplaySpeed: 0,
         speed:1200,
         cssEase: 'linear',
-        pauseOnHover: true,
+        pauseOnHover: false,
         rtl: true,
         responsive: [{
             breakpoint: 768,
@@ -130,20 +130,6 @@ jQuery(document).ready(function($){
 
 
 //accordion Box
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const accordionBoxes = document.querySelectorAll(".accordion-box");
-  
-//     accordionBoxes.forEach((box) => {
-//       const text = box.querySelector(".accordion-text");
-//       const toggleBtn = box.querySelector(".toggle-btn");
-  
-//       toggleBtn.addEventListener("click", function () {
-//         text.classList.toggle("open");
-//         toggleBtn.style.transform = text.classList.contains("open") ? "rotate(45deg)" : "rotate(0deg)";
-//       });
-//     });
-//   });
 
   document.addEventListener("DOMContentLoaded", function () {
     const accordionBoxes = document.querySelectorAll(".accordion-box");

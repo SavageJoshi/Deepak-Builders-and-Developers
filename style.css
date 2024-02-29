@@ -1935,7 +1935,7 @@ body:active .projects {
 }
 
 .proudMoments-title h1 {
-  font-size: 82px;
+  font-size: clamp(24px, 4vw, 82px);
   color: #e4e4e4;
   text-transform: uppercase;
   font-family: vorkurs;
@@ -1956,6 +1956,40 @@ body:active .projects {
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.proudMoments-images .image-container {
+  position: relative;
+  overflow: hidden;
+}
+.proudMoments-images .image-container img {
+  border-radius: 10px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.proudMoments-images .image-container .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.proudMoments-images .image-container .image-overlay .image-description {
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  max-width: 80%;
+}
+.proudMoments-images .image-container:hover .image-overlay {
+  opacity: 1;
 }
 
 .proudMoments-button {
@@ -1978,4 +2012,19 @@ body:active .projects {
   cursor: pointer;
   background-color: #ff7c7c;
   color: #e4e4e4;
+}
+
+@media only screen and (max-width: 768px) {
+  .proudMoments-images {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  .proudMoments-images img {
+    border-radius: 5px;
+    height: auto;
+  }
+  .proudMoments-images .image-overlay img {
+    height: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
