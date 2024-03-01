@@ -196,3 +196,53 @@ document.addEventListener("DOMContentLoaded", function () {
             showMoreButton.textContent === "Show More" ? "Show Less" : "Show More";
     });
 });
+
+
+
+// members section
+
+gsap.to(".members-title",{
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".members-title",
+      start: "top 80%", // adjust as needed
+      end: "top 50%", // adjust as needed
+      scrub: 1,
+    }
+  })
+
+gsap.to(".member-card",{
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".member-card",
+      start: "top 80%", // adjust as needed
+      end: "top 50%", // adjust as needed
+      scrub: 1,
+    }
+  })
+
+  //services
+
+  gsap.to(".services-title h1",{
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".services-title",
+      start: "top 80%", // adjust as needed
+      end: "top 60%", // adjust as needed
+      scrub: 1,
+    }
+  })
+
+gsap.to(".services-container",{
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".services-container",
+      start: "top 80%", // adjust as needed
+      end: "top 60%", // adjust as needed
+      scrub: 1,
+    }
+  })

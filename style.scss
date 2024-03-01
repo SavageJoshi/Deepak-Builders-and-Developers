@@ -2235,7 +2235,7 @@ body{
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 0, 0, 0.7); // Adjust transparency here
+			background-color: rgba(0, 0, 0, 0.5); // Adjust transparency here
 			border-radius: 10px;
 			display: flex;
 			align-items: center;
@@ -2310,11 +2310,15 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 4rem 0;
+
 }
 
 .members-title{
 	display: flex;
 	justify-content: center;
+	transform: translateY(25%);
+	opacity: 0;
 	h1{
 		font-size: clamp(48px, 4vw, 82px);
 		color: #e4e4e4;
@@ -2337,7 +2341,9 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 0.5rem 5rem;
+	margin: 0.5rem 6rem;
+	transform: translateY(25%);
+	opacity: 0;
 
 	img{
 		width: 150px;
@@ -2347,18 +2353,37 @@ body{
 	}
 	h1{
 		font-family: MullerNarrow;
-		font-size: clamp(12px, 4vw, 36px);
+		font-size: clamp(12px, 4vw, 26px);
 		margin-top: 0.5rem;
 		margin-bottom: 0;
 		color: #e4e4e4;
+		cursor: default;
 	}
 	h3{
+		cursor: default;
 		font-family: MullerNarrow;
 		font-weight: lighter;
-		font-size: clamp(16px, 4vw, 48px);
-		margin-top: 0;
+		font-size: clamp(16px, 4vw, 32px);
+		margin: 0;
 		text-transform: uppercase;
 		color: #e4e4e4;
+		transition: all 1s ease;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0; // Initially, the width is zero
+			height: 1.5px;
+			margin: 0;
+			background-color: #e4e4e4;
+			transition: width 0.5s ease; 
+		}
+	
+		&:hover::before {
+			width: 100%; // Full width on hover
+		}
 	}
 }
 
@@ -2370,4 +2395,65 @@ body{
 			height: 100px;
 		}
 	}
+}
+
+// members end
+
+// Services Start
+
+.section-services{
+	padding: 0;
+	margin: 0 0;
+	width: 100%;
+	height: max-content;
+	background-color: #EC1C24;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #e4e4e4;
+	text-align: center;
+
+	.services-title{
+		h1{
+			font-family: vorkurs;
+			font-size: clamp(48px, 4vw, 82px);
+			text-transform: uppercase;
+			cursor: default;
+			margin-bottom: 0;
+			transform: translateY(25%);
+			opacity: 0;
+		}
+	}
+	.services-container{
+		transform: translateY(25%);
+		opacity: 0;
+		padding: 1rem;
+		margin: 4rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 4rem;
+
+		h3{
+			font-family: MullerNarrow;
+			font-weight: lighter;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media only screen and (max-width:768px){
+	.section-services{
+
+		.services-container{
+			gap: 1.5rem;
+		}
+	}
+}
+
+.footer-line{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #e4e4e4;
 }
