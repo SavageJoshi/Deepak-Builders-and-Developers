@@ -2027,4 +2027,69 @@ body:active .projects {
   .proudMoments-images .image-overlay img {
     height: auto;
   }
+}
+.section-members {
+  width: 100%;
+  background-color: #EC1C24;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.members-title {
+  display: flex;
+  justify-content: center;
+}
+.members-title h1 {
+  font-size: clamp(48px, 4vw, 82px);
+  color: #e4e4e4;
+  font-family: vorkurs;
+  text-transform: uppercase;
+}
+
+.members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 5rem;
+}
+.member-card img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.member-card h1 {
+  font-family: MullerNarrow;
+  font-size: clamp(12px, 4vw, 36px);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  color: #e4e4e4;
+}
+.member-card h3 {
+  font-family: MullerNarrow;
+  font-weight: lighter;
+  font-size: clamp(16px, 4vw, 48px);
+  margin-top: 0;
+  text-transform: uppercase;
+  color: #e4e4e4;
+}
+
+@media only screen and (max-width: 768px) {
+  .member-card {
+    margin: 1rem 2rem;
+  }
+  .member-card img {
+    width: 100px;
+    height: 100px;
+  }
 }/*# sourceMappingURL=style.css.map */
