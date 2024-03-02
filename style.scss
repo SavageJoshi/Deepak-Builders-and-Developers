@@ -1473,9 +1473,11 @@ body{
   }
   
   .specificProject-heroImage {
-	padding-top: 20vh;
+	padding-top: 15vh;
 	width: 100%;
 	height: 100vh;
+
+	
   
 	img {
 	  width: 100%;
@@ -1500,6 +1502,10 @@ body{
 	flex-direction: column;
 	justify-content: end;
 	gap: 1rem;
+
+	transform: scaleY(0%);
+	transform-origin: top;
+	transition: all 1s ease;
 
 	h3 {
 	  margin: 0;
@@ -1549,21 +1555,54 @@ body{
 	h1{
 		font-family: vorkurs;
 		color: #EC1C24;
+		transform: translateY(50%);
+		opacity: 0;
 	}
 	p{
+		transform: translateY(50%);
+		opacity: 0;
 		font-family: MullerNarrow;
 	}
 }
 .descriptionBox-red{
+	width: 100%;
 	background-color: #EC1C24;
 	color: #e4e4e4;
 	display: flex;
-	justify-content: center;
-	padding: 3rem;
-	p{
-		width: 50%;
-		font-family: MullerNarrow;
+	gap: 3rem;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+	padding: 5rem;
+	flex-wrap: wrap;
+
+	.descriptionBox-red-infoBox{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+		
+		h3{
+			text-align: center;
+			font-family: vorkurs;
+			font-size: 30px;
+			margin: 0;
+			margin-bottom: 0.5rem;
+			text-transform: uppercase;
+			transform: translateY(50%);
+			opacity: 0;
+		}
+		p{
+			font-size: 28px;
+			text-align: center;
+			margin: 0;
+			transform: translateY(50%);
+			opacity: 0;
+			width: 50%;
+			font-family: MullerNarrow;
+		}
 	}
+
 }
 
 @media only screen and (max-width: 768px){
@@ -1578,10 +1617,19 @@ body{
 		}
 	}
 	.descriptionBox-red{
-		padding: 1.5rem;
+		padding: 0.5rem;
+		gap: 1.5rem;
 		p{
 			width: 85%;
 
+		}
+		.descriptionBox-red-infoBox{
+			h3{
+				font-size: 24px;
+			}
+			p{
+				font-size: 16px;
+			}
 		}
 	}
 }
@@ -1601,6 +1649,8 @@ body{
 	width: 45%;
 	height: auto;
 	overflow: hidden;
+	transform: translateX(-25%);
+	opacity: 0;
 	img{
 		width: 100%;
 		height: 100%;
@@ -1614,25 +1664,33 @@ body{
 	flex-direction: column;
 	align-items: end;
 	text-align: right;
+	justify-content: space-between;
 
 	img{
-		width: 80%;
-		height: 40%;
+		width: 100%;
+		height: 50%;
 		object-fit: cover;
+		transform: translateX(25%);
+		opacity: 0;
+		margin: 1rem 0;
 	}
-
+	
 }
 
 .imageDescription-right-text{
 	margin-right: 3rem;
 	padding: 1rem 0;
 	h3{
+		transform: translateX(25%);
+		opacity: 0;
 		margin: 0;
 		font-size: 40px;
 		color: #EC1C24;
 		font-family: vorkurs;
 	}
 	p{
+		transform: translateX(25%);
+		opacity: 0;
 		font-family: MullerNarrow;
 		font-size: 1rem;
 	}
@@ -1842,6 +1900,9 @@ body{
 			justify-content: center;
             // font-weight: bold;
             transition: background-color 0.3s ease;
+
+			transform: translateY(-25%);
+			opacity: 0;
 
             &:hover {
                 

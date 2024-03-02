@@ -28,6 +28,116 @@ const app = (() => {
   
     init();
   })();
+  // navbar ends
+
+
+
+
+
+
+// hero section and below
+gsap.to(".project-textCard", {
+  scaleY: "100%"
+})
+
+gsap.to(".descriptionBox-white h1", {
+  translateY: 0,
+  opacity: 1,
+  scrollTrigger:{
+    trigger: ".descriptionBox-white h1",
+    start: "top 90%",
+    end: "top 70%",
+    scrub: 0,
+  }
+})
+gsap.to(".descriptionBox-white p", {
+  translateY: 0,
+  opacity: 1,
+  scrollTrigger:{
+    trigger: ".descriptionBox-white p",
+    start: "top 90%",
+    end: "top 70%",
+    scrub: 0,
+  }
+})
+gsap.to(".descriptionBox-red h3", {
+  translateY: 0,
+  opacity: 1,
+  scrollTrigger:{
+    trigger: ".descriptionBox-red-infoBox h3",
+    start: "top 90%",
+    end: "top 50%",
+    scrub: 0,
+  }
+})
+gsap.to(".descriptionBox-red p", {
+  translateY: 0,
+  opacity: 1,
+  scrollTrigger:{
+    trigger: ".descriptionBox-red-infoBox p",
+    start: "top 90%",
+    end: "top 70%",
+    scrub: 0,
+  }
+})
+
+// image description
+
+gsap.to(".imageDescription-left", {
+  translateX: 0,
+  opacity: 1,
+  scrollTrigger:{
+    trigger: ".imageDescription-left",
+    start: "top 90%",
+    end: "top 20%",
+    scrub: 0,
+  }
+})
+gsap.to(".imageDescription-right img", {
+  translateX: 0,
+  opacity: 1,
+  scrollTrigger:{
+    trigger: ".imageDescription-right img",
+    start: "top 90%",
+    end: "top 20%",
+    scrub: 0,
+  }
+})
+// gsap.to(".imageDescription-right-text h3", {
+//   translateX: 0,
+//   opacity: 1,
+//   scrollTrigger:{
+//     trigger: ".imageDescription-right-text h3",
+//     start: "top 90%",
+//     end: "top 60%",
+//     scrub: 0,
+//   }
+// })
+// gsap.to(".imageDescription-right-text p", {
+//   translateX: 0,
+//   opacity: 1,
+//   scrollTrigger:{
+//     trigger: ".imageDescription-right-text p",
+//     start: "top 90%",
+//     end: "top 60%",
+//     scrub: 0,
+//   }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -69,6 +179,42 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for scroll animation
     // window.addEventListener("scroll", handleScrollAnimation);
 });
+
+
+
+// Amenities
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const amenityContainers = document.querySelectorAll(".amenities-list");
+
+  amenityContainers.forEach((container) => {
+      const amenities = container.querySelectorAll(".amenity");
+
+      gsap.to(amenities, {
+          y: 0,
+          opacity: 1,
+          scrollTrigger: {
+              trigger: container,
+              start: "top 70%",
+              end: "top 50%",
+              scrub: 1,
+          },
+          stagger: 0.2, // Adjust the stagger value as needed
+      });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 // project Section 
@@ -129,19 +275,6 @@ projectslider.addEventListener('mousemove', (e) => {
   const walk = x - startX;
   projectslider.scrollLeft = scrollLeft - walk;
 });
-
-// gsap.to(".projects-section-wrapper", {
-//   scrollTrigger: {
-//     trigger: ".projects-section-wrapper",
-//     start: "top top", // Adjust the start position
-//     end: "bottom", // Adjust the end position
-//     pin: true,
-//     pinSpacing: true, // Set to true if you want to maintain the spacing
-//     // markers: true, 
-//   },
-// });
-
-
 
 
 
