@@ -37,7 +37,13 @@ const app = (() => {
 
 // hero section and below
 gsap.to(".project-textCard", {
-  scaleY: "100%"
+  scaleY: "100%",
+  delay: 1.2
+})
+
+gsap.to(".specificProject-heroImage", {
+  x: 0,
+  // ease: "power4.out"
 })
 
 gsap.to(".descriptionBox-white h1", {

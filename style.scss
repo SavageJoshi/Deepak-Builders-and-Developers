@@ -50,13 +50,16 @@ body{
 
 .nav-container{
 	display: flex;
+	width: 100%;
 	max-width: 100%;
-	width: 100vw;
+	height: fit-content;
+	// width: 100vw;
 	flex-direction: row;
 	justify-content: space-between;
 	position: fixed;
 	z-index: 1001;
 	align-items: center;
+	// background-color: #0000004f;
 }
 
 .nav-icon{
@@ -1473,6 +1476,9 @@ body{
   }
   
   .specificProject-heroImage {
+	transform: translateX(-100%);
+	// transform-origin: left;
+	transition: all 1s ease-out;
 	padding-top: 15vh;
 	width: 100%;
 	height: 100vh;
@@ -2517,4 +2523,137 @@ body{
 	margin: 0;
 	padding: 0;
 	border: 1px solid #e4e4e4;
+}
+
+
+// specific Project ends
+
+
+
+
+
+
+
+// Projects Page starts
+
+.container-ProjectsPage{
+	height: 100vh;
+	overflow: hidden;
+}
+
+// Location button
+
+.location-dropdown {
+	font-family: MullerNarrow;
+	width: 20%;
+	z-index: 0;
+	position: absolute;
+	margin-left: 10rem;
+	margin-top: 3rem;
+	letter-spacing: 5%;
+	z-index: 20;
+}
+
+.location-dropdown button {
+	font-family: MullerNarrow;
+	background-color: #EC1C24 !important;
+	height: fit-content;
+	width: fit-content;
+	color: #e4e4e4 !important;
+	padding: 1.1rem;
+	border: none;
+	cursor: pointer;
+	font-size: 2rem;
+	text-transform: uppercase;
+  }
+  
+  .location-dropdown ul {
+	position: absolute;
+	top: 100%; /* Position the menu below the button */
+	left: 0;
+	width: fit-content;
+	background-color: #EC1C24;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: none; /* Hide the menu initially */
+  }
+  
+  .location-dropdown li {
+	padding: 0.5rem 1rem;
+	width: 100%;
+  }
+  
+  .location-dropdown:hover ul {
+	display: block; /* Show the menu on hover */
+  }
+  
+  .location-dropdown li {
+	color: #e4e4e4;
+	text-decoration: none;
+	transition: all 0.2s;
+
+  }
+  
+  .location-dropdown li:hover {
+	background-color: #f1f1f1;
+	color: #EC1C24;
+	cursor: pointer;
+  }
+  
+  .location-dropdown button[selected] { /* Styling for selected location */
+	background-color: #fff;
+	color: #EC1C24;
+  }
+
+
+//   Project Cards 
+
+.projectscard-container{
+	position: absolute;
+	height: 84vh;
+	width: 100%;
+	margin-top: 16vh;
+	display: flex;
+}
+
+.projectCard {
+    height: 100%;
+    width: 20%;
+    position: relative;
+
+    .projectCard-bgImage {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+		opacity: 0;
+		transition: all 0.3s ease;
+		
+        img {
+			position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+			
+
+        }
+		&:hover{
+			opacity: 1;
+			transform: scale(100%);
+		}
+    }
+	.projectCard-bgImage:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #000000;
+		opacity: 0.5;
+		transition: opacity 0.3s;
+		z-index: 1;
+	}
 }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+<body>
+
+
+<div class="container-ProjectsPage">
+
+    
+<!-- Navbar -->
+    <div class="nav-container">
+        <div class="navbar">
+
+        <div class="logo">
+            <a href="/">
+            <!-- <img src="../../assets/img/sampleLogo.png" alt="logo" style="height: 200px; width: 200px;"/> -->
+            <img src="/" alt="logo" />
+            </a>
+        </div>
+        
+        </div>
+        <div class="nav-icon">
+
+        <div class="menu-icon">
+            <span class="menu-icon__line menu-icon__line-left"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+                
+        <div class="nav">
+            <div class="nav__content">
+                <ul class="nav__list">
+                <li class="nav__list-item"><a href="/">Home</a></li>
+                <li class="nav__list-item"><a href="./pages/AboutUs/aboutUs.html">About</a></li>
+                <li class="nav__list-item"><a href="/pages/ProjectsPage/ProjectsPage.html">Projects</a></li>
+                <li class="nav__list-item">Contact</li>
+                <li class="nav__list-item"><a href="/pages/specificProject.html">SpecificProject</a></li>
+                </ul>
+            </div>
+        </div> 
+        </div>
+    </div>
+<!-- Navbar ends -->
+
+
+<!-- Location Button -->
+
+    <div class="location-dropdown">
+        <button>Location</button>
+        <ul>
+        <li>All</li>
+        <li>Govind Nagar</li>
+        <li>College Road</li>
+        <li>Pathardi Phata</li>
+        <li>Indira Nagar</li>
+        <li>Nashik Road</li>
+        <li>Mumbai Naka</li>
+        <li>Bodle Nagar</li>
+        </ul>
+    </div>
+
+  <!-- Location Button Ends -->
+
+  <!-- Projects section -->
+
+
+
+  <!-- Project-cards Start -->
+
+  <section class="section-projectCards">
+
+    <div class="projectscard-container">
+
+        <div class="projectCard">
+
+            <div class="projectCard-bgImage">
+                <img src="../../assets/img/Sunflower_City_Day_D10_.jpg" alt="">
+            </div>
+
+            <div class="projectCard-mainContent">
+
+                
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script> 
+<script src="https://unpkg.com/gsap@3.9.1/dist/TextPlugin.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://kit.fontawesome.com/f174b8f6e7.js" crossorigin="anonymous"></script>
+
+
+<script>
+  let lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  // console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+</script>
+
+
+<script src="./projectsPage.js"></script>
+</body>
+</html>
