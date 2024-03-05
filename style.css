@@ -2292,17 +2292,24 @@ body:active .projects {
 }
 
 .projectscard-container {
-  position: absolute;
+  position: relative;
   height: 84vh;
-  width: 100%;
   margin-top: 16vh;
   display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .projectCard {
   height: 100%;
-  width: 20%;
+  width: 20% !important;
   position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
 }
 .projectCard .projectCard-bgImage {
   width: 100%;
@@ -2319,10 +2326,8 @@ body:active .projects {
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.5s ease;
-}
-.projectCard .projectCard-bgImage:hover {
-  opacity: 1;
-  transform: scale(100%);
+  transform: scale(110%);
+  transform-origin: center;
 }
 .projectCard .projectCard-bgImage:before {
   content: "";
@@ -2335,4 +2340,121 @@ body:active .projects {
   opacity: 0.5;
   transition: opacity 0.3s;
   z-index: 1;
+}
+.projectCard .projectCard-mainContent {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left !important;
+  flex-wrap: wrap;
+}
+.projectCard .projectCard-mainContent img {
+  width: 100%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(110%);
+  transform-origin: center;
+  transition: all 0.5s ease;
+}
+.projectCard .projectCard-mainContent h1 {
+  font-family: vorkurs;
+  font-size: clamp(2rem, 4vw, 0.5rem);
+  margin-bottom: 0;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.projectCard .projectCard-mainContent h3 {
+  font-family: MullerNarrow;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-top: 0;
+  transition: all 0.3s ease;
+}
+.projectCard .projectCard-mainContent-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-align: left !important;
+}
+.projectCard .projectCard-mainContent-img {
+  width: 70%;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+  justify-content: center;
+}
+.projectCard .projectCard-mainContent-img .number-overlay {
+  position: absolute;
+  z-index: 5;
+  color: #e4e4e4;
+  margin-bottom: 2rem;
+}
+.projectCard .projectCard-mainContent-img .number-overlay .overlay-text {
+  transform: translateY(100%);
+  font-size: 0.8rem;
+  margin: 0;
+  letter-spacing: 5px;
+  overflow: hidden;
+}
+.projectCard .projectCard-mainContent-img .number-overlay .overlay-text p {
+  transition: all 0.5s;
+  margin: 0;
+  transform: translateY(-100%);
+}
+.projectCard .projectCard-mainContent-img .number-overlay .overlay-number {
+  transition: all 0.5 ease;
+  overflow: hidden;
+  display: flex;
+}
+.projectCard .projectCard-mainContent-img .number-overlay .overlay-number h1 {
+  font-family: bison;
+  font-size: 128px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.projectCard .projectCard-mainContent-img:before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 50vh;
+  background: #EC1C24;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.projectCard:hover .projectCard-bgImage {
+  opacity: 1;
+}
+.projectCard:hover .projectCard-bgImage img {
+  transform: scale(100%);
+}
+.projectCard:hover .projectCard-mainContent-img .number-overlay .overlay-text p {
+  transform: translateY(0);
+}
+.projectCard:hover .projectCard-mainContent-img .number-overlay .overlay-number h1 {
+  opacity: 1;
+}
+.projectCard:hover .projectCard-mainContent-img:before {
+  opacity: 1;
+}
+.projectCard:hover .projectCard-mainContent img {
+  transform: scale(100%);
+}
+.projectCard:hover .projectCard-mainContent h1 {
+  color: #e4e4e4;
+  display: flex;
+  flex-wrap: wrap;
+}
+.projectCard:hover .projectCard-mainContent h3 {
+  color: #e4e4e4;
 }/*# sourceMappingURL=style.css.map */
