@@ -2311,6 +2311,14 @@ body:active .projects {
   align-items: center;
   cursor: grab;
 }
+.projectCard.show-card {
+  display: flex;
+  opacity: 1;
+}
+.projectCard:not(.show-card) {
+  display: none;
+  opacity: 0;
+}
 .projectCard .projectCard-bgImage {
   width: 100%;
   height: 100%;

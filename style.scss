@@ -2628,6 +2628,16 @@ body{
 	justify-content: center;
 	align-items: center;
 	cursor: grab;
+
+	&.show-card {
+		display: flex;
+		opacity: 1;
+	  }
+	
+	  &:not(.show-card) {
+		display: none;
+		opacity: 0;
+	  }
 	
 
     .projectCard-bgImage {

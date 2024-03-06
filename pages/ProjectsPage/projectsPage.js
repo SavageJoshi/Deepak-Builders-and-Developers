@@ -37,17 +37,15 @@ const app = (() => {
 
 
 
+
+
 //   Location Button
 
 const dropdown = document.querySelector('.location-dropdown');
 const button = dropdown.querySelector('button');
+let projectCards;
 
-dropdown.addEventListener('click', (event) => {
-  if (event.target.tagName === 'LI') {
-    button.textContent = event.target.textContent;
-    button.setAttribute('selected', ''); // Add the attribute
-  }
-});
+
 
 
 
@@ -104,21 +102,48 @@ projectSlider.addEventListener('mousemove', (e) => {
 // Function to roll numbers using GSAP
 const rollingNumbers = (target, value) => {
   gsap.to(target, {
-    duration: 0.8,
+    duration: 0.6,
     innerHTML: value.toString(),
     roundProps: "innerHTML",
   });
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const projectCard = document.querySelector(".projectCard");
-  const card2 = document.querySelector(".card2");
-  const overlayNumber = document.querySelector(".overlay-number");
+// Function to filter project cards based on location
+const filterProjectCards = (selectedLocation) => {
 
-  projectCard.addEventListener("mouseenter", function () {
+
+  projectCards.forEach((card) => {
+    card.classList.remove('show-card');
+  });
+
+  projectCards.forEach((card) => {
+    const cardLocation = card.getAttribute('data-location');
+    if (selectedLocation === 'All' || selectedLocation === cardLocation || selectedLocation === 'LOCATION') {
+      card.classList.add('show-card');
+    }
+  });
+};
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  projectCards = document.querySelectorAll('.projectCard');
+  const card1 = document.querySelector(".card1");
+  const card2 = document.querySelector(".card2");
+  const card3 = document.querySelector(".card3");
+  const card4 = document.querySelector(".card4");
+  const card5 = document.querySelector(".card5");
+  const card6 = document.querySelector(".card6");
+  const card7 = document.querySelector(".card7");
+  const card8 = document.querySelector(".card8");
+  const card9 = document.querySelector(".card9");
+  const card10 = document.querySelector(".card10");
+  const card11 = document.querySelector(".card11");
+
+  card1.addEventListener("mouseenter", function () {
     rollingNumbers("#prj1 h1", 98);
   });
-  projectCard.addEventListener("mouseleave", function () {
+  card1.addEventListener("mouseleave", function () {
     rollingNumbers("#prj1 h1", 0);
   });
 
@@ -128,7 +153,84 @@ document.addEventListener("DOMContentLoaded", function () {
   card2.addEventListener("mouseleave", function () {
     rollingNumbers("#prj2 h1", 0);
   });
+  
+
+  card3.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj3 h1", 98);
+  });
+  card3.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj3 h1", 0);
+  });
+
+  card4.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj4 h1", 98);
+  });
+  card4.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj4 h1", 0);
+  });
+
+  card5.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj5 h1", 120);
+  });
+  card5.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj5 h1", 0);
+  });
+
+  card6.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj6 h1", 120);
+  });
+  card6.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj6 h1", 0);
+  });
+
+  card7.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj7 h1", 120);
+  });
+  card7.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj7 h1", 0);
+  });
+
+  card8.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj8 h1", 120);
+  });
+  card8.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj8 h1", 0);
+  });
+
+  card9.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj9 h1", 120);
+  });
+  card9.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj9 h1", 0);
+  });
+
+  card10.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj10 h1", 120);
+  });
+  card10.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj10 h1", 0);
+  });
+
+  card11.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj11 h1", 120);
+  });
+  card11.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj11 h1", 0);
+  });
+
+  dropdown.addEventListener('click', (event) => {
+    if (event.target.tagName === 'LI') {
+      const selectedLocation = event.target.textContent;
+      button.textContent = selectedLocation;
+      button.setAttribute('selected', ''); // Add the attribute
+      filterProjectCards(selectedLocation);
+    }
+  });
+
+ 
+
 });
+
 
 
 
