@@ -2229,7 +2229,6 @@ body:active .projects {
 .location-dropdown {
   font-family: MullerNarrow;
   width: 20%;
-  z-index: 0;
   position: absolute;
   margin-left: 10rem;
   margin-top: 3rem;
@@ -2355,7 +2354,7 @@ body:active .projects {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left !important;
+  text-align: left;
   flex-wrap: wrap;
 }
 .projectCard .projectCard-mainContent img {
@@ -2371,7 +2370,6 @@ body:active .projects {
   font-family: vorkurs;
   font-size: clamp(2rem, 4vw, 0.5rem);
   margin-bottom: 0;
-  text-align: left;
   transition: all 0.3s ease;
 }
 .projectCard .projectCard-mainContent h3 {
@@ -2386,7 +2384,7 @@ body:active .projects {
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
-  text-align: left !important;
+  text-align: left;
 }
 .projectCard .projectCard-mainContent-img {
   width: 70%;
@@ -2465,4 +2463,60 @@ body:active .projects {
 }
 .projectCard:hover .projectCard-mainContent h3 {
   color: #e4e4e4;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-ProjectsPage {
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: auto;
+  }
+  .location-dropdown {
+    margin-left: 1rem;
+    margin-top: 5rem;
+    position: fixed;
+  }
+  .location-dropdown button {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+  }
+  .projectscard-container {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .projectCard {
+    width: 100% !important;
+  }
+  .projectCard-mainContent {
+    text-align: center !important;
+  }
+  .projectCard-mainContent-text {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  .projectCard:hover .projectCard-bgImage {
+    opacity: 0;
+  }
+  .projectCard:hover .projectCard-mainContent-img .number-overlay .overlay-text p {
+    transform: translateY(0);
+  }
+  .projectCard:hover .projectCard-mainContent-img .number-overlay .overlay-number h1 {
+    opacity: 1;
+  }
+  .projectCard:hover .projectCard-mainContent-img:before {
+    opacity: 1;
+  }
+  .projectCard:hover .projectCard-mainContent img {
+    transform: scale(100%);
+  }
+  .projectCard:hover .projectCard-mainContent .projectCard-mainContent-text h1 {
+    color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .projectCard:hover .projectCard-mainContent .projectCard-mainContent-text h3 {
+    color: #000000;
+  }
 }/*# sourceMappingURL=style.css.map */
