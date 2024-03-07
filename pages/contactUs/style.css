@@ -33,7 +33,7 @@
 	margin-right: 60px;
 	background-color: #EC1C24;
 	padding: 1rem 2rem;
-	border-radius: 20px 0 0 20px;
+	border-radius: 20px; 
 }
 .row section.right{
 	flex-basis: 60%;
@@ -235,10 +235,23 @@ textarea::-webkit-scrollbar-thumb{
 }
 @media(max-width: 900px){
 	.container .row{
+		margin-top: 3rem;
 		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: fit-content;
+		padding-right: 0;
 	}
 	.row section.left, .row section.right{
-		flex-basis: 100%;
+		flex-basis: 80%;
 		margin: 0px;
+	}
+	.row section.right .messageForm{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-wrap: wrap;
+		padding-top: 30px;
 	}
 }
