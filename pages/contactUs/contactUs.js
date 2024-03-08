@@ -1,7 +1,5 @@
 
 // Navbar
-
-
 const app = (() => {
     let navContainer;
     let menu;
@@ -28,4 +26,10 @@ const app = (() => {
   
     init();
   })();
+
+
+
+
+
+
   

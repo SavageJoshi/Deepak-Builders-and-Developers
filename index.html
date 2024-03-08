@@ -403,13 +403,13 @@
 
     <div class="email-footer">
       <div class="mail-details">
-          <input type="text" placeholder="Name" class="input-footer">
-          <input type="email" placeholder="Email" class="input-footer">
-          <input type="tel" placeholder="Telephone" class="input-footer">
+          <input id="fullName" type="text" placeholder="Name" class="input-footer">
+          <input id="email_id" type="email" placeholder="Email" class="input-footer">
+          <input id="subject" type="text" placeholder="Subject" class="input-footer">
       </div>
       <div class="mail-content">
-        <textarea name="" id="" cols="30" rows="5" placeholder="Message" class="input-mail-content"></textarea>
-        <button class="sendEmail-button">Send</button>
+        <textarea name="" id="message" cols="30" rows="5" placeholder="Message" class="input-mail-content"></textarea>
+        <button onclick="SendMail(); reset();" class="sendEmail-button">Send</button>
       </div>
     </div>
 
@@ -480,6 +480,17 @@
 <script src="https://kit.fontawesome.com/f174b8f6e7.js" crossorigin="anonymous"></script>
 
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init({
+publicKey: "FNeaCNH8FD_XLtjra",
+});
+})();
+</script>
+
+
 <script>
   let lenis = new Lenis()
 
@@ -497,5 +508,6 @@ requestAnimationFrame(raf)
 
 
 <script src="./script.js"></script>
+<script src="./pages/contactUs/emailJs.js"></script>
   </body>
 </html>

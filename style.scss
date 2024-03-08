@@ -1373,31 +1373,45 @@ body{
 .input-footer{
 	padding: 10px;
 	margin-bottom: 1rem;
+	font-family: MullerNarrow;
 	&::placeholder{
 		color: #EC1C24;
 		opacity: 0.7;
+	}
+	&:focus{
+		color: #e4e4e4;
+		background-color: #EC1C24;
+		outline: none;	
+		border: solid 1px #e4e4e4;	
 	}
 }
 
 .input-mail-content{
 	padding: 10px;
+	font-family: MullerNarrow;
 	&::placeholder{
 		color: #EC1C24;
 		opacity: 0.7;
+	}
+	&:focus{
+		color: #e4e4e4;
+		background-color: #EC1C24;
+		outline: none;	
+		border: solid 1px #e4e4e4;	
 	}
 	
 }
 
 .sendEmail-button{
 	color: #e4e4e4;
-	background-color: #1e2023;
-	border: 0;
+	background-color: #EC1C24;
+	border: solid 1px #e4e4e4;
 	padding: 10px;
+	transition: all 200ms ease;
 	&:hover{
-		border: 1px solid #e4e4e4;
+		border: 1px solid #1e2023;
 		color: #e4e4e4;
-		background-color: #EC1C24;
-		transition-duration: 200ms;
+		background-color: #1e2023;
 	}
 }
 

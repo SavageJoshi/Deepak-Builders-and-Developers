@@ -12,6 +12,9 @@
 	<title>Contact Us</title>
 </head>
 <body>
+<section class="container-contactPage">
+
+
 	<!-- Navbar -->
 	<div class="nav-container">
 		<div class="navbar">
@@ -129,27 +132,27 @@
 				<form class="messageForm">
 					
 					<div class="inputGroup halfWidth">
-						<input type="text" name="" required="required">
+						<input type="text" name="name" id="fullName" required="required">
 						<label>Your Name</label>
 					</div>
 
 					<div class="inputGroup halfWidth">
-						<input type="email" name="" required="required">
+						<input type="email" name="email" id="email_id" required="required">
 						<label>Email</label>
 					</div>
 
 					<div class="inputGroup fullWidth">
-						<input type="text" name="" required="required">
+						<input id="subject" type="text" name="subject" required="required">
 						<label>Subject</label>
 					</div>
 
 					<div class="inputGroup fullWidth">
-						<textarea required="required"></textarea>
+						<textarea  id="message" name="message" required="required"></textarea> 
 						<label>Say Something</label>
 					</div>
 
 					<div class="inputGroup fullWidth">
-						<button>Send Message</button>
+						<button onclick="SendMail(); reset();">Send Message</button>
 					</div>
 
 				</form>
@@ -164,10 +167,23 @@
 
 
 
+</section>
 
 
 
 
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+	(function(){
+	emailjs.init({
+	publicKey: "FNeaCNH8FD_XLtjra",
+	});
+	})();
+	</script>
+
+	<script src="./emailJs.js"></script>
 	<script src="./contactUs.js"></script>
 </body>
 </html>
