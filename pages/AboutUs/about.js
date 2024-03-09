@@ -1,5 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
+
+
+
+
 // Navbar
 const app = (() => {
     let navContainer;

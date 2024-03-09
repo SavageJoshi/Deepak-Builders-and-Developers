@@ -27,6 +27,11 @@ const app = (() => {
     init();
   })();
 
+//   
+
+$("#prospects_form").submit(function(e) {
+    e.preventDefault();
+});
 
 
 

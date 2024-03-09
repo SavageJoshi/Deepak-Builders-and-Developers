@@ -5,8 +5,6 @@ gsap.registerPlugin(TextPlugin);
 
 
 
-
-
 // Navbar
 
 
