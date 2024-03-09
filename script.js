@@ -255,25 +255,26 @@ $(document).ready(function(){
   });
 });
 
-gsap.to(".goals-text", {
-  scrollTrigger: {
-    trigger: ".goals-text",
-    start: "top 10%",
-    end: "+=100%",
-    pin: true,
-    pinSpacing: true,
-  },
-});
+if (window.matchMedia("(min-width: 769px)").matches) {
+  gsap.to(".goals-text", {
+    scrollTrigger: {
+      trigger: ".goals-text",
+      start: "top 10%",
+      end: "+=100%",
+      pin: true,
+    },
+  });
 
-gsap.to(".long-title", {
-  y: "250%",
-  scrollTrigger: {
-    trigger: ".long-title",
-    start: "top 40%",
-    end: "top -20%",
-    scrub: 3,
-  }
-});
+  gsap.to(".long-title", {
+    y: "200%",
+    scrollTrigger: {
+      trigger: ".long-title",
+      start: "top 40%",
+      end: "top -20%",
+      scrub: 3,
+    },
+  });
+}
 
 
 //goals-2
@@ -288,15 +289,6 @@ $(document).ready(function(){
   });
 });
 
-// gsap.to(".title-2", {
-// 	y: 0, // Bring it to its natural position
-// 	scrollTrigger: {
-// 	  trigger: ".goals-2-text",
-// 	  start: "top 80%", // adjust as needed
-// 	  end: "top 50%", // adjust as needed
-// 	  scrub: 1,
-// 	}
-//   });
 
   gsap.to(".para-wrapper-2 .mask-2 span", {
     translateX: 0, // slide up into natural position
@@ -505,7 +497,7 @@ gsap.to(".projects-section-wrapper", {
     trigger: ".projects-section-wrapper",
     start: "top top", // Adjust the start position
     end: "bottom", // Adjust the end position
-    pin: true,
+    // pin: true,
     pinSpacing: true, // Set to true if you want to maintain the spacing
     // markers: true, 
   },
@@ -540,16 +532,7 @@ gsap.to(".projects-section-wrapper", {
 
 
 
-// Specific Project Start
 
-// Hero image section
-
-const projectImage = document.querySelector('.specificProject-heroImage');
-
-gsap.fromTo(projectImage, 1, 
-  {x: "-100%"}, 
-  {x: "0%", ease: Power2.easeInOut}
-)
 
 
 
