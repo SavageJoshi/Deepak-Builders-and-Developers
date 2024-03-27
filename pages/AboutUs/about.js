@@ -1,5 +1,34 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const circleElement = document.querySelector('.circle');
+
+const mouse = { x: 0, y: 0 },
+      circle = { x: 0, y: 0 };
+
+window.addEventListener('mousemove', e => {
+  mouse.x = e.x;
+  mouse.y = e.y;
+});
+
+// Speed factor
+// Between 0 and 1 (0 = smoother, 1 = instant)
+const speed = 0.15;
+
+const tick = () => {
+  // (mouse.x - circle.x) calculates the difference between the current x-coordinate of the mouse and the current x-coordinate of the circle.
+  // (mouse.x - circle.x) * speed multiplies the difference by the speed factor, which determines how quickly the circle should move towards the mouse position
+  circle.x += (mouse.x - circle.x) * speed;
+  circle.y += (mouse.y - circle.y) * speed;
+
+  // Update circle element's position
+  circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
+
+  // Call function on next frame
+  window.requestAnimationFrame(tick);
+}
+
+tick();
+
 
 
 
@@ -167,6 +196,43 @@ jQuery(document).ready(function($){
 document.addEventListener("DOMContentLoaded", function () {
     const proudMomentsImages = document.querySelector(".proudMoments-images");
     const showMoreButton = document.querySelector(".proudMoments-button");
+
+    // Set the number of initially visible rows
+    const initialRows = 2;
+    let totalRows = Math.ceil(proudMomentsImages.children.length / 3); // Assuming each row has 3 columns
+
+    // Hide additional rows initially
+    for (let i = initialRows; i < totalRows; i++) {
+        for (let j = 0; j < 3; j++) {
+            const index = i * 3 + j;
+            if (proudMomentsImages.children[index]) {
+                proudMomentsImages.children[index].style.display = "none";
+            }
+        }
+    }
+
+    showMoreButton.addEventListener("click", function () {
+        const additionalRows = totalRows - initialRows;
+
+        // Toggle visibility of additional rows
+        for (let i = initialRows; i < totalRows; i++) {
+            for (let j = 0; j < 3; j++) {
+                const index = i * 3 + j;
+                if (proudMomentsImages.children[index]) {
+                    proudMomentsImages.children[index].style.display =
+                        proudMomentsImages.children[index].style.display === "none" ? "grid" : "none";
+                }
+            }
+        }
+
+        // Toggle button text
+        showMoreButton.textContent =
+            showMoreButton.textContent === "Show More" ? "Show Less" : "Show More";
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const proudMomentsImages = document.querySelector(".proudMoments-images-2");
+    const showMoreButton = document.querySelector(".proudMoments-button-2");
 
     // Set the number of initially visible rows
     const initialRows = 2;

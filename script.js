@@ -1,6 +1,35 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 
+const circleElement = document.querySelector('.circle');
+
+const mouse = { x: 0, y: 0 },
+      circle = { x: 0, y: 0 };
+
+window.addEventListener('mousemove', e => {
+  mouse.x = e.x;
+  mouse.y = e.y;
+});
+
+// Speed factor
+// Between 0 and 1 (0 = smoother, 1 = instant)
+const speed = 0.15;
+
+const tick = () => {
+  // (mouse.x - circle.x) calculates the difference between the current x-coordinate of the mouse and the current x-coordinate of the circle.
+  // (mouse.x - circle.x) * speed multiplies the difference by the speed factor, which determines how quickly the circle should move towards the mouse position
+  circle.x += (mouse.x - circle.x) * speed;
+  circle.y += (mouse.y - circle.y) * speed;
+
+  // Update circle element's position
+  circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
+
+  // Call function on next frame
+  window.requestAnimationFrame(tick);
+}
+
+tick();
+
 
 
 
@@ -91,7 +120,7 @@ gsap.to(".video-container", {
 gsap.to(".video-scroll", {
     scrollTrigger: {
       trigger: ".video-scroll",
-      start: "top 50%", 
+      start: "top 120%", 
       end: "top -10%", 
       scrub: true,
     //   markers: true,
@@ -206,12 +235,12 @@ const rollingNumbers = (target, value) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  rollingNumbers(".count1 span", 98); 
-  rollingNumbers(".count2 span", 15); 
-  rollingNumbers(".count3 span", 5); 
-  rollingNumbers(".count4 span", 98); 
-  rollingNumbers(".count5 span", 98); 
-  rollingNumbers(".count6 span", 98); 
+  rollingNumbers(".count1 span", 18.09); 
+  rollingNumbers(".count2 span", 46.06); 
+  rollingNumbers(".count3 span", 36.30); 
+  rollingNumbers(".count4 span", 2.14); 
+  rollingNumbers(".count5 span", 3.61); 
+  rollingNumbers(".count6 span", 1.75); 
   
 });
 
@@ -250,7 +279,7 @@ $(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows: true,
+    arrows: false,
     infinite: true,
   });
 });
