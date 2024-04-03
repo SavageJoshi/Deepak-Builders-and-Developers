@@ -652,8 +652,8 @@ body{
 .section-achievements {
 	height: fit-content;
 	display: flex;
-	justify-content: center;
-
+	justify-content: space-evenly;
+	align-items: center;
 	width: 100%;
 	margin: 0 auto;
 	padding: 2% 0;
@@ -662,19 +662,19 @@ body{
   }
   
   .achievement-grid {
-	width: 80%;
+	width: 100%;
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
   }
   
   .achievement-tab {
-	width: 33%;
+	width: 30%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	margin: 5% auto;
+	margin: 5% 1.5%;
 	padding: 0;
 
 	
@@ -683,9 +683,9 @@ body{
   
   .achievement-text{
 	padding-left: 3%;
-	width: 50%;
+	width: 100%;
 	font-family: MullerNarrow;
-	font-size: 0.7em;
+	font-size: 0.5em;
 	font-weight: bold;
 	display: flex;
 	align-self: flex-end;
@@ -694,6 +694,8 @@ body{
   .count {
 	//   text-transform: uppercase;
 	  display: flex;
+	  justify-content: center;
+	//   align-items: flex-start;
 	  text-align: left;
 	  font-size: 1.5em;
 	  font-weight: 700;
@@ -707,7 +709,7 @@ body{
 		// display: flex;
 		text-align: right;
 		line-height: 0;
-		font-size: 8rem;
+		font-size: 9rem;
 		color: #EC1C24;
 	}
 	

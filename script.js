@@ -235,12 +235,12 @@ const rollingNumbers = (target, value) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  rollingNumbers(".count1 span", 18); 
-  rollingNumbers(".count2 span", 46); 
-  rollingNumbers(".count3 span", 36); 
-  rollingNumbers(".count4 span", "02"); 
-  rollingNumbers(".count5 span", "04"); 
-  rollingNumbers(".count6 span", "04"); 
+  rollingNumbers(".count1 span", 98); 
+  rollingNumbers(".count2 span", "15+"); 
+  rollingNumbers(".count3 span", "5+"); 
+  rollingNumbers(".count4 span", "1.75Cr"); 
+  rollingNumbers(".count5 span", "100+"); 
+  // rollingNumbers(".count6 span", "04"); 
   
 });
 
