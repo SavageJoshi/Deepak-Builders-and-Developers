@@ -189,7 +189,7 @@ let currentScroll2 = 0;
 let isScrollingDown2 = false;  //direction to be opposite
 
 let tween2 = gsap.to(".marquee__part2", {
-    xPercent: 100,  // This will make it scroll in the opposite direction
+    xPercent: 50,  // This will make it scroll in the opposite direction
     repeat: -1,
     duration: 20,
     ease: "linear"
@@ -229,20 +229,22 @@ const rollingNumbers = (target, value) => {
       once: true,
       // markers: true, 
     },
-    innerHTML: value.toString(),
-    roundProps: "innerHTML",
+    text: value.toString(),
+    
   });
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  rollingNumbers(".count1 span", 18.09); 
-  rollingNumbers(".count2 span", 46.06); 
-  rollingNumbers(".count3 span", 36.30); 
-  rollingNumbers(".count4 span", 2.14); 
-  rollingNumbers(".count5 span", 3.61); 
-  rollingNumbers(".count6 span", 1.75); 
+  rollingNumbers(".count1 span", 18); 
+  rollingNumbers(".count2 span", 46); 
+  rollingNumbers(".count3 span", 36); 
+  rollingNumbers(".count4 span", "02"); 
+  rollingNumbers(".count5 span", "04"); 
+  rollingNumbers(".count6 span", "04"); 
   
 });
+
+
 
 
 
@@ -256,7 +258,7 @@ $(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    arrows: false,
+    arrows: true,
     infinite: true,
   });
 });

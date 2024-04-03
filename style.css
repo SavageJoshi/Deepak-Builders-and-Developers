@@ -80,6 +80,7 @@ body {
   margin-top: 1rem;
   margin-left: 1rem;
   width: 70px;
+  background-blend-mode: difference;
 }
 
 .menu-icon {
@@ -568,32 +569,40 @@ body {
     font-size: 48px;
   }
 }
+.achievements-wrapper {
+  margin: 6% 0;
+}
+
 .section-achievements {
-  height: 80vh;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  max-width: 80%;
+  width: 100%;
   margin: 0 auto;
-  font-size: 16px;
+  padding: 2% 0;
+  font-size: 24px;
 }
 
 .achievement-grid {
+  width: 80%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-end;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .achievement-tab {
-  position: static;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   margin: 5% auto;
-  padding: 15px;
-  text-align: center;
-  flex-basis: calc(33.3333% - 40px); /* Adjusted width for three tabs per row */
+  padding: 0;
 }
 
 .achievement-text {
+  padding-left: 3%;
   width: 50%;
   font-family: MullerNarrow;
   font-size: 0.7em;
@@ -603,14 +612,15 @@ body {
 }
 
 .count {
-  font-size: 1.5em;
-  font-weight: 700;
-  text-transform: uppercase;
   display: flex;
   text-align: left;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 .count span {
+  display: block;
   font-family: bison;
+  text-align: right;
   line-height: 0;
   font-size: 8rem;
   color: #EC1C24;
@@ -632,7 +642,7 @@ body {
   }
   .count {
     font-size: 0.7em;
-    font-weight: bold;
+    font-weight: bolder;
     flex-direction: column;
     text-align: center;
   }
@@ -641,39 +651,35 @@ body {
   }
 }
 .block-div {
-  height: 80vh;
+  height: 70vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
   overflow: hidden;
 }
 
 .block-img {
-  width: 50%;
+  width: 100%;
 }
 
 .image-slider {
-  height: 80vh;
+  height: 100%;
   width: 100%;
-  position: relative;
-  display: flex;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: bottom;
-     object-position: bottom;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 
 .slide img {
+  bottom: 0;
+  left: 50%;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: bottom;
-     object-position: bottom;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .color-block {
+  display: none;
   height: 40%;
   width: 10%;
   background-color: #EC1C24;
@@ -690,7 +696,7 @@ body {
     visibility: hidden;
   }
   .image-slider {
-    height: auto;
+    height: 100%;
   }
 }
 .long-img-parent {
@@ -1135,10 +1141,6 @@ h2 {
   height: 100%;
 }
 
-.ctnr-winter:after {
-  background: linear-gradient(-135deg, black, transparent);
-}
-
 image {
   transition: 0.6s;
   opacity: 0;
@@ -1531,6 +1533,11 @@ p {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+.contact-row:first-child {
+  gap: 10px;
+  transform: scale(200%);
+  transform-origin: left;
 }
 
 .footer-color-block {
@@ -2634,9 +2641,17 @@ p {
   display: none;
   opacity: 0;
 }
+.projectCard .project-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
 .projectCard .projectCard-bgImage {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   overflow: hidden;
   position: absolute;
   opacity: 0;
@@ -2663,6 +2678,7 @@ p {
   opacity: 0.5;
   transition: opacity 0.3s;
   z-index: 1;
+  height: 100%;
 }
 .projectCard .projectCard-mainContent {
   z-index: 10;
@@ -2670,7 +2686,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center;
   flex-wrap: wrap;
 }
 .projectCard .projectCard-mainContent img {
@@ -2760,7 +2776,7 @@ p {
   opacity: 1;
 }
 .projectCard:hover .projectCard-bgImage img {
-  transform: scale(100%);
+  transform: scale(1);
 }
 .projectCard:hover .projectCard-mainContent-img .number-overlay .overlay-text p {
   transform: translateY(0);
@@ -2775,6 +2791,7 @@ p {
   transform: scale(100%);
 }
 .projectCard:hover .projectCard-mainContent h1 {
+  opacity: 1 !important;
   color: #e4e4e4;
   display: flex;
   flex-wrap: wrap;
@@ -2790,11 +2807,17 @@ p {
     overflow: auto;
   }
   .location-dropdown {
+    height: -moz-fit-content;
+    height: fit-content;
     margin-left: 1rem;
     margin-top: 5rem;
     position: fixed;
   }
   .location-dropdown button {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     padding: 0.7rem;
     font-size: 1.5rem;
   }
