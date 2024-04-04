@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
   rollingNumbers(".count1 span", 98); 
   rollingNumbers(".count2 span", "15+"); 
   rollingNumbers(".count3 span", "5+"); 
-  rollingNumbers(".count4 span", "1.75Cr"); 
+  rollingNumbers(".count4 span", "1,75,000,00"); 
   rollingNumbers(".count5 span", "100+"); 
   // rollingNumbers(".count6 span", "04"); 
   

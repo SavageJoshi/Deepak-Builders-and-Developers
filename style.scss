@@ -56,7 +56,7 @@ body{
 	top: calc(-1 * var(--cursor-size) / 2);
 	left: calc(-1 * var(--cursor-size) / 2);
 	pointer-events: none;
-	z-index: 1000;
+	z-index: 1005;
 	mix-blend-mode: exclusion;
   }
   @media only screen and (max-width: 768px) {
@@ -646,7 +646,7 @@ body{
 // Achievements
 
 .achievements-wrapper{
-	margin: 6% 0;
+	margin: 4% 0;
 }
 
 .section-achievements {
@@ -670,7 +670,7 @@ body{
   }
   
   .achievement-tab {
-	width: 30%;
+	width: 20%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -1352,19 +1352,23 @@ body{
 // Projects
 
 .ourprojects-title{
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	font-family: vorkurs;
 	color: red;
-	font-size: clamp(1rem, 4vw, 3rem);
-	letter-spacing: 1rem;
+	font-size: clamp(1rem, 4vw, 5rem);
+	// letter-spacing: 0.5rem;
 	user-select: none;
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edg */
+	h1{
+		margin: 3% 0;
+		font-weight: 500;
+	}
 }
 
 .projects {
