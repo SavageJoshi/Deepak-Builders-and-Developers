@@ -178,14 +178,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const card14 = document.querySelector(".card14");
 
   card1.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj1 h1", 0);
+    rollingNumbers("#prj1 h1", 92);
   });
   card1.addEventListener("mouseleave", function () {
     rollingNumbers("#prj1 h1", 0);
   });
 
   card2.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj2 h1", 640);
+    rollingNumbers("#prj2 h1", 512);
   });
   card2.addEventListener("mouseleave", function () {
     rollingNumbers("#prj2 h1", 0);

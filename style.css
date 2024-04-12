@@ -233,6 +233,9 @@ body {
 .nav-container.nav-active .nav__list-item:nth-child(4) {
   transition-delay: 0.9s;
 }
+.nav-container.nav-active .nav__list-item:nth-child(5) {
+  transition-delay: 1s;
+}
 
 @media (max-width: 768px) {
   .nav-logo {
@@ -629,27 +632,41 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .achievements-wrapper {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .achievement-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .section-achievements {
-    height: 40vh;
     max-width: 100%;
     font-size: 16px;
     text-align: center;
+    justify-content: center;
   }
   .achievement-tab {
-    flex-basis: calc(33.3333% - 20px); /* Adjusted width for two tabs per row */
+    flex-basis: 40%; /* Adjusted width for two tabs per row */
     margin-bottom: 5%; /* Added margin to space out the rows */
   }
   .achievement-text {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   .count {
-    font-size: 0.7em;
+    flex-direction: column; /* Display the big number and text in a column */
+    align-items: center; /* Center align items */
+    text-align: center; /* Center align text */
+    font-size: 0.8em;
     font-weight: bolder;
     flex-direction: column;
     text-align: center;
+    flex-direction: column;
+    gap: 25px;
   }
   .count span {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 .block-div {
@@ -1544,6 +1561,9 @@ p {
   transform: scale(200%);
   transform-origin: left;
 }
+.contact-row a {
+  color: #e4e4e4;
+}
 
 .footer-color-block {
   background-color: #1e2023;
@@ -1575,6 +1595,11 @@ p {
   .contact-row {
     align-items: center;
     justify-content: center;
+  }
+  .contact-row:first-child {
+    gap: 10px;
+    transform: scale(1);
+    transform-origin: left;
   }
   .address-line-footer {
     flex-direction: column;
@@ -1631,7 +1656,6 @@ p {
   font-size: 1rem; /* Adjust font size as needed */
   font-family: MullerNarrow;
 }
-
 @media only screen and (max-width: 768px) {
   .specificProject-heroImage {
     padding-top: 10vh;
@@ -1712,6 +1736,9 @@ p {
   width: -moz-fit-content;
   width: fit-content;
   font-family: MullerNarrow;
+}
+.descriptionBox-red .descriptionBox-red-infoBox img {
+  height: 100px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -2429,13 +2456,16 @@ p {
 }
 
 .members-container {
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .member-card {
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2443,13 +2473,16 @@ p {
   margin: 0.5rem 6rem;
   transform: translateY(25%);
   opacity: 0;
+  flex-basis: 30%;
+  margin-bottom: 2rem;
+  padding: 0;
 }
 .member-card img {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 50%;
+  border-radius: 20px;
 }
 .member-card h1 {
   font-family: MullerNarrow;

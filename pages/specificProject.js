@@ -99,7 +99,7 @@ gsap.to(".descriptionBox-red h3", {
   scrollTrigger:{
     trigger: ".descriptionBox-red-infoBox h3",
     start: "top 90%",
-    end: "top 50%",
+    end: "top 60%",
     scrub: 0,
   }
 })
