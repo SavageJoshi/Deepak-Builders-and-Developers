@@ -1,9 +1,23 @@
 function SendMail() {
+    // Get form input values
+    var fullName = document.getElementById("fullName").value;
+    var email = document.getElementById("email_id").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("message").value;
+
+    // Check if any field is empty
+    if (fullName === "" || email === "" || subject === "" || message === "") {
+        // Display alert for empty fields
+        alert("Please fill out all the fields.");
+        return; // Exit function if any field is empty
+    }
+
+    // If all fields are filled, proceed to send the email
     var params = {
-        from_name: document.getElementById("fullName").value,
-        email_id: document.getElementById("email_id").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value,
+        from_name: fullName,
+        email_id: email,
+        subject: subject,
+        message: message,
     }
 
     emailjs.send("service_12534z5", "template_1gwupj6", params).then(

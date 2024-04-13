@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   card2.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj2 h1", 512);
+    rollingNumbers("#prj2 h1", 640);
   });
   card2.addEventListener("mouseleave", function () {
     rollingNumbers("#prj2 h1", 0);
@@ -200,62 +200,62 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   card4.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj4 h1", 500);
+    rollingNumbers("#prj4 h1", 563);
   });
   card4.addEventListener("mouseleave", function () {
     rollingNumbers("#prj4 h1", 0);
   });
 
   card5.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj5 h1", 296);
+    rollingNumbers("#prj5 h1", 300);
   });
   card5.addEventListener("mouseleave", function () {
     rollingNumbers("#prj5 h1", 0);
   });
 
   card6.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj6 h1", 212);
+    rollingNumbers("#prj6 h1", 214);
   });
   card6.addEventListener("mouseleave", function () {
     rollingNumbers("#prj6 h1", 0);
   });
 
   card7.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj7 h1", 270);
+    rollingNumbers("#prj7 h1", 264);
   });
   card7.addEventListener("mouseleave", function () {
     rollingNumbers("#prj7 h1", 0);
   });
 
   card8.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj8 h1", 400);
+    rollingNumbers("#prj8 h1", 307);
   });
   card8.addEventListener("mouseleave", function () {
     rollingNumbers("#prj8 h1", 0);
   });
 
   card9.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj9 h1", 168);
+    rollingNumbers("#prj9 h1", 150);
   });
   card9.addEventListener("mouseleave", function () {
     rollingNumbers("#prj9 h1", 0);
   });
 
   card10.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj10 h1", 35);
+    rollingNumbers("#prj10 h1", 34);
   });
   card10.addEventListener("mouseleave", function () {
     rollingNumbers("#prj10 h1", 0);
   });
 
   card11.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj11 h1", 148);
+    rollingNumbers("#prj11 h1", 201);
   });
   card11.addEventListener("mouseleave", function () {
     rollingNumbers("#prj11 h1", 0);
   });
   card12.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj12 h1", 104);
+    rollingNumbers("#prj12 h1", 103);
   });
   card12.addEventListener("mouseleave", function () {
     rollingNumbers("#prj12 h1", 0);
@@ -266,12 +266,12 @@ document.addEventListener("DOMContentLoaded", function () {
   card13.addEventListener("mouseleave", function () {
     rollingNumbers("#prj13 h1", 0);
   });
-  // card14.addEventListener("mouseenter", function () {
-  //   rollingNumbers("#prj14 h1", 94);
-  // });
-  // card14.addEventListener("mouseleave", function () {
-  //   rollingNumbers("#prj14 h1", 0);
-  // });
+  card14.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj14 h1", 115);
+  });
+  card14.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj14 h1", 0);
+  });
 
   dropdown.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI') {
