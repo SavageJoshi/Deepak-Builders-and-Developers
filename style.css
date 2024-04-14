@@ -464,6 +464,8 @@ body {
 }
 
 .video-container {
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   transform-origin: center;
   transform: translateY(70%);
@@ -1566,8 +1568,15 @@ p {
 }
 
 .footer-color-block {
-  background-color: #1e2023;
+  background-color: #EC1C24;
+  color: #e4e4e4;
   height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: MullerNarrow;
+  font-weight: 100;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1656,12 +1665,14 @@ p {
   font-size: 1rem; /* Adjust font size as needed */
   font-family: MullerNarrow;
 }
+
 @media only screen and (max-width: 768px) {
   .specificProject-heroImage {
     padding-top: 10vh;
     height: 50vh;
   }
   .project-textCard {
+    width: 30%;
     padding: 0.5rem;
   }
   .project-textCard h3 {
@@ -1753,6 +1764,7 @@ p {
     font-size: 16px;
   }
   .descriptionBox-red {
+    flex-direction: column;
     padding: 0.5rem;
     gap: 1.5rem;
   }
@@ -1776,7 +1788,7 @@ p {
 }
 
 .imageDescription-left {
-  width: 45%;
+  width: 49%;
   height: auto;
   overflow: hidden;
   transform: translateX(-25%);
@@ -1795,7 +1807,8 @@ p {
   flex-direction: column;
   align-items: end;
   text-align: right;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 1rem;
 }
 .imageDescription-right img {
   width: 100%;
@@ -1804,7 +1817,6 @@ p {
      object-fit: cover;
   transform: translateX(25%);
   opacity: 0;
-  margin: 1rem 0;
 }
 
 .imageDescription-right-text {
@@ -2159,7 +2171,6 @@ p {
 .history-text p {
   font-family: MullerNarrow;
   font-size: 32px;
-  text-transform: uppercase;
   transform: translateY(2rem);
   opacity: 0;
   line-height: 1;
@@ -2285,7 +2296,6 @@ p {
   overflow: hidden;
   position: relative;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   transition: all 1s ease;
 }
@@ -2456,7 +2466,7 @@ p {
 }
 
 .members-container {
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -2465,12 +2475,12 @@ p {
 }
 
 .member-card {
-  width: 40%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem 6rem;
+  margin: 0.5rem 2rem;
   transform: translateY(25%);
   opacity: 0;
   flex-basis: 30%;
@@ -2506,15 +2516,11 @@ p {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 0;
   height: 1.5px;
   margin: 0;
   background-color: #e4e4e4;
   transition: width 0.5s ease;
-}
-.member-card h3:hover::before {
-  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {

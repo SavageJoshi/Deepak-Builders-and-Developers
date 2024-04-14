@@ -165,28 +165,28 @@ jQuery(document).ready(function($){
 
 //accordion Box
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const accordionBoxes = document.querySelectorAll(".accordion-box");
+//   document.addEventListener("DOMContentLoaded", function () {
+//     const accordionBoxes = document.querySelectorAll(".accordion-box");
   
-    accordionBoxes.forEach((box) => {
-        const text = box.querySelector(".accordion-text");
-        const toggleBtn = box.querySelector(".toggle-btn");
+//     accordionBoxes.forEach((box) => {
+//         const text = box.querySelector(".accordion-text");
+//         const toggleBtn = box.querySelector(".toggle-btn");
   
-        toggleBtn.addEventListener("click", function () {
-            text.classList.toggle("open");
-            toggleBtn.style.transform = text.classList.contains("open") ? "rotate(45deg)" : "rotate(0deg)";
+//         toggleBtn.addEventListener("click", function () {
+//             text.classList.toggle("open");
+//             toggleBtn.style.transform = text.classList.contains("open") ? "rotate(45deg)" : "rotate(0deg)";
             
-            // Toggle the -webkit-line-clamp property
-            text.style.webkitLineClamp = text.classList.contains("open") ? "unset" : "5"; // Set to 'unset' to show all lines
+//             // Toggle the -webkit-line-clamp property
+//             text.style.webkitLineClamp = text.classList.contains("open") ? "unset" : "5"; // Set to 'unset' to show all lines
 
-            if (window.innerWidth > 768){
-                box.style.minHeight = text.classList.contains("open") ? "auto" : "20rem";
-            }else{
-                box.style.minHeight = "auto";
-            }
-        });
-    });
-});
+//             if (window.innerWidth > 768){
+//                 box.style.minHeight = text.classList.contains("open") ? "auto" : "20rem";
+//             }else{
+//                 box.style.minHeight = "auto";
+//             }
+//         });
+//     });
+// });
   
 
 
