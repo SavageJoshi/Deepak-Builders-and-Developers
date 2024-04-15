@@ -311,7 +311,7 @@ if (window.matchMedia("(min-width: 769px)").matches) {
   });
 
   gsap.to(".long-title", {
-    y: "200%",
+    y: "250%",
     scrollTrigger: {
       trigger: ".long-title",
       start: "top 40%",
@@ -331,6 +331,7 @@ $(document).ready(function(){
     autoplaySpeed: 2000,
     arrows: false,
     infinite: true,
+    pauseOnHover: false
   });
 });
 

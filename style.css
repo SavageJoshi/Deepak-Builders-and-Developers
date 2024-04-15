@@ -647,6 +647,10 @@ body {
   width: 100%;
   -o-object-fit: cover !important;
      object-fit: cover !important;
+  cursor: url("/assets/img/hand-grab-o-32.png"), grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .slide img {
@@ -815,8 +819,8 @@ body {
   height: 70vh;
 }
 
-.goals-2-img {
-  width: 50%;
+.goals-2-img img {
+  width: 100%;
 }
 
 .goals-image-slider {
@@ -874,7 +878,7 @@ body {
     text-align: center;
   }
   .goals-2-img {
-    width: 80%;
+    width: 100%;
   }
   .goals-image-slider {
     height: auto;
