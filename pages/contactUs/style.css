@@ -255,21 +255,22 @@ textarea::-webkit-scrollbar-thumb{
 		margin: 15px 0px;
 	}
 	.iconGroup .icon{
-		width: 30px;
-		height: 30px;
+		width: 40px;
+		height: 40px !important;
 	}
 	.iconGroup .icon i{
 		font-size: 14px;
 	}
 
 	.iconGroup .details span{
+		font-size: 10px;
 		display: inline-block;
 	}
 
-	.iconGroup .details span:nth-child(1){
+	/* .iconGroup .details span:nth-child(1){
 		font-size: 18px;
 		text-transform: none;
-	}
+	} */
 
 
 
