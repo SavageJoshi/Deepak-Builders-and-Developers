@@ -1628,11 +1628,21 @@ p {
 @media only screen and (max-width: 768px) {
   .specificProject-heroImage {
     padding-top: 10vh;
-    height: 50vh;
+    height: auto;
+    overflow: hidden;
+  }
+  .specificProject-heroImage img {
+    width: 100%;
+    height: auto;
+    -o-object-position: 100% 100%;
+       object-position: 100% 100%;
   }
   .project-textCard {
     width: 30%;
     padding: 0.5rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    justify-content: flex-start;
   }
   .project-textCard h3 {
     font-size: 16px;
@@ -1718,9 +1728,13 @@ p {
   }
   .descriptionBox-white h1 {
     font-size: 24px;
+    transform: translateY(0%);
+    opacity: 1;
   }
   .descriptionBox-white p {
     font-size: 16px;
+    transform: translateY(0%);
+    opacity: 1;
   }
   .descriptionBox-red {
     flex-direction: column;
@@ -1959,6 +1973,10 @@ p {
   width: 80%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  place-content: center center;
   gap: 20px;
   margin-top: 2rem;
 }
