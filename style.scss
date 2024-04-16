@@ -2952,16 +2952,38 @@ body{
 		padding: 1rem;
 		margin: 4rem 0;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 4rem;
 
-		h3{
-			font-family: MullerNarrow;
-			font-weight: lighter;
-			text-transform: uppercase;
+		.service-box{
+			// width: 30%;
+			width: 13%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			
+			img{
+				width: 25%;
+				height: auto;
+			}
+
+			h1{
+				font-family: vorkurs;
+				font-size: 1rem;
+			}
+	
+			p{
+				font-size: 12px;
+				font-family: MullerNarrow;
+				font-weight: lighter;
+			}
+
 		}
+
+		
 	}
 }
 
@@ -2970,6 +2992,19 @@ body{
 
 		.services-container{
 			gap: 1.5rem;
+
+			.service-box{
+				width: 40%;
+
+				img{
+					width: 80%;
+				}
+				p{
+					font-size: 8px;
+				}
+			}
+
+
 		}
 	}
 }

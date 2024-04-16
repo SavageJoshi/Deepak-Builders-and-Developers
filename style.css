@@ -2545,20 +2545,44 @@ p {
   padding: 1rem;
   margin: 4rem 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   gap: 4rem;
 }
-.section-services .services-container h3 {
+.section-services .services-container .service-box {
+  width: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-services .services-container .service-box img {
+  width: 25%;
+  height: auto;
+}
+.section-services .services-container .service-box h1 {
+  font-family: vorkurs;
+  font-size: 1rem;
+}
+.section-services .services-container .service-box p {
+  font-size: 12px;
   font-family: MullerNarrow;
   font-weight: lighter;
-  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 768px) {
   .section-services .services-container {
     gap: 1.5rem;
+  }
+  .section-services .services-container .service-box {
+    width: 40%;
+  }
+  .section-services .services-container .service-box img {
+    width: 80%;
+  }
+  .section-services .services-container .service-box p {
+    font-size: 8px;
   }
 }
 .footer-line {
