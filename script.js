@@ -84,23 +84,27 @@ const logo = document.querySelector('.logo');
 const menu = document.querySelector('.menu-icon')
 
 const tl = new TimelineMax();
-tl.fromTo(hero , 1 , {height: "0%"}, {height: "80%", ease: Power2.easeInOut })
 
-// .fromTo(hero, 0.7 , {width: "100%"}, {width: "90%", ease: Power2.easeInOut})
+// if (window.matchMedia("(min-width: 768px)").matches){  
+  tl.fromTo(hero , 1 , {height: "0%"}, {height: "80%", ease: Power2.easeInOut })
+  
+  .fromTo(slider, 0.7, 
+      {x: "-100%"}, 
+      {x: "0%", ease: Power2.easeInOut}
+  )
+  .to(slider, 0.7, 
+      {scaleX: 0, ease: Power2.easeInOut}
+  )
+  tl.fromTo(headline , 0.5 , {opacity: 0, y: 30 }, {opacity: 1, y: 0}, "1.7")
+  .fromTo(logo, 0.5, {opacity: 0, y: 30}, {opacity: 1, y: 0}, "1.7")
+  .fromTo(menu, 0.5, {opacity: 0, y: 30}, {opacity: 1, y: 0}, "1.7");
+  
+  tl.fromTo(hero , 1 , {height: "80vh"}, {height: "100vh", ease: Power2.easeInOut }, "2")
+  .fromTo(hero, 0.7 , {width: "90%"}, {width: "100%", ease: Power2.easeInOut}, "2")
 
-.fromTo(slider, 0.7, 
-    {x: "-100%"}, 
-    {x: "0%", ease: Power2.easeInOut}
-)
-.to(slider, 0.7, 
-    {scaleX: 0, ease: Power2.easeInOut}
-)
-tl.fromTo(headline , 0.5 , {opacity: 0, y: 30 }, {opacity: 1, y: 0}, "1.7")
-.fromTo(logo, 0.5, {opacity: 0, y: 30}, {opacity: 1, y: 0}, "1.7")
-.fromTo(menu, 0.5, {opacity: 0, y: 30}, {opacity: 1, y: 0}, "1.7");
 
-tl.fromTo(hero , 1 , {height: "80%"}, {height: "100%", ease: Power2.easeInOut }, "2")
-.fromTo(hero, 0.7 , {width: "90%"}, {width: "100%", ease: Power2.easeInOut}, "2")
+// }
+
 
 //Hero End
 
