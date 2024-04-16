@@ -2427,6 +2427,9 @@ p {
   .proudMoments-images .image-overlay img, .proudMoments-images-2 .image-overlay img {
     height: auto;
   }
+  .proudMoments-images .image-overlay .image-description, .proudMoments-images-2 .image-overlay .image-description {
+    font-size: 8px !important;
+  }
 }
 .section-members {
   width: 100%;
