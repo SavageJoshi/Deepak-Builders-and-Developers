@@ -1599,6 +1599,8 @@ p {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover; /* Use 'cover' to ensure the entire image is visible */
+  -o-object-position: bottom;
+     object-position: bottom;
   z-index: -1;
 }
 
@@ -2063,7 +2065,7 @@ p {
 }
 .aboutHero-content .aboutHero-content-left .aboutHero-content-left-text h1 {
   font-family: vorkurs;
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: uppercase;
   font-weight: bolder;
   color: #EC1C24;
@@ -2071,6 +2073,7 @@ p {
 .aboutHero-content .aboutHero-content-left .aboutHero-content-left-text p {
   font-family: MullerNarrow;
   font-size: 24px;
+  text-align: justify;
 }
 .aboutHero-content .aboutHero-content-right {
   width: 50%;
@@ -2114,7 +2117,7 @@ p {
   margin: 0.1rem;
   font-family: MullerNarrow;
   font-size: 10px;
-  text-align: right;
+  text-align: justify;
   font-weight: bold;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-text .text-quote {
@@ -2657,6 +2660,7 @@ p {
   font-size: 12px;
   font-family: MullerNarrow;
   font-weight: lighter;
+  text-align: justify;
 }
 
 @media only screen and (max-width: 768px) {

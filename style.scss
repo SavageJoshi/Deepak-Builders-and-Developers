@@ -1836,6 +1836,7 @@ body{
 	  width: 100%;
 	  height: 100%;
 	  object-fit: cover; /* Use 'cover' to ensure the entire image is visible */
+	  object-position: bottom;
 	  z-index: -1;
 	}
   }
@@ -2377,7 +2378,7 @@ body{
 
 			h1{
 				font-family: vorkurs;
-				font-size: 3rem;
+				font-size: 4rem;
 				text-transform: uppercase;
 				font-weight: bolder;
 				color: #EC1C24;
@@ -2385,6 +2386,8 @@ body{
 			p{
 				font-family: MullerNarrow;
 				font-size: 24px;
+				text-align: justify;
+
 			}
 		}
 
@@ -2431,7 +2434,7 @@ body{
 				margin: 0.1rem;
 				font-family: MullerNarrow;
 				font-size: 10px;
-				text-align: right;
+				text-align: justify;
 				font-weight: bold;
 			}
 			.text-quote{
@@ -2466,7 +2469,7 @@ body{
 				padding-left: 0;
 				padding: 0.5rem;
 				margin-top: 10vh;
-
+				
 				h1{
 					font-size: 1rem;
 					margin-bottom: 0;
@@ -3073,6 +3076,7 @@ body{
 				font-size: 12px;
 				font-family: MullerNarrow;
 				font-weight: lighter;
+				text-align: justify;
 			}
 
 		}
