@@ -95,7 +95,8 @@ const tl = new TimelineMax();
   .to(slider, 0.7, 
       {scaleX: 0, ease: Power2.easeInOut}
   )
-  tl.fromTo(headline , 0.5 , {opacity: 0, y: 30 }, {opacity: 1, y: 0}, "1.7")
+  tl.fromTo(headline , 0.5 , {opacity: 0, y: 30 }, {opacity: 1, y: 0}, "2.5")
+
   .fromTo(logo, 0.5, {opacity: 0, y: 30}, {opacity: 1, y: 0}, "1.7")
   .fromTo(menu, 0.5, {opacity: 0, y: 30}, {opacity: 1, y: 0}, "1.7");
   
