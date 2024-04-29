@@ -683,7 +683,7 @@ body {
   width: 100%;
   -o-object-fit: cover !important;
      object-fit: cover !important;
-  cursor: url("/assets/img/hand-grab-o-32.png"), grab;
+  cursor: url("./assets/img/hand-grab-o-32.png"), grab;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -1234,13 +1234,13 @@ p {
 }
 
 .projects {
-  cursor: url("/assets/img/hand-grab-o-32.png"), grab;
+  cursor: url("./assets/img/hand-grab-o-32.png"), grab;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 .projects:active {
-  cursor: url("/assets/img/hand-grab-o-32.png"), grabbing;
+  cursor: url("./assets/img/hand-grab-o-32.png"), grabbing;
 }
 
 .projects {

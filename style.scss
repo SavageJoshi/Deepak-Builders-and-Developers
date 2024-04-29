@@ -795,7 +795,7 @@ body{
 	// display: flex;
 	object-fit: cover !important;
 	// object-position: bottom;
-	cursor: url('/assets/img/hand-grab-o-32.png'), grab;
+	cursor: url('./assets/img/hand-grab-o-32.png'), grab;
 	user-select: none;
   }
 
@@ -1394,10 +1394,10 @@ body{
 }
 
 .projects {
-	cursor: url('/assets/img/hand-grab-o-32.png'), grab;
+	cursor: url('./assets/img/hand-grab-o-32.png'), grab;
 	user-select: none;
 	&:active{
-	  cursor: url('/assets/img/hand-grab-o-32.png'), grabbing;
+	  cursor: url('./assets/img/hand-grab-o-32.png'), grabbing;
 	}
   }
   
