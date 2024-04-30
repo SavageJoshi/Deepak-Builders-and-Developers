@@ -134,27 +134,27 @@ gsap.to(".video-container", {
 
 
 
-gsap.to(".video-scroll", {
-    scrollTrigger: {
-      trigger: ".video-scroll",
-      start: "top 120%", 
-      end: "top -10%", 
-      scrub: true,
-    //   markers: true,
-      onEnter: function() {
-        videoElement.play();
-      },
-      onLeaveBack: function() {
-        videoElement.pause();
-      },
-      onLeave: function() {
-        videoElement.pause();
-      },
-      onEnterBack: function() {
-        videoElement.play();
-      }
-    }
-  });
+// gsap.to(".video-scroll", {
+//     scrollTrigger: {
+//       trigger: ".video-scroll",
+//       start: "top 120%", 
+//       end: "top -10%", 
+//       scrub: true,
+//     //   markers: true,
+//       onEnter: function() {
+//         videoElement.play();
+//       },
+//       onLeaveBack: function() {
+//         videoElement.pause();
+//       },
+//       onLeave: function() {
+//         videoElement.pause();
+//       },
+//       onEnterBack: function() {
+//         videoElement.play();
+//       }
+//     }
+//   });
 
 
 
