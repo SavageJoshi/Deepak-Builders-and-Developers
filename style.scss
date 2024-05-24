@@ -861,7 +861,7 @@ body{
 		align-self: flex-start;
 		padding: 1rem;
 		text-align: left;
-
+		padding: 1rem 3rem;
 	}
 
 	.goals-text h2 {
@@ -881,6 +881,8 @@ body{
 
 	.goals-content{
 		font-family: MullerNarrow;
+		text-align: justify;
+		margin-top: 0.5rem;
 		font-size: 1.2rem;
 		font-weight: bold;
 		width: 80%;
@@ -1350,13 +1352,16 @@ body{
 	line-height: 1.2;
 	font-size: 2em;
 	font-family: vorkurs;
+	// margin-top: 1rem;
+	margin-bottom: 0.5rem;
   }
   .main p{
 	font-size: 1.2rem;
 	font-family: MullerNarrow;
 	font-weight: lighter;
 	color: white;
-	letter-spacing: 4px;
+	text-align: justify;
+	letter-spacing: 2px;
   }
 
 
@@ -1727,10 +1732,11 @@ body{
 	text-align: left;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	// gap: 5px;
 	color: #e4e4e4;
 }
 .contact-row{
+	font-family: vorkurs;
 	font-size: 22px;
 	width: 100%;
 	height: 30%;
@@ -1743,8 +1749,27 @@ body{
 		transform-origin: left;
 	}
 	a{
-		color: #e4e4e4;
+	width: 35px;
+	height: 35px;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 5px;
+	background-color: white;
+	transition: all 0.4s;
+		i{
+		color: #EC1C24;
+		font-size: 18px;
+		line-height: 35px;
+		border: 1px solid transparent;
+		}
 	}
+}
+.contact-row a:hover{
+		background-color: #EC1C24;
+		border: 1px solid #e4e4e4;
+		i{
+			color: #e4e4e4;
+		}
 }
 
 .footer-color-block{
@@ -1842,7 +1867,7 @@ body{
 	background-color: #EC1C24;
 	height: 50%;
 	z-index: 2;
-	padding: 1rem; /* Add padding for content inside the card */
+	padding: 3rem 2rem;
 	margin-left: 5%;
 	display: flex;
 	flex-direction: column;
@@ -1863,11 +1888,12 @@ body{
   
 	p {
 	  margin: 0;
-	  font-size: 1rem; /* Adjust font size as needed */
-	  font-family: MullerNarrow;
+	  font-size: 0.8rem; 
+	  font-weight: lighter;
+	  font-family: vorkurs;
 	}
 	// img{
-	// padding: 2rem 0;
+	// padding: 1rem 0;
 
 	// }
   }
@@ -1924,6 +1950,7 @@ body{
 	p{
 		transform: translateY(50%);
 		opacity: 0;
+		text-align: justify;
 		font-family: MullerNarrow;
 	}
 }
@@ -2366,9 +2393,10 @@ body{
 			width: 90%;
 			padding: 1rem;
 			padding-left: 4rem;
-
-
+			
+			
 			h1{
+				font-weight: bolder !important;
 				font-family: vorkurs;
 				font-size: 4rem;
 				text-transform: uppercase;
@@ -2379,7 +2407,6 @@ body{
 				font-family: MullerNarrow;
 				font-size: 24px;
 				text-align: justify;
-
 			}
 		}
 
@@ -2706,27 +2733,27 @@ body{
 }
 
 .accordion-box{
-	width: 50%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 1rem;
-	padding-left: 1.7rem;
+	padding: 3rem 3.5rem;
 	background-color: #e4e4e4;
-	margin: 2rem;
+	margin: 3rem;
 	min-height: 20rem;
-	transition: height 1s ease;
 
 	h1{
 		margin: 0;
 		font-family: vorkurs;
+		font-weight: lighter;
 		color: #EC1C24;
 		font-size: clamp(2rem, 4vw, 5rem);
 	}
 	.accordion-text {
+		width: 75%;
+		text-align: justify;
 		font-size: clamp(0.2rem, 4vw, 1rem);
-		font-family: MullerNarrow;
-		text-transform: uppercase;
+		font-family: vorkurs;
 		overflow: hidden;
 		position: relative;
 		display: -webkit-box;
@@ -3124,67 +3151,63 @@ body{
 // Location button
 
 .location-dropdown {
-	font-family: MullerNarrow;
-	width: 20%;
-	position: absolute;
-	margin-left: 10rem;
-	margin-top: 3rem;
-	letter-spacing: 5%;
-	z-index: 20;
+    font-family: MullerNarrow;
+    position: absolute;
+    // width: 20%;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    z-index: 1002;
+
+    button {
+        font-family: MullerNarrow;
+        background-color: #EC1C24 !important;
+        color: #e4e4e4 !important;
+        padding: 1.1rem;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        text-transform: uppercase;
+        // width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #EC1C24;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+        width: 100%;
+    }
+
+    li {
+        font-size: 1.3rem;
+        padding: 0.5rem 1rem;
+        color: #e4e4e4;
+        transition: background-color 0.2s, color 0.2s;
+    }
+    
+    li:hover {
+        background-color: #f1f1f1;
+        color: #EC1C24;
+        cursor: pointer;
+    }
+    
+    &:hover ul {
+        display: block;
+    }
+
+    button[selected] {
+        background-color: #fff;
+        color: #EC1C24;
+    }
 }
-
-.location-dropdown button {
-	font-family: MullerNarrow;
-	background-color: #EC1C24 !important;
-	height: fit-content;
-	width: fit-content;
-	color: #e4e4e4 !important;
-	padding: 1.1rem;
-	border: none;
-	cursor: pointer;
-	font-size: 2rem;
-	text-transform: uppercase;
-  }
-  
-  .location-dropdown ul {
-	position: absolute;
-	top: 100%; /* Position the menu below the button */
-	left: 0;
-	width: fit-content;
-	background-color: #EC1C24;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: none; /* Hide the menu initially */
-  }
-  
-  .location-dropdown li {
-	font-size: 1.3rem;
-	padding: 0.5rem 1rem;
-	width: 100%;
-  }
-  
-  .location-dropdown:hover ul {
-	display: block; /* Show the menu on hover */
-  }
-  
-  .location-dropdown li {
-	color: #e4e4e4;
-	text-decoration: none;
-	transition: all 0.2s;
-
-  }
-  
-  .location-dropdown li:hover {
-	background-color: #f1f1f1;
-	color: #EC1C24;
-	cursor: pointer;
-  }
-  
-  .location-dropdown button[selected] { /* Styling for selected location */
-	background-color: #fff;
-	color: #EC1C24;
-  }
 
 
 //   Project Cards 
@@ -3335,6 +3358,7 @@ body{
 				letter-spacing: 5px;
 				overflow: hidden;
 				p{
+					font-family: vorkurs;
 					transition: all 0.5s;
 					margin: 0;
 					transform: translateY(-100%);

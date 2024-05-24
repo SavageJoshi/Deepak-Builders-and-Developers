@@ -119,7 +119,6 @@ let videobox = document.querySelector(".video-conatainer");
 let videoElement = document.querySelector(".video-scroll");
 
 gsap.to(".video-container", {
-  // width: "100vh" ,
   translateY: 0,
   scale: 1,
   scrollTrigger: {
@@ -127,8 +126,6 @@ gsap.to(".video-container", {
     start: "top 130%",
     end: "top 65%",
     scrub: true,
-    // pin: true,
-    // markers: true,
   }
 })
 
