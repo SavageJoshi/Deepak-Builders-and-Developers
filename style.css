@@ -4,8 +4,12 @@
   src: url(./fonts/II\ Vorkurs\ Medium.ttf);
 }
 @font-face {
+  font-family: vorkursThin;
+  src: url(./fonts/II\ Vorkurs\ Light.ttf);
+}
+@font-face {
   font-family: bison;
-  src: url(./fonts/Bison.ttf);
+  src: url(./fonts/II\ Vorkurs\ Bold.ttf);
 }
 @font-face {
   font-family: MullerNarrow;
@@ -33,17 +37,16 @@ body {
 }
 
 .circle {
-  --cursor-size: 40px;
+  --cursor-size: 30px;
   position: fixed;
   width: var(--cursor-size);
   height: var(--cursor-size);
-  border: 2px solid #00FFFF;
+  background-color: #efefef;
   border-radius: 100%;
   top: calc(-1 * var(--cursor-size) / 2);
   left: calc(-1 * var(--cursor-size) / 2);
   pointer-events: none;
   z-index: 1005;
-  mix-blend-mode: exclusion;
 }
 
 @media only screen and (max-width: 768px) {
@@ -84,9 +87,8 @@ body {
 }
 
 .menu-icon {
-  mix-blend-mode: difference;
-  height: 30px;
-  width: 30px;
+  height: 45px;
+  width: 45px;
   position: absolute;
   z-index: 1001;
   right: 30px;
@@ -95,18 +97,21 @@ body {
 }
 .menu-icon__line {
   mix-blend-mode: multiply;
-  height: 2px;
-  width: 30px;
+  height: 3.5px;
+  border-radius: 10px;
+  width: 45px;
   display: block;
-  background-color: red;
+  background-color: #EC1C24;
   margin-bottom: 4px;
   transition: transform 0.2s ease, background-color 0.5s ease;
 }
 .menu-icon__line-left {
-  width: 15px;
+  width: 22.5px;
+  height: 3px;
 }
 .menu-icon__line-right {
-  width: 15px;
+  height: 3px;
+  width: 22.5px;
   float: right;
 }
 
@@ -586,7 +591,7 @@ body {
 }
 
 .achievement-grid {
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -594,7 +599,7 @@ body {
 }
 
 .achievement-tab {
-  width: 20%;
+  width: 22%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -616,15 +621,15 @@ body {
   display: flex;
   justify-content: center;
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 700;
 }
 .count span {
-  display: block;
+  letter-spacing: -10px;
   font-family: bison;
   text-align: right;
   line-height: 0;
-  font-size: 9rem;
+  font-size: 8rem;
   color: #EC1C24;
 }
 
@@ -734,7 +739,7 @@ body {
   align-self: flex-start;
   padding: 1rem;
   text-align: left;
-  padding: 1rem 3rem;
+  padding: 1rem 1.5rem;
 }
 
 .goals-text h2 {
@@ -743,20 +748,22 @@ body {
 }
 
 .goals-title {
-  font-family: vorkurs;
+  font-family: vorkursThin;
   font-weight: bolder;
+  font-size: 28px;
   letter-spacing: 2px;
-  text-transform: uppercase;
   color: #EC1C24;
+  margin-bottom: 0;
+  margin-top: 0.2rem;
 }
 
 .goals-content {
   font-family: MullerNarrow;
   text-align: justify;
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  width: 80%;
+  width: 90%;
   line-height: 1.7rem;
 }
 
@@ -783,6 +790,7 @@ body {
 
 .carousel-slide {
   width: 100%;
+  height: 100%;
   flex-shrink: 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -809,6 +817,7 @@ body {
   z-index: 10;
   width: 100%;
   margin-top: 2rem;
+  margin-right: 3rem;
   mix-blend-mode: multiply;
 }
 
@@ -845,6 +854,7 @@ body {
   .long-title {
     position: relative;
     margin-top: 0;
+    margin-right: 0;
     padding: 2rem 0;
   }
   .long-title h1 {
@@ -855,7 +865,8 @@ body {
 .goals-2 {
   display: flex;
   flex-direction: row;
-  height: 70vh;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .goals-2-img img {
@@ -978,7 +989,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background-color: #ED1D24;
   user-select: none;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -1061,7 +1072,7 @@ body {
   z-index: 2;
   pointer-events: none;
   opacity: 0;
-  background: red;
+  background: #ED1D24;
   color: #fff;
   transition: opacity 1s;
   transform: translateX(-50%);
@@ -1226,7 +1237,7 @@ p {
   justify-content: center;
   text-align: center;
   font-family: vorkurs;
-  color: red;
+  color: #ED1D24;
   font-size: clamp(1rem, 4vw, 5rem);
   user-select: none;
   -webkit-user-select: none; /* Safari */
@@ -1253,7 +1264,7 @@ p {
   height: 70vh;
   overflow-x: scroll;
   overflow-y: hidden;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
   -ms-overflow-style: none; /* IE and Edge */
   white-space: nowrap; /* This will ensure our projects are in one line */
   user-select: none;
@@ -1272,7 +1283,7 @@ p {
 }
 
 .projects-scrollbar {
-  scrollbar-width: thin;
+  scrollbar-width: auto;
   scrollbar-color: #EC1C24 transparent;
 }
 
@@ -1544,7 +1555,7 @@ p {
 }
 
 .contact-details {
-  width: 40%;
+  width: 50%;
   font-family: vorkurs;
   align-items: start;
   text-align: left;

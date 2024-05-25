@@ -200,10 +200,10 @@ gsap.to(".video-container", {
 //marquee2
 
 let currentScroll2 = 0;
-let isScrollingDown2 = false;  //direction to be opposite
+let isScrollingDown2 = true;  //direction to be opposite
 
 let tween2 = gsap.to(".marquee__part2", {
-    xPercent: 50,  // This will make it scroll in the opposite direction
+    xPercent: -100,  // This will make it scroll in the opposite direction
     repeat: -1,
     duration: 20,
     ease: "linear"
@@ -231,34 +231,34 @@ window.addEventListener("scroll", function() {
 
 //Achiements
 
-const rollingNumbers = (target, value) => {
-  gsap.to(target, {
-    duration: 1,
-    scrollTrigger: {
-      // trigger: "target",
-      trigger: ".count1",
-      start: "top 80%",
-      end: "top 50%",
-      scrub: true,
-      once: true,
-      // markers: true, 
-    },
-    // text: value.toString(),
-    innerHTML: value.toString(),
-    roundProps: "innerHTML",
+// const rollingNumbers = (target, value) => {
+//   gsap.to(target, {
+//     duration: 1,
+//     scrollTrigger: {
+//       // trigger: "target",
+//       trigger: ".count1",
+//       start: "top 80%",
+//       end: "top 50%",
+//       scrub: true,
+//       once: true,
+//       // markers: true, 
+//     },
+//     // text: value.toString(),
+//     innerHTML: value.toString(),
+//     roundProps: "innerHTML",
     
-  });
-};
+//   });
+// };
 
-document.addEventListener("DOMContentLoaded", function () {
-  rollingNumbers(".count1 span", 98); 
-  rollingNumbers(".count2 span", "15+"); 
-  rollingNumbers(".count3 span", "5+"); 
-  rollingNumbers(".count4 span", "17500000"); 
-  rollingNumbers(".count5 span", "100+"); 
-  // rollingNumbers(".count6 span", "04"); 
+// document.addEventListener("DOMContentLoaded", function () {
+//   rollingNumbers(".count1 span", 98); 
+//   rollingNumbers(".count2 span", "15+"); 
+//   rollingNumbers(".count3 span", "5+"); 
+//   rollingNumbers(".count4 span", "17500000"); 
+//   rollingNumbers(".count5 span", "100+"); 
+//   // rollingNumbers(".count6 span", "04"); 
   
-});
+// });
 
 
 
@@ -303,14 +303,14 @@ $(document).ready(function(){
 });
 
 if (window.matchMedia("(min-width: 769px)").matches) {
-  gsap.to(".goals-text", {
-    scrollTrigger: {
-      trigger: ".goals-text",
-      start: "top 10%",
-      end: "+=100%",
-      pin: true,
-    },
-  });
+  // gsap.to(".goals-text", {
+  //   scrollTrigger: {
+  //     trigger: ".goals-text",
+  //     start: "top 10%",
+  //     end: "+=100%",
+  //     pin: true,
+  //   },
+  // });
 
   gsap.to(".long-title", {
     y: "250%",
