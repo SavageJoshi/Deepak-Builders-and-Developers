@@ -2140,7 +2140,7 @@ p {
   width: 95%;
   padding: 1rem;
   padding-left: 4rem;
-  padding-bottom: 2.8rem;
+  padding-bottom: 4.5rem;
 }
 .aboutHero-content .aboutHero-content-left .aboutHero-content-left-text h1 {
   font-family: vorkursBold;
@@ -2152,7 +2152,7 @@ p {
 }
 .aboutHero-content .aboutHero-content-left .aboutHero-content-left-text p {
   font-family: vorkursBold;
-  font-size: 17px;
+  font-size: 16px;
   text-align: justify;
 }
 .aboutHero-content .aboutHero-content-right {
@@ -2198,9 +2198,9 @@ p {
   margin-bottom: 1rem;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-text .text-para {
-  margin: 0.1rem;
+  margin: 0;
   font-family: vorkursBold;
-  font-size: 17px;
+  font-size: 15px;
   text-align: justify;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-text .text-quote {
