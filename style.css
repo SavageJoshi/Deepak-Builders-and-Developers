@@ -15,6 +15,10 @@
   font-family: MullerNarrow;
   src: url(./fonts/AmericanAuto-Light.ttf);
 }
+@font-face {
+  font-family: vorkursBold;
+  src: url(./fonts/II\ Vorkurs\ Bold.ttf);
+}
 ::-webkit-scrollbar {
   display: none;
 }
@@ -591,7 +595,7 @@ body {
 }
 
 .achievement-grid {
-  width: 90%;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -624,7 +628,7 @@ body {
   font-weight: 700;
 }
 .count span {
-  letter-spacing: -10px;
+  letter-spacing: -5px;
   font-family: bison;
   text-align: right;
   line-height: 0;
@@ -2122,29 +2126,33 @@ p {
   width: 45%;
   padding: 1rem;
   position: absolute;
-  opacity: 0.04;
+  top: 8%;
+  left: 3%;
+  opacity: 0.05;
   z-index: -5;
 }
 .aboutHero-content .aboutHero-content-left .aboutHero-content-left-bgImage img {
-  width: 80% !important;
+  filter: grayscale(100%);
+  width: 40% !important;
   height: auto;
 }
 .aboutHero-content .aboutHero-content-left .aboutHero-content-left-text {
   width: 90%;
   padding: 1rem;
   padding-left: 4rem;
+  padding-bottom: 2.8rem;
 }
 .aboutHero-content .aboutHero-content-left .aboutHero-content-left-text h1 {
-  font-weight: bolder !important;
-  font-family: vorkurs;
-  font-size: 4rem;
+  font-family: vorkursBold;
+  font-size: 50px;
   text-transform: uppercase;
-  font-weight: bolder;
   color: #EC1C24;
+  margin-bottom: 0.5rem;
+  -webkit-text-stroke: 2px #EC1C24;
 }
 .aboutHero-content .aboutHero-content-left .aboutHero-content-left-text p {
-  font-family: MullerNarrow;
-  font-size: 24px;
+  font-family: vorkursBold;
+  font-size: 17px;
   text-align: justify;
 }
 .aboutHero-content .aboutHero-content-right {
@@ -2154,22 +2162,24 @@ p {
   justify-content: space-between;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-img {
-  height: 60%;
+  height: 50%;
   width: auto;
   overflow: hidden;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-text {
   width: 100%;
-  height: 40%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: 1rem 3rem;
+  padding: 0.5rem 3rem;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-text .text-name {
   margin: 0;
@@ -2177,26 +2187,25 @@ p {
   font-size: 24px;
   text-transform: uppercase;
   color: #EC1C24;
+  margin-top: 0.7rem;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-text .text-designation {
-  font-family: MullerNarrow;
+  font-family: vorkursBold;
   font-weight: lighter;
   font-size: 22px;
   margin: 0;
-  font-style: oblique;
+  margin-bottom: 1rem;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-text .text-para {
   margin: 0.1rem;
-  font-family: MullerNarrow;
-  font-size: 10px;
+  font-family: vorkursBold;
+  font-size: 17px;
   text-align: justify;
-  font-weight: bold;
 }
 .aboutHero-content .aboutHero-content-right .aboutHero-content-right-text .text-quote {
-  width: 80%;
+  width: 100%;
   font-family: MullerNarrow;
   font-style: oblique;
-  text-align: right;
 }
 
 @media only screen and (max-width: 768px) {
@@ -2765,8 +2774,8 @@ p {
   font-family: vorkurs;
   position: absolute;
   margin-left: 10rem;
-  margin-top: 3rem;
-  z-index: 1002;
+  margin-top: 6rem;
+  z-index: 1000;
 }
 .location-dropdown button {
   font-family: vorkurs;

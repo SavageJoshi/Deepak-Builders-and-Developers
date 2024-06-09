@@ -152,7 +152,7 @@ const filterProjectCards = (selectedLocation) => {
 
   projectCards.forEach((card) => {
     const cardLocation = card.getAttribute('data-location');
-    if (selectedLocation === 'All' || selectedLocation === cardLocation || selectedLocation === 'LOCATION') {
+    if (selectedLocation === 'Show all' || selectedLocation === cardLocation || selectedLocation === 'LOCATION') {
       card.classList.add('show-card');
     }
   });
