@@ -88,6 +88,7 @@ body{
 	position: fixed;
 	z-index: 1001;
 	align-items: center;
+	// pointer-events: none;
 	// background-color: #0000004f;
 }
 
@@ -121,12 +122,11 @@ body{
     height: $size;
     width: $size;
     position: absolute;
-    z-index: 1001;
+    z-index: 1006;
 	right: 30px;
 	top: 30px;
 	cursor: pointer;
 	&__line{
-		mix-blend-mode: multiply;
 		height: 3.5px;
 		border-radius: 10px;
 		width: $size;
@@ -165,6 +165,7 @@ body{
 		position: fixed;
 		width:$width;
 		height:$height;
+		z-index: 1005;
 		background: rgba(red, .2);
 		z-index: -1;
 		transition: transform $transition--easing $transition--length + s;
@@ -229,20 +230,20 @@ body{
 
 //active state
 .nav-container.nav-active{
-	$menu--items--count: 5;
+	$menu--items--count: 4;
 	.menu-icon{
 		&__line{
 			background-color: #ffffff;
-			transform: translateX(0px) rotate(-45deg);
-			mix-blend-mode: difference;
+			transform: rotate(-45deg);
 		}
 		&__line-left{
-			mix-blend-mode: difference;
-			transform: translateX(1px) rotate(45deg);
+			width: $size;
+			height: 4px;
+			transform:  rotate(45deg);
 		}
 		&__line-right{
-			mix-blend-mode: difference;
-			transform: translateX(-2px) rotate(45deg);
+			width: $size;
+			transform:  rotate(45deg);
 		}
 	}
 	.nav{
@@ -1899,7 +1900,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
-	gap: 1rem;
+	gap: 0.5rem;
 
 
 	transform: scaleY(0%);
@@ -1909,14 +1910,15 @@ body{
 	h3 {
 	  margin: 0;
 	  font-size: 1.5rem; /* Adjust font size as needed */
-	  font-family: vorkurs;
+	  font-family: vorkursThin;
+	  font-weight: 10;
 	  text-transform: uppercase;
 	}
   
 	p {
 	  margin: 0;
-	  font-size: 0.8rem; 
-	  font-weight: lighter;
+	  font-size: 0.7rem; 
+	//   font-weight: lighter;
 	  font-family: vorkurs;
 	}
 	// img{
@@ -3192,7 +3194,7 @@ body{
     position: absolute;
     // width: 20%;
     margin-left: 10rem;
-    margin-top: 6rem;
+    margin-top: 3rem;
     z-index: 1000;
 
     button {
@@ -3413,7 +3415,7 @@ body{
 				display: flex;
 
 				h1{
-					font-family: bison;
+					font-family: vorkurs;
 					font-size: 128px;
 					margin: 0;
 					padding: 0;

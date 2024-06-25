@@ -94,7 +94,7 @@ body {
   height: 45px;
   width: 45px;
   position: absolute;
-  z-index: 1001;
+  z-index: 1006;
   right: 30px;
   top: 30px;
   cursor: pointer;
@@ -135,6 +135,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  z-index: 1005;
   background: rgba(255, 0, 0, 0.2);
   z-index: -1;
   transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
@@ -197,14 +198,11 @@ body {
 .nav-container.nav-active .menu-icon__line {
   background-color: #ffffff;
   transform: translateX(0px) rotate(-45deg);
-  mix-blend-mode: difference;
 }
 .nav-container.nav-active .menu-icon__line-left {
-  mix-blend-mode: difference;
   transform: translateX(1px) rotate(45deg);
 }
 .nav-container.nav-active .menu-icon__line-right {
-  mix-blend-mode: difference;
   transform: translateX(-2px) rotate(45deg);
 }
 .nav-container.nav-active .nav {
@@ -241,9 +239,6 @@ body {
 }
 .nav-container.nav-active .nav__list-item:nth-child(4) {
   transition-delay: 0.9s;
-}
-.nav-container.nav-active .nav__list-item:nth-child(5) {
-  transition-delay: 1s;
 }
 
 @media (max-width: 768px) {
@@ -1691,7 +1686,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  gap: 1rem;
+  gap: 0.5rem;
   transform: scaleY(0%);
   transform-origin: top;
   transition: all 1s ease;
@@ -1699,13 +1694,13 @@ p {
 .project-textCard h3 {
   margin: 0;
   font-size: 1.5rem; /* Adjust font size as needed */
-  font-family: vorkurs;
+  font-family: vorkursThin;
+  font-weight: 10;
   text-transform: uppercase;
 }
 .project-textCard p {
   margin: 0;
-  font-size: 0.8rem;
-  font-weight: lighter;
+  font-size: 0.7rem;
   font-family: vorkurs;
 }
 
@@ -2773,7 +2768,7 @@ p {
   font-family: vorkurs;
   position: absolute;
   margin-left: 10rem;
-  margin-top: 6rem;
+  margin-top: 3rem;
   z-index: 1000;
 }
 .location-dropdown button {
@@ -2968,7 +2963,7 @@ p {
   display: flex;
 }
 .projectCard .projectCard-mainContent-img .number-overlay .overlay-number h1 {
-  font-family: bison;
+  font-family: vorkurs;
   font-size: 128px;
   margin: 0;
   padding: 0;
