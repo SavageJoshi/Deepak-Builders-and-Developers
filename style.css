@@ -58,6 +58,44 @@ body {
     display: none;
   }
 }
+.section-title {
+  font-family: vorkurs;
+  font-size: 60px;
+}
+
+.lg-para-title {
+  font-family: vorkurs;
+  font-size: 60px;
+  letter-spacing: 5px;
+}
+
+.rg-para-title {
+  font-family: vorkursThin;
+  font-size: 45px;
+  letter-spacing: 8px;
+}
+
+.sm-para-title {
+  font-family: vorkursThin;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.lg-para {
+  font-family: MullerNarrow;
+  font-size: 20px;
+}
+
+.rg-para {
+  font-family: MullerNarrow;
+  font-size: 16px;
+}
+
+.sm-para {
+  font-family: MullerNarrow;
+  font-size: 14px;
+}
+
 .nav-container {
   display: flex;
   width: 100%;
@@ -100,12 +138,11 @@ body {
   cursor: pointer;
 }
 .menu-icon__line {
-  mix-blend-mode: multiply;
   height: 3.5px;
   border-radius: 10px;
   width: 45px;
   display: block;
-  background-color: #EC1C24;
+  background-color: #921115;
   margin-bottom: 4px;
   transition: transform 0.2s ease, background-color 0.5s ease;
 }
@@ -200,7 +237,8 @@ body {
   transform: translateX(0px) rotate(-45deg);
 }
 .nav-container.nav-active .menu-icon__line-left {
-  transform: translateX(1px) rotate(45deg);
+  height: 4px;
+  transform: translateX(3px) rotate(45deg);
 }
 .nav-container.nav-active .menu-icon__line-right {
   transform: translateX(-2px) rotate(45deg);
@@ -748,7 +786,7 @@ body {
 
 .goals-title {
   font-family: vorkursThin;
-  font-size: 45px;
+  font-size: 60px;
   color: #EC1C24;
   margin-bottom: 0;
   margin-top: 0.2rem;
@@ -1206,12 +1244,9 @@ p {
 }
 
 .main h2 {
-  text-transform: uppercase;
-  letter-spacing: 5px;
   line-height: 1.2;
-  font-size: 2em;
-  font-family: vorkurs;
   margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .main p {
@@ -1234,9 +1269,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: vorkurs;
   color: #ED1D24;
-  font-size: 60px;
   user-select: none;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -1318,8 +1351,6 @@ p {
 
 .project-title {
   text-decoration: none;
-  font-family: vorkursThin;
-  font-size: 45px;
   font-weight: normal;
   position: absolute;
   bottom: 7%;
@@ -1381,7 +1412,6 @@ p {
   color: #ED1D24;
   padding: 32px;
   position: relative;
-  letter-spacing: 1px;
   width: auto;
   justify-content: center;
   align-items: center;
@@ -1422,9 +1452,6 @@ p {
 }
 
 .btn__text {
-  font-family: vorkurs;
-  font-size: 60px;
-  letter-spacing: 5px;
   top: 50%;
   transform: translateY(-50%);
   white-space: nowrap;
@@ -1464,12 +1491,9 @@ p {
 }
 
 .headtitle {
-  font-family: vorkursThin;
   text-transform: uppercase;
   width: 80%;
   z-index: 1;
-  font-size: 30px;
-  letter-spacing: 2px;
   color: #e4e4e4;
   display: flex;
 }
@@ -1508,14 +1532,19 @@ p {
   font-family: MullerNarrow;
 }
 .input-footer::-moz-placeholder {
+  font-family: MullerNarrow;
+  font-size: 14px;
   color: #EC1C24;
   opacity: 0.7;
 }
 .input-footer::placeholder {
+  font-family: MullerNarrow;
+  font-size: 14px;
   color: #EC1C24;
   opacity: 0.7;
 }
 .input-footer:focus {
+  font-family: MullerNarrow;
   color: #e4e4e4;
   background-color: #EC1C24;
   outline: none;
@@ -1565,18 +1594,11 @@ p {
 }
 
 .contact-row {
-  font-family: vorkurs;
-  font-size: 22px;
   width: 100%;
   height: 30%;
   display: flex;
   align-items: center;
   gap: 15px;
-}
-.contact-row:first-child {
-  gap: 10px;
-  transform: scale(200%);
-  transform-origin: left;
 }
 .contact-row a {
   width: 35px;
@@ -1610,8 +1632,6 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: MullerNarrow;
-  font-weight: 100;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1745,7 +1765,6 @@ p {
 }
 .descriptionBox-white h1 {
   margin: 0;
-  font-family: vorkurs;
   color: #EC1C24;
   transform: translateY(50%);
   opacity: 0;
@@ -1754,7 +1773,6 @@ p {
   transform: translateY(50%);
   opacity: 0;
   text-align: justify;
-  font-family: MullerNarrow;
 }
 
 .descriptionBox-red {
@@ -1779,8 +1797,6 @@ p {
 }
 .descriptionBox-red .descriptionBox-red-infoBox h3 {
   text-align: center;
-  font-family: vorkurs;
-  font-size: 30px;
   margin: 0;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -1788,14 +1804,12 @@ p {
   opacity: 0;
 }
 .descriptionBox-red .descriptionBox-red-infoBox p {
-  font-size: 20px;
   text-align: center;
   margin: 0;
   transform: translateY(50%);
   opacity: 0;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: MullerNarrow;
 }
 .descriptionBox-red .descriptionBox-red-infoBox img {
   height: 100px;
@@ -1929,9 +1943,7 @@ p {
   text-align: center;
 }
 .imageGallery .imageGallery-header h1 {
-  font-size: 4rem;
   color: #EC1C24;
-  font-family: vorkurs;
 }
 .imageGallery .imageGallery-images {
   display: flex;
@@ -2045,9 +2057,7 @@ p {
   text-align: center;
 }
 .amenities-section .amenities-header h1 {
-  font-size: 4rem;
   color: #EC1C24;
-  font-family: vorkurs;
 }
 .amenities-section .amenities-list {
   width: 80%;
@@ -2284,8 +2294,6 @@ p {
   overflow: hidden;
 }
 .history-left h1 {
-  font-size: 48px;
-  font-family: MullerNarrow;
   text-transform: uppercase;
 }
 .history-left .history-left-line {
@@ -2312,15 +2320,13 @@ p {
   margin-bottom: 3rem;
 }
 .history-text h1 {
-  font-size: 128px;
-  font-family: vorkurs;
   margin: 0;
+  font-size: 110px;
+  font-family: vorkurs;
   transform: translateX(4rem);
   opacity: 0;
 }
 .history-text p {
-  font-family: MullerNarrow;
-  font-size: 32px;
   transform: translateY(2rem);
   opacity: 0;
   line-height: 1;
@@ -2371,8 +2377,6 @@ p {
   color: #e4e4e4;
 }
 .ticker-title h1 {
-  font-size: clamp(1.5rem, 4vw, 4rem);
-  font-family: vorkurs;
   text-transform: uppercase;
 }
 
@@ -2430,17 +2434,13 @@ p {
   margin: 3rem;
 }
 .accordion-box h1 {
+  font-family: vorkursThin;
   margin: 0;
-  font-family: vorkurs;
-  font-weight: lighter;
   color: white;
-  font-size: clamp(2rem, 4vw, 5rem);
 }
 .accordion-box .accordion-text {
   width: 75%;
   text-align: justify;
-  font-size: clamp(0.2rem, 4vw, 1rem);
-  font-family: vorkurs;
   color: #e4e4e4;
   overflow: hidden;
   position: relative;
@@ -2545,9 +2545,7 @@ p {
   cursor: pointer;
 }
 .proudMoments-images .image-container .image-overlay .image-description, .proudMoments-images-2 .image-container .image-overlay .image-description {
-  font-family: MullerNarrow;
   color: #fff;
-  font-size: 16px;
   text-align: center;
   max-width: 80%;
 }
@@ -2610,9 +2608,7 @@ p {
   opacity: 0;
 }
 .members-title h1 {
-  font-size: clamp(48px, 4vw, 82px);
   color: #e4e4e4;
-  font-family: vorkurs;
   text-transform: uppercase;
 }
 
@@ -2646,8 +2642,6 @@ p {
   border-radius: 20px;
 }
 .member-card h1 {
-  font-family: vorkurs;
-  font-size: clamp(12px, 4vw, 26px);
   margin-top: 0.5rem;
   margin-bottom: 0;
   color: #e4e4e4;
@@ -2655,12 +2649,7 @@ p {
 }
 .member-card h3 {
   cursor: default;
-  font-family: vorkursThin;
-  font-weight: lighter;
-  font-size: 30px;
-  letter-spacing: 2px;
   margin: 0;
-  text-transform: uppercase;
   color: #e4e4e4;
   transition: all 1s ease;
 }
@@ -2728,14 +2717,7 @@ p {
   width: 25%;
   height: auto;
 }
-.section-services .services-container .service-box h1 {
-  font-family: vorkursThin;
-  font-size: 30px;
-}
 .section-services .services-container .service-box p {
-  font-size: 14px;
-  font-family: MullerNarrow;
-  font-weight: lighter;
   text-align: justify;
 }
 
@@ -2765,21 +2747,17 @@ p {
 }
 
 .location-dropdown {
-  font-family: vorkurs;
   position: absolute;
   margin-left: 10rem;
   margin-top: 3rem;
-  z-index: 1000;
+  z-index: 1005;
 }
 .location-dropdown button {
-  font-family: vorkurs;
   background-color: #EC1C24 !important;
   color: #e4e4e4 !important;
   padding: 1.1rem;
   border: none;
   cursor: pointer;
-  font-size: 30px;
-  letter-spacing: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2797,7 +2775,6 @@ p {
   width: 100%;
 }
 .location-dropdown li {
-  font-size: 1.3rem;
   padding: 0.5rem 1rem;
   color: #e4e4e4;
   transition: background-color 0.2s, color 0.2s;
@@ -2907,15 +2884,10 @@ p {
   transition: all 0.5s ease;
 }
 .projectCard .projectCard-mainContent h1 {
-  font-family: vorkurs;
-  font-size: 30px;
-  letter-spacing: 2px;
   margin-bottom: 0;
   transition: all 0.3s ease;
 }
 .projectCard .projectCard-mainContent h3 {
-  font-family: MullerNarrow;
-  font-size: 20px;
   margin-top: 0;
   transition: all 0.3s ease;
 }

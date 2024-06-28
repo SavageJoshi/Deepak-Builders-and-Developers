@@ -29,6 +29,13 @@ $font--primary:'Fira Sans', sans-serif;
 
 $transition--length: .8;
 
+
+
+
+
+
+// Text Styles Ends
+
 ::-webkit-scrollbar{
 	display: none;
 }
@@ -73,6 +80,44 @@ body{
 	}
   }
 
+  // Text Styles
+
+.section-title {
+	font-family: vorkurs;
+	font-size: 60px;
+}
+
+.lg-para-title {
+	font-family: vorkurs;
+	font-size: 60px;
+	letter-spacing: 5px;
+}
+
+.rg-para-title{
+	font-family: vorkursThin;
+	font-size: 45px;
+	letter-spacing: 8px;
+}
+
+.sm-para-title{
+	font-family: vorkursThin;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+
+.lg-para{
+	font-family: MullerNarrow;
+	font-size: 20px;
+}
+.rg-para{
+	font-family: MullerNarrow;
+	font-size: 16px;
+}
+.sm-para{
+	font-family: MullerNarrow;
+	font-size: 14px;
+}
+
 
 
 //navbar Starts
@@ -116,9 +161,9 @@ body{
 }
 
 //default state
+$size: 45px;
 .menu-icon{
 	// mix-blend-mode: difference;
-	$size: 45px;
     height: $size;
     width: $size;
     position: absolute;
@@ -131,7 +176,7 @@ body{
 		border-radius: 10px;
 		width: $size;
 		display: block;
-		background-color: #EC1C24;
+		background-color: #921115;
 		margin-bottom: 4px;
 		transition: transform .2s ease, background-color .5s ease;
 	}
@@ -234,16 +279,15 @@ body{
 	.menu-icon{
 		&__line{
 			background-color: #ffffff;
-			transform: rotate(-45deg);
+			transform: translateX(0px) rotate(-45deg);
 		}
 		&__line-left{
-			width: $size;
 			height: 4px;
-			transform:  rotate(45deg);
+			transform: translateX(3px) rotate(45deg);
 		}
 		&__line-right{
-			width: $size;
-			transform:  rotate(45deg);
+			// width: $size;
+			transform: translateX(-2px) rotate(45deg);
 		}
 	}
 	.nav{
@@ -888,7 +932,7 @@ body{
 
 	.goals-title{
 		font-family: vorkursThin;
-		font-size: 45px;
+		font-size: 60px;
 		color: #EC1C24;
 		margin-bottom: 0;
 		margin-top: 0.2rem;
@@ -1370,13 +1414,10 @@ body{
 	color: #fff;
   }
   .main h2{
-	text-transform: uppercase;
-	letter-spacing: 5px;
 	line-height: 1.2;
-	font-size: 2em;
-	font-family: vorkurs;
 	// margin-top: 1rem;
 	margin-bottom: 0.5rem;
+	font-weight: normal;
   }
   .main p{
 	font-size: 1.2rem;
@@ -1407,9 +1448,7 @@ body{
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	font-family: vorkurs;
 	color: #ED1D24;
-	font-size: 60px;
 	// letter-spacing: 0.5rem;
 	user-select: none;
     -webkit-user-select: none; /* Safari */
@@ -1493,9 +1532,7 @@ body{
   
   .project-title {
 	text-decoration: none;
-	font-family: vorkursThin;
 	// font-size: clamp(1rem, 4vw, 2.5rem);
-	font-size: 45px;
 	font-weight: normal;
 	position: absolute;
 	bottom: 7%;
@@ -1567,7 +1604,6 @@ body{
 		color: #ED1D24;
 		padding: 32px;
 		position: relative;
-		letter-spacing: 1px;
 		width: auto;
 		justify-content: center;
 		align-items: center;
@@ -1609,10 +1645,7 @@ body{
 	}
 	
 	.btn__text {
-		font-family: vorkurs;
 		// font-size: 3em;
-		font-size: 60px;
-		letter-spacing: 5px;
 		top: 50%;
 		transform: translateY(-50%);
 		white-space: nowrap;
@@ -1668,13 +1701,10 @@ body{
 	// text-align: center;
 }
 .headtitle{
-	font-family: vorkursThin;
 	text-transform: uppercase;
 	width: 80%;
 	z-index: 1;
 	// font-size: clamp(1rem, 4vw, 3rem);
-	font-size: 30px;
-	letter-spacing: 2px;
 	color: #e4e4e4;
 	// margin-top: 2em;
 	display: flex;
@@ -1713,10 +1743,13 @@ body{
 	margin-bottom: 1rem;
 	font-family: MullerNarrow;
 	&::placeholder{
+		font-family: MullerNarrow;
+		font-size: 14px;
 		color: #EC1C24;
 		opacity: 0.7;
 	}
 	&:focus{
+		font-family: MullerNarrow;
 		color: #e4e4e4;
 		background-color: #EC1C24;
 		outline: none;	
@@ -1764,18 +1797,15 @@ body{
 	color: #e4e4e4;
 }
 .contact-row{
-	font-family: vorkurs;
-	font-size: 22px;
 	width: 100%;
 	height: 30%;
 	display: flex;
 	align-items: center;
 	gap: 15px;
-	&:first-child {
-		gap: 10px;
-		transform: scale(200%);
-		transform-origin: left;
-	}
+	// &:first-child {
+	// 	gap: 10px;
+	// 	transform-origin: left;
+	// }
 	a{
 	width: 35px;
 	height: 35px;
@@ -1808,8 +1838,6 @@ body{
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-family: MullerNarrow;
-	font-weight: 100;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1971,7 +1999,6 @@ body{
 	line-height: 1.4rem;
 	h1{
 		margin: 0;
-		font-family: vorkurs;
 		color: #EC1C24;
 		transform: translateY(50%);
 		opacity: 0;
@@ -1980,7 +2007,6 @@ body{
 		transform: translateY(50%);
 		opacity: 0;
 		text-align: justify;
-		font-family: MullerNarrow;
 	}
 }
 .descriptionBox-red{
@@ -2005,8 +2031,6 @@ body{
 		
 		h3{
 			text-align: center;
-			font-family: vorkurs;
-			font-size: 30px;
 			margin: 0;
 			margin-bottom: 0.5rem;
 			text-transform: uppercase;
@@ -2014,13 +2038,11 @@ body{
 			opacity: 0;
 		}
 		p{
-			font-size: 20px;
 			text-align: center;
 			margin: 0;
 			transform: translateY(50%);
 			opacity: 0;
 			width: fit-content;
-			font-family: MullerNarrow;
 		}
 		img{
 			height: 100px;
@@ -2169,9 +2191,7 @@ body{
 
     .imageGallery-header {
         h1 {
-            font-size: 4rem;
             color: #EC1C24;
-            font-family: vorkurs;
         }
     }
 
@@ -2304,9 +2324,7 @@ body{
 
     .amenities-header {
         h1 {
-            font-size: 4rem;
             color: #EC1C24;
-            font-family: vorkurs;
         }
     }
 
@@ -2592,8 +2610,6 @@ body{
 	overflow: hidden;
 
 	h1{
-		font-size: 48px;
-		font-family: MullerNarrow;
 		text-transform: uppercase;
 	}
 	.history-left-line {
@@ -2613,7 +2629,6 @@ body{
 
 
 .history-right{
-	// height: min-content;
 	display: flex;
 	flex-direction: column;
 	width: 60%;
@@ -2622,16 +2637,13 @@ body{
 .history-text{
 	margin-bottom: 3rem;
 	h1{
-		font-size: 128px;
-		font-family: vorkurs;
 		margin: 0;
-
+		font-size: 110px;
+		font-family: vorkurs;
 		transform: translateX(4rem);
 		opacity: 0;
 	}
 	p{
-		font-family: MullerNarrow;
-		font-size: 32px;
 		// text-transform: uppercase;
 
 		transform: translateY(2rem);
@@ -2697,8 +2709,6 @@ body{
 	justify-content: center;
 	color: #e4e4e4;
 	h1{
-		font-size: clamp(1.5rem, 4vw, 4rem);
-		font-family: vorkurs;
 		text-transform: uppercase;
 	}
   }
@@ -2778,17 +2788,13 @@ body{
 	// min-height: 20rem;
 
 	h1{
+		font-family: vorkursThin;
 		margin: 0;
-		font-family: vorkurs;
-		font-weight: lighter;
 		color: white;
-		font-size: clamp(2rem, 4vw, 5rem);
 	}
 	.accordion-text {
 		width: 75%;
 		text-align: justify;
-		font-size: clamp(0.2rem, 4vw, 1rem);
-		font-family: vorkurs;
 		color: #e4e4e4;
 		overflow: hidden;
 		position: relative;
@@ -2909,9 +2915,7 @@ body{
 			cursor: pointer;
 
 			.image-description {
-				font-family: MullerNarrow;
 				color: #fff;
-				font-size: 16px;
 				text-align: center;
 				max-width: 80%;
 			}
@@ -2988,9 +2992,7 @@ body{
 	transform: translateY(25%);
 	opacity: 0;
 	h1{
-		font-size: clamp(48px, 4vw, 82px);
 		color: #e4e4e4;
-		font-family: vorkurs;
 		text-transform: uppercase;
 	}
 }
@@ -3027,21 +3029,16 @@ body{
 		border-radius: 20px;
 	}
 	h1{
-		font-family: vorkurs;
-		font-size: clamp(12px, 4vw, 26px);
 		margin-top: 0.5rem;
 		margin-bottom: 0;
 		color: #e4e4e4;
 		cursor: default;
+		// text-transform: uppercase;
+
 	}
 	h3{
 		cursor: default;
-		font-family: vorkursThin;
-		font-weight: lighter;
-		font-size: 30px;
-		letter-spacing: 2px;
 		margin: 0;
-		text-transform: uppercase;
 		color: #e4e4e4;
 		transition: all 1s ease;
 
@@ -3124,16 +3121,13 @@ body{
 				height: auto;
 			}
 
-			h1{
-				font-family: vorkursThin;
-				// font-size: 1rem;
-				font-size: 30px;
-			}
+			// h1{
+			// 	font-family: vorkursThin;
+			// 	// font-size: 1rem;
+			// 	font-size: 30px;
+			// }
 	
 			p{
-				font-size: 14px;
-				font-family: MullerNarrow;
-				font-weight: lighter;
 				text-align: justify;
 			}
 
@@ -3190,23 +3184,19 @@ body{
 // Location button
 
 .location-dropdown {
-    font-family: vorkurs;
     position: absolute;
     // width: 20%;
     margin-left: 10rem;
     margin-top: 3rem;
-    z-index: 1000;
+    z-index: 1005;
 
     button {
-        font-family: vorkurs;
         background-color: #EC1C24 !important;
         color: #e4e4e4 !important;
         padding: 1.1rem;
         border: none;
         cursor: pointer;
         // font-size: 2rem;
-		font-size: 30px;
-		letter-spacing: 2px;
         // text-transform: uppercase;
         // width: 100%;
         display: flex;
@@ -3228,7 +3218,6 @@ body{
     }
 
     li {
-        font-size: 1.3rem;
         padding: 0.5rem 1rem;
         color: #e4e4e4;
         transition: background-color 0.2s, color 0.2s;
@@ -3349,17 +3338,12 @@ body{
 			transition: all 0.5s ease;
 		}
 		h1{
-			font-family: vorkurs;
 			// font-size: clamp(2rem, 4vw , 0.5rem);
-			font-size: 30px;
-			letter-spacing: 2px;
 			margin-bottom: 0;
 			transition: all 0.3s ease;
 			
 		}
 		h3{
-			font-family: MullerNarrow;
-			font-size: 20px;
 			// text-transform: uppercase;
 			// font-weight: lighter;
 			margin-top: 0;
