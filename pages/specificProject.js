@@ -73,16 +73,16 @@ gsap.to(".specificProject-heroImage", {
   // ease: "power4.out"
 })
 
-gsap.to(".descriptionBox-white h1", {
-  translateY: 0,
-  opacity: 1,
-  scrollTrigger:{
-    trigger: ".descriptionBox-white h1",
-    start: "top 90%",
-    end: "top 70%",
-    scrub: 0,
-  }
-})
+// gsap.to(".descriptionBox-white h1", {
+//   translateY: 0,
+//   opacity: 1,
+//   scrollTrigger:{
+//     trigger: ".descriptionBox-white h1",
+//     start: "top 90%",
+//     end: "top 70%",
+//     scrub: 0,
+//   }
+// })
 gsap.to(".descriptionBox-white p", {
   translateY: 0,
   opacity: 1,
