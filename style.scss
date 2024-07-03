@@ -726,6 +726,7 @@ $size: 45px;
 		height: 20vh;
 	}
 	.marquee{
+		height: fit-content;
 		transform: translateY(0%);
 	}
 	.marquee1{
@@ -958,7 +959,6 @@ $size: 45px;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-self: flex-start;
-		padding: 1rem;
 		text-align: left;
 		padding: 5rem 1.5rem;
 		padding-left: 8rem;
@@ -1059,8 +1059,10 @@ $size: 45px;
 		}
 		.goals-text{
 			width: 100%;
+			width: 100%;
 			height: fit-content;
 			text-align: center;
+			padding: 3rem 1.5rem;
 		}
 		.goals-content{
 			width: 100%;
@@ -1588,7 +1590,7 @@ $size: 45px;
 
 @media only screen and (max-width: 768px) {
 	.projects-section-wrapper{
-		margin-top: 1rem;
+		// margin-top: 1rem;
 	}
 	.ourprojects-title{
 		color: #e4e4e4;
@@ -1899,6 +1901,7 @@ $size: 45px;
 	.contact-row{
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 		&:first-child {
 			gap: 10px;
 			transform: scale(1);
@@ -2096,12 +2099,14 @@ $size: 45px;
 			font-size: 16px;
 			transform: translateY(0%);
 			opacity: 1;
+			line-height: normal;
+
 		}
 	}
 	.descriptionBox-red{
 		flex-direction: column;
 		padding: 0.5rem;
-		gap: 1.5rem;
+		gap: 1rem;
 		p{
 			width: 85%;
 
@@ -2335,6 +2340,43 @@ $size: 45px;
 					height: 20vh;
 					width: 45%;
 				}
+			}
+		}
+	}
+
+	.modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: auto;
+		background: rgba(0, 0, 0, 0.9);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	
+		.modal-content {
+			position: relative;
+			display: flex;
+			align-items: center;
+			overflow: scroll;
+			border-radius: 8px;
+			height: auto;
+			width: 90%;
+	
+			img {
+				width: 100% !important;
+				height: auto;
+				object-fit: cover;
+			}
+	
+			.close-btn {
+				position: fixed;
+				top: 10vh;
+				right: 10px;
+				font-size: 64px;
+				cursor: pointer;
+				color: white; // Set color to white
 			}
 		}
 	}
@@ -2574,11 +2616,13 @@ $size: 45px;
 				margin-top: 10vh;
 				
 				h1{
-					font-size: 1rem;
+					font-size: 2rem;
 					margin-bottom: 0;
+					-webkit-text-stroke: 1px;
 				}
 				p{
 					font-size: 12px;
+					text-align: center;
 				}
 			}
 		}
@@ -2597,17 +2641,20 @@ $size: 45px;
 
 				.text-name{
 					font-size: 16px;
+					margin-top: 0.2rem;
 				}
 				.text-designation{
 					font-size: 16px;
+					margin-bottom: 0.7rem;
 				}
 				.text-para{
 					text-align: center;
-					font-size: 8px;
+					font-size: 12px;
 				}
 				.text-quote{
 					width: 90%;
 					text-align: center;
+					font-size: 12px;
 				}
 			}
 		}
@@ -2733,6 +2780,8 @@ $size: 45px;
 	background-color: #EC1C24;
 	// position: relative;
 	padding: 3rem 0;
+	display: flex;
+	flex-direction: column;
   }
 
   .ticker-title{
@@ -2770,8 +2819,14 @@ $size: 45px;
 
 
 @media only screen and (max-width: 768px) {
+	.ticker-title{
+		// width: 90%;
+		font-size: 24px;
+		text-align: center;
+	}
 	.section-brandTicker{
-		padding-top: 1rem;
+		padding: 1rem 0;
+		// align-items: center;
 		margin: 0;
 	}
 	.ticker-logo{
@@ -2872,12 +2927,22 @@ $size: 45px;
 		width: 100%;
 	}
 	.accordion-box{
-		width: 90%;
-		border-radius: 5px;
+		width: 100%;
 		min-height: 0px;
 		height: fit-content;
-		margin: 0.5rem;
-		justify-content: flex-start;
+		margin: 0.2rem;
+		justify-content: center;
+		text-align: center;
+		padding: 2rem 1.5rem;
+
+		h1{
+			font-size: 32px;
+		}
+
+		.accordion-text{
+			width: 100%;
+			text-align: center;
+		}
 	}
 }
 
@@ -3033,7 +3098,7 @@ $size: 45px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	text-align: center;
 	// row-gap: 1rem;
 	// gap: 10rem;
@@ -3092,8 +3157,25 @@ $size: 45px;
 }
 
 @media only screen and (max-width: 768px) {
+
+	.members-title{
+		font-size: 24px;
+		text-align: center;
+	}
+
+	
+
 	.member-card{
 		margin: 1rem 2rem;
+
+		h1{
+			font-size: 16px;
+		}
+
+		h3{
+			font-size: 14px;
+		}
+
 		img{
 			width: 100px;
 			height: 100px;
@@ -3182,7 +3264,7 @@ $size: 45px;
 					width: 80%;
 				}
 				p{
-					font-size: 8px;
+					font-size: 12px;
 				}
 			}
 
