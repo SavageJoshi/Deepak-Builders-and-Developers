@@ -338,6 +338,8 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 50% 90%;
+     object-position: 50% 90%;
 }
 
 .hero {
@@ -360,12 +362,13 @@ body {
 
 .headline {
   display: flex;
+  width: 100%;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   font-family: vorkurs;
   position: absolute;
-  top: 20%;
-  left: 8%;
+  top: 8%;
   line-height: 1;
   color: red;
   z-index: 5;
@@ -422,15 +425,15 @@ body {
     right: 0;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: 65% 70%;
-       object-position: 65% 70%;
+    -o-object-position: bottom;
+       object-position: bottom;
   }
   .headline {
     width: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
-    top: 20%;
+    top: 15%;
     left: 0;
     z-index: 5;
     transform: translateX(0);
@@ -443,7 +446,7 @@ body {
     display: block !important;
   }
   .headline h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .headline .scrollDown-icon {
     display: block;

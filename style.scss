@@ -388,6 +388,7 @@ $size: 45px;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	object-position: 50% 90%;
 }
 .hero{
 	height: 150vh;
@@ -409,12 +410,14 @@ $size: 45px;
 
 .headline{
 	display: flex;
+	width: 100%;
+	text-align: center;
 	flex-direction: column;
 	justify-content: center;
 	font-family:vorkurs;
 	position: absolute;
-	top: 20%;
-	left: 8%;
+	top: 8%;
+	// left: 50%;
 	line-height: 1;
 	color: red;
 	z-index: 5;
@@ -473,14 +476,14 @@ $size: 45px;
 		position: absolute;
 		right: 0;
 		object-fit: cover;
-		object-position: 65% 70%;
+		object-position: bottom;
 	}
 	.headline{
 		width: 100%;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		top: 20%;	
+		top: 15%;
 		left: 0;
 		z-index: 5;
 		transform: translateX(0);
@@ -493,7 +496,7 @@ $size: 45px;
 		}
 
 		h1{
-			font-size: 1rem;
+			font-size: 1.5rem;
 		}
 		.scrollDown-icon{
 			display: block;
@@ -1589,9 +1592,7 @@ $size: 45px;
   }
 
 @media only screen and (max-width: 768px) {
-	.projects-section-wrapper{
-		// margin-top: 1rem;
-	}
+	
 	.ourprojects-title{
 		color: #e4e4e4;
 		background-color: #EC1C24;

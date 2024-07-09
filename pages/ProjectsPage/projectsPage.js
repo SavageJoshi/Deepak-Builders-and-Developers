@@ -1,3 +1,21 @@
+console.log(
+  `%cDesigned, Developed & Tested with ♥ by`,
+  'background-color: #000022; padding: 5px; color: #ffffff;'
+);
+console.log(
+  `%cSarvesh Joshi - https://www.linkedin.com/in/sarvesh-joshi-95644022a/`,
+  'background-color: #000022; padding: 5px; color: #ffffff; text-decoration: underline;'
+);
+console.log(
+  `%cChirag Nikumbh - https://www.linkedin.com/in/work-chiragnikumbh1/`,
+  'background-color: #000022; padding: 5px; color: #ffffff; text-decoration: underline;'
+);
+console.log(
+  `%cAjinkya Pawar - https://www.linkedin.com/in/-ajinkya-pawar-/`,
+  'background-color: #000022; padding: 5px; color: #ffffff; text-decoration: underline;'
+);
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const circleElement = document.querySelector('.circle');
