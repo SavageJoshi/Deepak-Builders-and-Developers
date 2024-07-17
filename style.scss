@@ -907,7 +907,7 @@ $size: 45px;
 	left: 50%;
 	width: 100%;
 	height: 100%;
-	object-fit: fill;
+	object-fit: cover !important;
 	
 
   }
@@ -1101,7 +1101,7 @@ $size: 45px;
   .goals-2-img {
 	img{
 
-		width: 100%;
+		width: 100vw;
 	}
   }
   
@@ -1115,7 +1115,7 @@ $size: 45px;
   .slide img {
 	width: 100%;
 	height: 100%;
-	object-fit: scale-down;
+	object-fit: cover;
   }
   
   .goals-2-content {
@@ -2783,6 +2783,9 @@ $size: 45px;
 	padding: 3rem 0;
 	display: flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
+	box-sizing: border-box;
+	gap: 20px;
   }
 
   .ticker-title{
@@ -2794,11 +2797,18 @@ $size: 45px;
 	}
   }
   
+  .ticker-row{
+	margin: 0;
+	padding: 0;
+  }
+
   .ticker-container {
 	// background-color: #EC1C24;
 	// overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
+	gap: 20px;
   }
   
   .ticker-logo {
@@ -2810,11 +2820,12 @@ $size: 45px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+	margin: 0;
+	height: fit-content;
+
 	img {
 	  max-width: 100%;
-	  height: 100%;
-	  object-fit: contain;
+	  object-fit: cover;
 	}
   }
 
@@ -2868,6 +2879,7 @@ $size: 45px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	justify-content: space-between;
 	padding: 3rem 3.5rem;
 	// background-color: #e4e4e4;
@@ -2925,6 +2937,7 @@ $size: 45px;
 @media only screen and (max-width: 768px) {
 	.accordions{
 		flex-direction: column;
+		-webkit-flex-direction: column;
 		width: 100%;
 	}
 	.accordion-box{
@@ -2956,6 +2969,7 @@ $size: 45px;
 	background-color: #EC1C24;
 	display: flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	align-items: center;
 }
 
@@ -3078,6 +3092,7 @@ $size: 45px;
 	background-color: #EC1C24;
 	display: flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	justify-content: center;
 	padding: 4rem 0;
 
@@ -3109,6 +3124,7 @@ $size: 45px;
 	width: 20%;
 	display: flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin: 0.5rem 2rem;
@@ -3196,6 +3212,7 @@ $size: 45px;
 	background-color: #EC1C24;
 	display: flex;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	align-items: center;
 	color: #e4e4e4;
 	text-align: center;
@@ -3229,6 +3246,7 @@ $size: 45px;
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
+			-webkit-flex-direction: column;
 			
 			img{
 				// width: 25%;
@@ -3617,20 +3635,20 @@ $size: 45px;
 	}
 	.projectCard:hover{
 		.projectCard-bgImage{
-			opacity: 0;
+			opacity: 1;
 		}
 		.projectCard-mainContent-img{
 			.number-overlay{
 				.overlay-text p{
-					transform: translateY(0);
+					transform: translateY(-100%);
 				}
 				.overlay-number h1{
-					opacity: 1;
+					opacity: 0 !important;
 				}
 			}
 		}
 		.projectCard-mainContent-img:before{
-			opacity: 1;
+			opacity: 0;
 		}
 		.projectCard-mainContent{
 			img{
@@ -3639,12 +3657,12 @@ $size: 45px;
 			.projectCard-mainContent-text{
 
 				h1{
-					color: #000000;
+					color: #e4e4e4;
 					display: flex;
 					flex-wrap: wrap;
 				}
 				h3{
-					color: #000000;
+					color: #e4e4e4;
 				}
 			}
 		}

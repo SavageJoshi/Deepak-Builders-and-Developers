@@ -778,8 +778,8 @@ body {
   left: 50%;
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
 }
 
 .color-block {
@@ -946,7 +946,7 @@ body {
 }
 
 .goals-2-img img {
-  width: 100%;
+  width: 100vw;
 }
 
 .goals-image-slider {
@@ -959,8 +959,8 @@ body {
 .slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .goals-2-content {
@@ -2446,6 +2446,8 @@ p {
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  gap: 20px;
 }
 
 .ticker-title {
@@ -2457,9 +2459,15 @@ p {
   text-transform: uppercase;
 }
 
+.ticker-row {
+  margin: 0;
+  padding: 0;
+}
+
 .ticker-container {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .ticker-logo {
@@ -2469,12 +2477,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .ticker-logo img {
   max-width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (max-width: 768px) {
@@ -3119,26 +3129,26 @@ p {
     justify-content: center !important;
   }
   .projectCard:hover .projectCard-bgImage {
-    opacity: 0;
+    opacity: 1;
   }
   .projectCard:hover .projectCard-mainContent-img .number-overlay .overlay-text p {
-    transform: translateY(0);
+    transform: translateY(-100%);
   }
   .projectCard:hover .projectCard-mainContent-img .number-overlay .overlay-number h1 {
-    opacity: 1;
+    opacity: 0 !important;
   }
   .projectCard:hover .projectCard-mainContent-img:before {
-    opacity: 1;
+    opacity: 0;
   }
   .projectCard:hover .projectCard-mainContent img {
     transform: scale(100%);
   }
   .projectCard:hover .projectCard-mainContent .projectCard-mainContent-text h1 {
-    color: #000000;
+    color: #e4e4e4;
     display: flex;
     flex-wrap: wrap;
   }
   .projectCard:hover .projectCard-mainContent .projectCard-mainContent-text h3 {
-    color: #000000;
+    color: #e4e4e4;
   }
 }/*# sourceMappingURL=style.css.map */
