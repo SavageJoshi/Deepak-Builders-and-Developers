@@ -12,6 +12,13 @@ function SendMail() {
         return; // Exit function if any field is empty
     }
 
+    // Phone number validation rules
+    if (!/^\d{10}$/.test(email)) {
+        // Display alert if phone number is invalid
+        alert("Please enter a valid 10-digit phone number without spaces or special characters.");
+        return; // Exit function if phone number is invalid
+    }
+
     // If all fields are filled, proceed to send the email
     var params = {
         from_name: fullName,
