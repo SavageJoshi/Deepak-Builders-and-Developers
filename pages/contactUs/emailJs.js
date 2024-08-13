@@ -39,7 +39,7 @@ function SendMail() {
         },
         function (error) {
             // Handle any errors during the API request
-            alert("Error. Please try again later.");
+            alert("Error. Please try again later. Or reach out to us at deepakbuilderssales@gmail.com");
         }
     );
 }
