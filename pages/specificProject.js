@@ -131,6 +131,16 @@ gsap.to(".descriptionBox-red p", {
     scrub: 0,
   }
 })
+gsap.to(".descriptionBox-red img", {
+  translateY: 0,
+  opacity: 1,
+  scrollTrigger:{
+    trigger: ".descriptionBox-red-infoBox img",
+    start: "top 90%",
+    end: "top 70%",
+    scrub: 0,
+  }
+})
 
 // image description
 

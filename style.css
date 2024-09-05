@@ -1723,8 +1723,8 @@ p {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover; /* Use 'cover' to ensure the entire image is visible */
-  -o-object-position: bottom;
-     object-position: bottom;
+  -o-object-position: 50% 95% !important;
+     object-position: 50% 95% !important;
   z-index: -1;
 }
 
@@ -1818,10 +1818,22 @@ p {
   display: flex;
   gap: 3rem;
   justify-content: space-around;
+  align-items: center;
   text-align: center;
   align-items: center;
   padding: 5rem 1rem;
   flex-wrap: wrap;
+}
+.descriptionBox-red .disclaimer {
+  font-family: vorkurs;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.descriptionBox-red .disclaimer h6 {
+  font-size: 16px;
+  font-weight: lighter;
+  width: 30%;
 }
 .descriptionBox-red .descriptionBox-red-infoBox {
   display: flex;
@@ -1849,6 +1861,9 @@ p {
 }
 .descriptionBox-red .descriptionBox-red-infoBox img {
   height: 100px;
+  margin-bottom: 0.5rem;
+  transform: translateY(50%);
+  opacity: 0;
 }
 
 @media only screen and (max-width: 768px) {

@@ -176,14 +176,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   card3.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj3 h1", 493);
+    rollingNumbers("#prj3 h1", 494);
   });
   card3.addEventListener("mouseleave", function () {
     rollingNumbers("#prj3 h1", 0);
   });
 
   card4.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj4 h1", 500);
+    rollingNumbers("#prj4 h1", 550);
   });
   card4.addEventListener("mouseleave", function () {
     rollingNumbers("#prj4 h1", 0);
