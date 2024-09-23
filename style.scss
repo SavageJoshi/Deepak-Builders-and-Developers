@@ -2085,6 +2085,11 @@ $size: 45px;
 			text-transform: uppercase;
 			transform: translateY(50%);
 			opacity: 0;
+			a{
+				text-transform: lowercase;
+				text-decoration: none;
+				color: #e4e4e4;
+			}
 		}
 
 		

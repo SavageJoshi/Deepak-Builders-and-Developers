@@ -1851,6 +1851,11 @@ p {
   transform: translateY(50%);
   opacity: 0;
 }
+.descriptionBox-red .descriptionBox-red-infoBox h3 a {
+  text-transform: lowercase;
+  text-decoration: none;
+  color: #e4e4e4;
+}
 .descriptionBox-red .descriptionBox-red-infoBox p {
   text-align: center;
   margin: 0;

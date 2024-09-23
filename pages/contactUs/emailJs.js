@@ -1,4 +1,4 @@
-function SendMail() {
+async function SendMail() {
     // Get form input values
     var fullName = document.getElementById("fullName").value;
     var email = document.getElementById("email_id").value;
@@ -21,27 +21,46 @@ function SendMail() {
 
     // If all fields are filled, proceed to send the email
     var params = {
-        from_name: fullName,
-        email_id: email,
-        subject: subject,
-        message: message,
+        apikey:'iyufndsi7f98sd79f87ds9f87',
+        lead_name: fullName,
+        mobile_no: email,
+        country_code: "+91",
+        project: subject,
+        notes: message,
     }
 
-    emailjs.send("service_12534z5", "template_1gwupj6", params).then(
-        function (res) {
-            if (res.status === 200) {
-                // Successful response
-                alert("Message sent! Thank you for reaching out.");
-            } else {
-                // Error response
-                alert("Error. Please try again later.");
-            }
-        },
-        function (error) {
-            // Handle any errors during the API request
-            alert("Error. Please try again later. Or reach out to us at deepakbuilderssales@gmail.com");
+    const header = {
+        'Content-Type': 'application/json', // Sending data as JSON
+        // 'Cache-Control': 'no-cache',       
+        // 'Pragma': 'no-cache',
+        // 'Expires': '0',
+        
+    };
+
+    try {
+        console.log(params);
+        const response = await fetch('https://dbd.net.in/backend/proxy.php', {
+            method: 'POST',
+            // mode: 'no-cors',
+            headers: header, 
+            body: JSON.stringify(params), 
+        });
+
+if (response.ok) {
+            const responseData = await response.json();
+            // console.log('Response:', responseData);
+            alert('Your message has been sent successfully!');
+        } else {
+            console.error('Error:', response.statusText);
+            alert('There was an error sending your message. Please try again.');
         }
-    );
+
+    } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again.');
+    }
+
+    
 }
 
 function reset() {
