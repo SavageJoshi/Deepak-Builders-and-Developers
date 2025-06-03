@@ -160,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const card12 = document.querySelector(".card12");
   const card13 = document.querySelector(".card13");
   const card14 = document.querySelector(".card14");
+  const card15 = document.querySelector(".card15");
 
   card1.addEventListener("mouseenter", function () {
     rollingNumbers("#prj1 h1", 99);
@@ -257,6 +258,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   card14.addEventListener("mouseleave", function () {
     rollingNumbers("#prj14 h1", 0);
+  });
+
+  card15.addEventListener("mouseenter", function () {
+    rollingNumbers("#prj15 h1", 174);
+  });
+  card15.addEventListener("mouseleave", function () {
+    rollingNumbers("#prj15 h1", 0);
   });
 
   dropdown.addEventListener('click', (event) => {
