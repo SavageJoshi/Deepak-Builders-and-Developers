@@ -99,8 +99,11 @@ const slider = document.querySelector('.slider');
 const headline = document.querySelector('.headline');
 const logo = document.querySelector('.logo');
 const menu = document.querySelector('.menu-icon')
+const whatsapp = document.querySelector('.whatsapp-float');
 
 const tl = new TimelineMax();
+
+
 
 // if (window.matchMedia("(min-width: 768px)").matches){  
   tl.fromTo(hero , 1 , {height: "0%"}, {height: "80%", ease: Power2.easeInOut })
@@ -119,6 +122,8 @@ const tl = new TimelineMax();
   
   tl.fromTo(hero , 1 , {height: "80vh"}, {height: "100vh", ease: Power2.easeInOut }, "2")
   .fromTo(hero, 0.7 , {width: "90%"}, {width: "100%", ease: Power2.easeInOut}, "2")
+
+  // tl.fromTo(whatsapp , 0.7 , {opacity: 0, y: 50 }, {opacity: 1, y: 0, ease: Power2.easeInOut}, "4")
 
 
 // }

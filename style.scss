@@ -505,6 +505,30 @@ $size: 45px;
 	
 }
 
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 18px;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #009336;
+//   transform: scale(1.1);
+}
+
+
+
+
 // Hero Ends
 
 
@@ -1758,11 +1782,27 @@ $size: 45px;
 	// justify-content: space-between;
 }
 
+.form-separator{
+	display: flex;
+	flex-direction: column;
+}
+
+.terms-text{
+	p{
+		width: 100%;
+		margin: 0 0;
+		color: #e4e4e4;
+		font-size: 12px;
+		font-weight: 0.5;
+	}
+}
+
 .email-footer{
 	font-family: MullerNarrow;
 	display: flex;
 	gap: 10px;
-	width: 50%;
+	width: 100%;
+	
 }
 
 .mail-details{
@@ -2066,7 +2106,7 @@ $size: 45px;
 		h6{
 			font-size: 16px;
 			font-weight: lighter;
-			width: 30%;
+			width: 50%;
 		}
 	}
 

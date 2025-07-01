@@ -251,6 +251,11 @@ textarea::-webkit-scrollbar-thumb{
 		margin: 0;
 	}
 
+	.contactTitle p{
+		margin: 0 !important;
+		padding: 0;
+	}
+
 	.contactInfo .iconGroup{
 		margin: 15px 0px;
 	}
