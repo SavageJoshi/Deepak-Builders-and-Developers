@@ -163,21 +163,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const card15 = document.querySelector(".card15");
 
   card1.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj1 h1", 99);
+    rollingNumbers("#prj1 h1", 109);
   });
   card1.addEventListener("mouseleave", function () {
     rollingNumbers("#prj1 h1", 0);
   });
 
   card2.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj2 h1", 640);
+    rollingNumbers("#prj2 h1", 493);
   });
   card2.addEventListener("mouseleave", function () {
     rollingNumbers("#prj2 h1", 0);
   });
 
   card3.addEventListener("mouseenter", function () {
-    rollingNumbers("#prj3 h1", 494);
+    rollingNumbers("#prj3 h1", 463);
   });
   card3.addEventListener("mouseleave", function () {
     rollingNumbers("#prj3 h1", 0);
