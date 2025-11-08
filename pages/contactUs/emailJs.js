@@ -39,7 +39,7 @@ async function SendMail() {
 
     try {
         console.log(params);
-        const response = await fetch('https://dbd.net.in/backend/proxy.php', {
+        const response = await fetch('https://deepakbuildersanddevelopers.com/backend/proxy.php', {
             method: 'POST',
             // mode: 'no-cors',
             headers: header, 
